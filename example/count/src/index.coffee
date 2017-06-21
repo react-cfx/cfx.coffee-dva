@@ -2,8 +2,8 @@ import React from 'react'
 import dva, { connect } from 'dva'
 import { Router, Route } from 'dva/router'
 
-import { Cfxify } from './lib/common/Cfxify'
-import { Components } from './lib/rw/Components'
+import { Cfxify } from './lib/coffee-dva/common/Cfxify'
+import { Components } from './lib/coffee-dva/rw/Components'
 
 # 1. Initializ
 app = dva()
