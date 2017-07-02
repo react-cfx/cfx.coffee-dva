@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "scripts": {
+    "clean": "make clean",
+    "build": "make build",
+    "build:dll": "make buildDll"
+  },
+  "dependencies": {
+    "antd": "^2.11.2",
+    "babel-runtime": "^6.23.0",
+    "dva": "^1.2.1",
+    "dva-loading": "^0.2.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel-plugin-dva-hmr": "^0.3.2",
+    "babel-plugin-import": "^1.2.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "coffeescript": "next",
+    "expect": "^1.20.2",
+    "husky": "^0.14.1",
+    "pug-cli": "^1.0.0-alpha6",
+    "redbox-react": "^1.4.2",
+    "roadhog": "^0.6.0",
+    "stylus": "^0.54.5"
+  }
+}
