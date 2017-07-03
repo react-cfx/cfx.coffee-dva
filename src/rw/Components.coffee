@@ -32,4 +32,13 @@ Components = [
   result
 , {}
 
-export { Components }
+prefixDom = (waitForPrefix) ->
+  cfxDom = {}
+  for domItemName, domItem of waitForPrefix
+    cfxDom["c_#{domItemName}"] = domItem
+  cfxDom
+
+export {
+  prefixDom
+  Components
+}
