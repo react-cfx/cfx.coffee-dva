@@ -60,4 +60,6 @@ IndexPage = ({
             href: 'https://github.com/dvajs/dva-docs/blob/master/v1/en-us/getting-started.md'
           , 'Getting Started'
 
+IndexPage.propTypes = {}
+
 export default connect() IndexPage
