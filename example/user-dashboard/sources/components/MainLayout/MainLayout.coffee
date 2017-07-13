@@ -27,7 +27,6 @@ export default MainLayout = ({
     c_Header {
       location
     }
-  ,
     c_div
       className: styles.content
     ,

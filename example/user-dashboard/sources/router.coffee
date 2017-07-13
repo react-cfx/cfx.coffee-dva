@@ -16,7 +16,7 @@ RouterConfig = ({
   history
   app
 }) ->
-  routes =[
+  routes = [
       path: '/'
       name: 'IndexPage'
       getComponent: (nextState, cb) ->

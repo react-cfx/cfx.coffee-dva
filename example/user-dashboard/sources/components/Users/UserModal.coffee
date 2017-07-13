@@ -99,7 +99,6 @@ class UserEditModal extends Component
 
           )
 
-        ,
           c_FormItem(
 
             Object.assign {}
@@ -113,7 +112,6 @@ class UserEditModal extends Component
 
           )
 
-        ,
           c_FormItem(
 
             Object.assign {}

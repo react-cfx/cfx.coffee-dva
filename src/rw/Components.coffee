@@ -1,4 +1,5 @@
 import { cfxify } from '../common/Cfxify'
+import _ from '../common/lodash'
 
 Components = [
   'script', 'style'
@@ -10,6 +11,7 @@ Components = [
   'br', 'hr'
 
   'ul', 'ol', 'li'
+  'dl', 'dt', 'dd'
 
   'nav', 'aside'
   'header', 'footer'
@@ -34,8 +36,17 @@ Components = [
 
 prefixDom = (waitForPrefix) ->
   cfxDom = {}
+  if _.has waitForPrefix, 'default'
+
+    for _domItemName, domItemName of waitForPrefix.default
+      continue unless typeof domItemName is 'string'
+      cfxDom["c_#{domItemName}"] = Components[domItemName]
+
+    delete waitForPrefix.default
+
   for domItemName, domItem of waitForPrefix
-    cfxDom["c_#{domItemName}"] = domItem
+    cfxDom["c_#{domItemName}"] = cfxify domItem
+
   cfxDom
 
 export {
