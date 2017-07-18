@@ -17,22 +17,66 @@ build:
 	make .pug
 	make .styl
 	make .coffee
+	make .js
+
+	make .public
+
+findPath = findPath() { \
+	file_ext=$$1; \
+	file_handler=$$2; \
+	for filepath in `find ./sources -print | grep "$$file_ext"`; do \
+		output_dir=`echo "$$filepath" | sed 's/sources/src/g' | xargs dirname`; \
+		mkdir -p $$output_dir; \
+		$$file_handler $$file_ext $$filepath $$output_dir; \
+	done; \
+}
+
+pugHandler = pugHandler() { \
+	file_ext=$$1; \
+	source_path=$$2; \
+	output_dir=$$3; \
+	case "$$file_ext" in \
+		'.pug' ) \
+			./node_modules/.bin/pug -P -o $$output_dir $$source_path; \
+			;; \
+		'.styl' ) \
+			./node_modules/.bin/stylus --out $$output_dir $$source_path; \
+			;; \
+		'.coffee' ) \
+			./node_modules/.bin/coffee -c -b -o $$output_dir $$source_path; \
+			;; \
+		'.js' ) \
+			cp $$source_path $$output_dir; \
+			;; \
+		* ) \
+			exit 1; \
+			;; \
+	esac; \
+}
+
 
 .pug:
-	./node_modules/.bin/pug -P -o ./public ./sources/public
+	@$(findPath); $(pugHandler); \
+	findPath '.pug' pugHandler
 
 .styl:
-	for styl_file in `find ./sources -print | grep '.styl'`; do \
-		css_dir=`echo "$$styl_file" | sed 's/sources/src/g' | xargs dirname`; \
-		# echo $$styl_file; \
-		# echo $$css_dir; \
-		mkdir -p $$css_dir; \
-		./node_modules/.bin/stylus --out $$css_dir $$styl_file; \
-	done
+	@$(findPath); $(pugHandler); \
+	findPath '.styl' pugHandler
 
 .coffee:
+	@$(findPath); $(pugHandler); \
+	findPath '.coffee' pugHandler; \
 	./node_modules/.bin/coffee -c -b -o ./src/lib/coffee-dva ../../src
-	./node_modules/.bin/coffee -c -b -o ./src ./sources
+
+.js:
+	@$(findPath); $(pugHandler); \
+	findPath '.js' pugHandler
+
+.public:
+	if [ -d './src/public' ]; then \
+		mv ./src/public/* ./public; \
+		rmdir './src/public'; \
+	fi
 
 rebuild: clean story_book
 	make build
