@@ -1,0 +1,6 @@
+/*/src
+/*/public
+/*/build
+/*/backup/*
+!/*/backup/.keep
+/*/.storybook
