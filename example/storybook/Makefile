@@ -6,7 +6,7 @@ clean:
 story_book:
 	rm -rf ./.storybook
 	mkdir ./.storybook
-	./node_modules/.bin/coffee -c -b -o ./.storybook ./storybook
+	./node_modules/.bin/coffee -c -b -o ./.storybook ../../storybook
 
 build:
 	mkdir -p ./src
