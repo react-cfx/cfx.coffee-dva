@@ -11,14 +11,19 @@ CFX = prefixDom {
 class NormalLoginFormCard extends React.Component
 
   render: ->
+
     {
       c_Card
       c_Login
     } = CFX
 
     c_Card
+
       style:
-        width: 300
+        Object.assign {}
+        , @props.style
+        ,
+          width: 300
     ,
       c_Login {}
 
