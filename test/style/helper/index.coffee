@@ -16,6 +16,10 @@ fonts = gdf require '../../../src/style/helper/fonts/fontFamily'
 fontSize = gdf require '../../../src/style/helper/fonts/fontSize'
 fontWeight = gdf require '../../../src/style/helper/fonts/fontWeight'
 
+letterSpacing = gdf require '../../../src/style/helper/letterSpacing'
+lineHeight = gdf require '../../../src/style/helper/lineHeight'
+overflow = gdf require '../../../src/style/helper/overflow'
+
 target.all = ->
   echo 'Hello World!!'
 
@@ -70,3 +74,22 @@ target.fontWeight = ->
   dd fontWeight
     helpers:
       fontWeight: {}
+
+target.letterSpacing = ->
+  dd letterSpacing
+    helpers:
+      letterSpacing:
+        limit: 3
+        incrementBy: 2
+
+target.lineHeight = ->
+  dd lineHeight
+    helpers:
+      lineHeight:
+        limit: 5
+        incrementBy: 2
+
+target.overflow = ->
+  dd overflow
+    helpers:
+      overflow: {}

@@ -30,7 +30,6 @@ export default fontFamily = ({
     code:
       fontFamily: fonts.code
 
-
   ##
    # Media Queries
    ##
