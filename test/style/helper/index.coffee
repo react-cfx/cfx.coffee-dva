@@ -10,6 +10,8 @@ spacing = gdf require '../../../src/style/helper/spacing'
 display = gdf require '../../../src/style/helper/display'
 beardColors = gdf require '../../../src/style/utils/setBeardColors'
 colors = gdf require '../../../src/style/helper/colors'
+float = gdf require '../../../src/style/helper/float'
+fonts = gdf require '../../../src/style/helper/fontFamily'
 
 target.all = ->
   echo 'Hello World!!'
@@ -39,3 +41,17 @@ target.colors = ->
     helpers:
       colors: {}
     colors: beardColors()
+
+target.float = ->
+  dd float
+    helpers:
+      float: {}
+    
+target.fonts = ->
+  dd fonts
+    helpers:
+      fontFamily: {}
+    fonts:
+      sans: "Helvetica Neue, Helvetica, Arial, sans-serif"
+      serif: "Merriweather, Georgia, serif"
+      code: "Consolas, Monaco, 'Andale Mono', monospace"

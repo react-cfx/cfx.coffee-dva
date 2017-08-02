@@ -43,7 +43,11 @@ export default colors = ({
         {
           t...
           "#{prefix}#{i}":
-            "#{colorTypes[prefix]}Color": colors["brandColor#{ if i is 1 then '' else i }"]
+            "#{colorTypes[prefix]}Color": colors["brandColor#{
+              if i is 1
+              then ''
+              else i
+            }"]
         }
       , {}
     ,

@@ -32,11 +32,15 @@ export default border = ({
     switch option
       when 'selector'
       then(
-        if flag is '' then flag else "--#{flag}"
+        if flag is ''
+        then flag
+        else "--#{flag}"
       )
       when 'style'
       then(
-        if flag is '' then flag else "#{flag[0].toUpperCase()}#{flag[1..]}"
+        if flag is ''
+        then flag
+        else "#{flag[0].toUpperCase()}#{flag[1..]}"
       )
       else flag
 
