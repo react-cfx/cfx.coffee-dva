@@ -1,7 +1,9 @@
 {
   "dependencies": {
+    "color": "^2.0.0",
     "lodash.has": "^4.5.2",
-    "react": "^15.6.1"
+    "react": "^15.6.1",
+    "rgb-hex": "^2.1.0"
   },
   "devDependencies": {
     "coffee-require": "^0.0.3",
