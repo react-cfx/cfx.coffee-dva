@@ -19,6 +19,13 @@ fontWeight = gdf require '../../../src/style/helper/fonts/fontWeight'
 letterSpacing = gdf require '../../../src/style/helper/letterSpacing'
 lineHeight = gdf require '../../../src/style/helper/lineHeight'
 overflow = gdf require '../../../src/style/helper/overflow'
+misc = gdf require '../../../src/style/helper/misc'
+
+textAlignment = gdf require '../../../src/style/helper/textAlignment'
+textDecoration = gdf require '../../../src/style/helper/textDecoration'
+zIndex = gdf require '../../../src/style/helper/zIndex'
+
+position = gdf require '../../../src/style/helper/layout/position'
 
 target.all = ->
   echo 'Hello World!!'
@@ -93,3 +100,30 @@ target.overflow = ->
   dd overflow
     helpers:
       overflow: {}
+
+target.misc = ->
+  dd misc
+    helpers:
+      misc:
+        siteWidth: 10
+        
+target.textAlignment = ->
+  dd textAlignment
+    helpers:
+      textAlignment: {}
+      
+target.textDecoration = ->
+  dd textDecoration
+    helpers:
+      textDecoration: {}
+
+target.zIndex = ->
+  dd zIndex
+    helpers:
+      zIndex:
+        limit: 10
+
+target.position = ->
+  dd position
+    helpers:
+      position: {}
