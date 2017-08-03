@@ -25,7 +25,10 @@ textAlignment = gdf require '../../../src/style/helper/textAlignment'
 textDecoration = gdf require '../../../src/style/helper/textDecoration'
 zIndex = gdf require '../../../src/style/helper/zIndex'
 
-position = gdf require '../../../src/style/helper/layout/position'
+position = gdf require '../../../src/style/helper/position'
+
+flex = gdf require '../../../src/style/helper/layout/flex'
+grid = gdf require '../../../src/style/helper/layout/grid'
 
 target.all = ->
   echo 'Hello World!!'
@@ -127,3 +130,15 @@ target.position = ->
   dd position
     helpers:
       position: {}
+      
+target.flex = ->
+  dd flex
+    helpers:
+      flex: {}
+
+target.grid = ->
+  dd grid
+    helpers:
+      grid:
+        gridGutter: 12
+        gridBlockCount: 12
