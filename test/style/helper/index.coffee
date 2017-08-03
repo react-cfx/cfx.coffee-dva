@@ -50,6 +50,12 @@ target.border = ->
     helpers:
       border: {}
 
+target.borderRadius = ->
+  dd borderRadius
+    helpers:
+      borderRadius:
+        limit: 3
+
 target.spacing = ->
   dd spacing
     helpers:

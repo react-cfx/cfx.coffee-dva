@@ -26,7 +26,7 @@ export default borderRadius = ({
    # Borders
    ##
   for x in [1..limit]
-    v = "${ x }px"
+    v = "#{ x }px"
     selectors = {
       selectors...
       "br#{ x }":
