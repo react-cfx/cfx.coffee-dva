@@ -1,4 +1,4 @@
-import addMediaQueries from '../utils/addMediaQueries'
+import addMediaQueries from '../../utils/addMediaQueries'
 
 ##
  # Position

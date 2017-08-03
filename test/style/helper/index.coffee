@@ -5,30 +5,42 @@ dd = require 'ddeyes'
 { gdf } = require 'coffee-require'
 require 'coffee-require/register'
 
-border = gdf require '../../../src/style/helper/border'
-spacing = gdf require '../../../src/style/helper/spacing'
-display = gdf require '../../../src/style/helper/display'
+{
+  # Layout
+  flex
+  grid 
+
+  # Box
+  display
+  position
+  spacing
+  float
+  overflow
+
+  # Border
+  border
+  borderRadius
+
+  zIndex
+
+  # Fonts
+  fontFamily
+  fontSize
+  fontWeight 
+
+  # text
+
+  textAlignment
+  textDecoration
+  lineHeight
+  letterSpacing
+
+  colors
+
+  misc 
+
+} = require '../../../src/style/helper'
 beardColors = gdf require '../../../src/style/utils/setBeardColors'
-colors = gdf require '../../../src/style/helper/colors'
-float = gdf require '../../../src/style/helper/float'
-
-fonts = gdf require '../../../src/style/helper/fonts/fontFamily'
-fontSize = gdf require '../../../src/style/helper/fonts/fontSize'
-fontWeight = gdf require '../../../src/style/helper/fonts/fontWeight'
-
-letterSpacing = gdf require '../../../src/style/helper/letterSpacing'
-lineHeight = gdf require '../../../src/style/helper/lineHeight'
-overflow = gdf require '../../../src/style/helper/overflow'
-misc = gdf require '../../../src/style/helper/misc'
-
-textAlignment = gdf require '../../../src/style/helper/textAlignment'
-textDecoration = gdf require '../../../src/style/helper/textDecoration'
-zIndex = gdf require '../../../src/style/helper/zIndex'
-
-position = gdf require '../../../src/style/helper/position'
-
-flex = gdf require '../../../src/style/helper/layout/flex'
-grid = gdf require '../../../src/style/helper/layout/grid'
 
 target.all = ->
   echo 'Hello World!!'
@@ -65,7 +77,7 @@ target.float = ->
       float: {}
     
 target.fonts = ->
-  dd fonts
+  dd fontFamily
     helpers:
       fontFamily: {}
     fonts:
