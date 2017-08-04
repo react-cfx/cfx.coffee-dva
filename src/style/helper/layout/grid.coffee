@@ -1,5 +1,3 @@
-import addMediaQueries from '../../utils/addMediaQueries'
-
 ##
  # Grid
  #
@@ -10,19 +8,24 @@ import addMediaQueries from '../../utils/addMediaQueries'
  # @param  {object} responsive
  # @return {object}
  ##
-export default grid = ({
-  helpers: {
-    grid: {
-      gridGutter
-      gridBlockCount
-      stackAtBreakpoint
-      responsive
+export default grid = (helpers) ->
+  def_helpers =
+    grid:
+      gridGutter: 12
+      gridBlockCount: 30
+
+  helpers =
+    if helpers
+    then {
+      def_helpers...
+      helpers...
     }
-  }
-  breakpoints
-}) ->
-  selectors = {}
-  media = {}
+    else def_helpers
+
+  {
+    gridGutter
+    gridBlockCount
+  } = helpers.grid
 
   # The default column width is 100% divided by the column count
   blockWidth = 100 / gridBlockCount
@@ -36,15 +39,13 @@ export default grid = ({
   
   # Blocks
   #########
-  selectors = {
-    selectors...
+  selectors =
     blk:
       position: 'relative'
       paddingLeft: "#{ gridGutter }px"
       paddingRight: "#{ gridGutter }px"
       flexGrow: 1
       flexBasis: 0
-  }
   
   # Generate standard sizing helpers
   for x in [1..gridBlockCount]
@@ -79,34 +80,28 @@ export default grid = ({
       order: 1
   }
 
+  selectors
+
   ##
-   # Media Queries
-   ##
-  if responsive
-    media = addMediaQueries selectors, breakpoints
-
-    ##
-    # Response Flexbox Grid
-    ##
-    selectors = {
-      selectors...
-      wrap:
-        marginLeft: 'auto'
-        marginRight: 'auto'
-        paddingLeft: "#{ gridGutter }px"
-        paddingRight: "#{ gridGutter }px"
-      'wrap--xpad':
-        paddingLeft: 0
-        paddingRight: 0
-      frame:
-        marginLeft: -gridGutter
-        marginRight: -gridGutter
-        "@media (min-width: #{ breakpoints[stackAtBreakpoint] }px)":
-          display: 'flex'
-          flexDirection: 'row'
-          flexWrap: 'wrap'
-      'frame--stay':
-        display: 'flex'
-    }
-
-  { selectors..., media... }
+  # Response Flexbox Grid
+  ##
+  # selectors = {
+  #   selectors...
+  #   wrap:
+  #     marginLeft: 'auto'
+  #     marginRight: 'auto'
+  #     paddingLeft: "#{ gridGutter }px"
+  #     paddingRight: "#{ gridGutter }px"
+  #   'wrap--xpad':
+  #     paddingLeft: 0
+  #     paddingRight: 0
+  #   frame:
+  #     marginLeft: -gridGutter
+  #     marginRight: -gridGutter
+  #     "@media (min-width: #{ breakpoints[stackAtBreakpoint] }px)":
+  #       display: 'flex'
+  #       flexDirection: 'row'
+  #       flexWrap: 'wrap'
+  #   'frame--stay':
+  #     display: 'flex'
+  # }

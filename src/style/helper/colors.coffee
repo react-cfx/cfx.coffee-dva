@@ -1,5 +1,3 @@
-import addMediaQueries from '../utils/addMediaQueries'
-
 ##
  # Colors
  #
@@ -7,17 +5,7 @@ import addMediaQueries from '../utils/addMediaQueries'
  # @param  {object} breakpoints={} (optional)
  # @return {object}
  ##
-export default colors = ({
-  helpers: {
-    colors: {
-      responsive
-    }
-  }
-  colors
-  breakpoints
-}) ->
-
-  media = {}
+export default colors = (helper, {colors}) ->
 
   ##
    # Colors
@@ -62,10 +50,4 @@ export default colors = ({
 
   , {}
 
-  ##
-   # Media Queries
-   ##
-  if responsive
-    media = addMediaQueries selectors, breakpoints
-
-  { selectors..., media... }
+  selectors

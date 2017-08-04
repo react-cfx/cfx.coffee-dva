@@ -1,5 +1,3 @@
-import addMediaQueries from '../../utils/addMediaQueries'
-
 ##
  # Letter Spacing
  #
@@ -7,19 +5,26 @@ import addMediaQueries from '../../utils/addMediaQueries'
  # @param  {object} breakpoints={} (optional)
  # @return {object}
  ##
-export default letterSpacing = ({
-  helpers: {
-    letterSpacing: {
-      limit
-      incrementBy
-      responsive
+export default letterSpacing = (helpers) ->
+  def_helpers =
+    letterSpacing:
+      limit: 10
+      incrementBy: .1
+
+  helpers =
+    if helpers
+    then {
+      def_helpers...
+      helpers...
     }
-  }
-  breakpoints
-}) ->
+    else def_helpers
+
+  {
+    limit
+    incrementBy
+  } = helpers.letterSpacing
 
   selectors = {}
-  media = {}
 
   ##
    # Letter Spacing
@@ -28,10 +33,4 @@ export default letterSpacing = ({
     selectors["ls#{ x }"] =
       letterSpacing: "#{ x * incrementBy }rem"
 
-  ##
-   # Media Queries
-   #
-  if responsive
-      media = addMediaQueries selectors, breakpoints
-
-  { selectors..., media... }
+  selectors

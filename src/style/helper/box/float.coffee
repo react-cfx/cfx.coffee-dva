@@ -1,5 +1,3 @@
-import addMediaQueries from '../../utils/addMediaQueries'
-
 ##
  # Floats
  #
@@ -7,35 +5,18 @@ import addMediaQueries from '../../utils/addMediaQueries'
  # @param  {object} breakpoints={} (optional)
  # @return {object}
  ##
-export default float = ({
-  helpers: {
-    float: {
-      responsive
-    }
-  }
-  breakpoints
-}) ->
-  media = {}
+export default float =  ->
 
   ##
    # Float Helpers
    ##
-  selectors =
-    fl:
-      float: 'left'
-    fr:
-      float: 'right'
-    fn:
-      float: 'none'
-    finit:
-      float: 'initial'
-    finhe:
-      float: 'inherit'
-    
-  ##
-   # Media Queries
-   ##
-  if responsive
-    media = addMediaQueries selectors, breakpoints
-
-  { selectors..., media... }
+  fl:
+    float: 'left'
+  fr:
+    float: 'right'
+  fn:
+    float: 'none'
+  finit:
+    float: 'initial'
+  finhe:
+    float: 'inherit'

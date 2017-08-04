@@ -1,5 +1,3 @@
-import addMediaQueries from '../../utils/addMediaQueries'
-
 ##
  # Overflow
  #
@@ -7,31 +5,14 @@ import addMediaQueries from '../../utils/addMediaQueries'
  # @param  {object} breakpoints={} (optional)
  # @return {object}
  ##
-export default overflow = ({
-  helpers: {
-    overflow: {
-      responsive
-    }
-  }
-  breakpoints
-}) ->
-  media = {}
+export default overflow = ->
 
   ##
    # Text Alignment Helpers
    ##
-  selectors =
-    ofh:
-      overflow: 'hidden'
-    ofx:
-      overflowX: 'scroll'
-    ofy:
-      verflowY: 'scroll'
-
-  ##
-   # Media Queries
-   #
-  if responsive
-      media = addMediaQueries selectors, breakpoints
-
-  { selectors..., media... }
+  ofh:
+    overflow: 'hidden'
+  ofx:
+    overflowX: 'scroll'
+  ofy:
+    verflowY: 'scroll'

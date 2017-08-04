@@ -1,5 +1,3 @@
-import addMediaQueries from '../../utils/addMediaQueries'
-
 ##
  # Borders
  #
@@ -8,25 +6,30 @@ import addMediaQueries from '../../utils/addMediaQueries'
  # @param  {object} breakpoints={} (optional)
  # @return {object}
  ##
-export default border = ({
-  helpers: {
-    border: {
-      limit = 10
-      incrementBy
-      responsive
-    }
-  }
-  breakpoints
-}) ->
+export default border = (helpers) ->
+  def_helpers =
+    border:
+      limit: 3
+      incrementBy: 1
 
-  selectors = {}
-  media = {}
+  helpers =
+    if helpers
+    then {
+      def_helpers...
+      helpers...
+    }
+    else def_helpers
+
+  {
+    limit
+  } = helpers.border
 
   ##
    # Borders
    ##
-  selectors['xbrdr'] =
-    border: 'none'
+  selectors =
+    xbrdr:
+      border: 'none'
 
   selectorOrStyle = (option, flag) ->
     switch option
@@ -58,10 +61,4 @@ export default border = ({
         "border#{ selectorOrStyle 'style', flag }Style": 'solid'
         "border#{ selectorOrStyle 'style', flag }Width": "#{ x }px"
 
-  ##
-   # Media Queries
-   ##
-  if responsive
-    media = addMediaQueries selectors, breakpoints
-
-  { selectors..., media... }
+  selectors

@@ -1,5 +1,3 @@
-import addMediaQueries from '../utils/addMediaQueries'
-
 ##
  # Misc
  #
@@ -7,16 +5,23 @@ import addMediaQueries from '../utils/addMediaQueries'
  # @param  {object} breakpoints={} (optional)
  # @return {object}
  ##
-export default misc = ({
-  helpers: {
-    misc: {
-      responsive
-      siteWidth
+export default misc = (helpers) ->
+
+  def_helpers =
+    misc:
+      siteWidth: '114rem'
+
+  helpers =
+    if helpers
+    then {
+      def_helpers...
+      helpers...
     }
-  }
-  breakpoints
-}) ->
-  media = {}
+    else def_helpers
+
+  {
+    siteWidth
+  } = helpers.misc
 
   ##
    # Text Alignment Helpers
@@ -25,10 +30,10 @@ export default misc = ({
     center:
       marginLeft: 'auto'
       marginRight: 'auto'
-    'default-hover':
+    defaultHover:
       ':hover':
         opacity: 0.5
-    'default-active':
+    defaultActive:
       ':active':
         opacity: 0.8
     dim:
@@ -36,7 +41,7 @@ export default misc = ({
         opacity: 0.5
       ':active':
         opacity: 0.8
-    'site-width':
+    siteWidth:
       maxWidth: siteWidth
     lowercase:
       textTransform: 'lowercase'
@@ -70,10 +75,4 @@ export default misc = ({
     pointer:
       cursor: "pointer"
 
-  ##
-   # Media Queries
-   #
-  if responsive
-    media = addMediaQueries selectors, breakpoints
-
-  { selectors..., media... }
+  selectors

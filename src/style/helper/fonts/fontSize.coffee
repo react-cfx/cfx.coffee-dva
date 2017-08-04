@@ -1,5 +1,3 @@
-import addMediaQueries from '../../utils/addMediaQueries'
-
 ##
  # Font Size
  #
@@ -7,18 +5,24 @@ import addMediaQueries from '../../utils/addMediaQueries'
  # @param  {object} breakpoints={} (optional)
  # @return {object}
  ##
-export default fontSize = ({
-  helpers: {
-    fontSize: {
-      limit
-      incrementBy
-      responsive
-    }
-  }
-  breakpoints
-}) ->
+export default fontSize = ( helpers ) ->
+  def_helpers =
+    fontSize:
+      limit: 17
+      incrementBy: .1
 
-  media = {}
+  helpers =
+    if helpers
+    then {
+      def_helpers...
+      helpers...
+    }
+    else def_helpers
+
+  {
+    limit
+    incrementBy
+  } = helpers.fontSize
 
   ##
    # Font Sizes
@@ -31,10 +35,4 @@ export default fontSize = ({
     selectors["ft#{ x }"] =
       fontSize: "#{ 1 + (x - 1) * incrementBy }rem"
 
-  ##
-   # Media Queries
-   ##
-  if responsive
-    media = addMediaQueries selectors, breakpoints
-
-  { selectors..., media... }
+  selectors

@@ -1,4 +1,3 @@
-import addMediaQueries from '../../utils/addMediaQueries'
 
 ##
  # Line Height
@@ -7,17 +6,25 @@ import addMediaQueries from '../../utils/addMediaQueries'
  # @param  {object} breakpoints={} (optional)
  # @return {object}
  ##
-export default lineHeight = ({
-  helpers: {
-    lineHeight: {
-      responsive
-      limit
-      incrementBy
+export default lineHeight = (helpers) ->
+
+  def_helpers =
+    lineHeight:
+      limit: 10
+      incrementBy: .1
+
+  helpers =
+    if helpers
+    then {
+      def_helpers...
+      helpers...
     }
-  }
-  breakpoints
-}) ->
-  media = {}
+    else def_helpers
+
+  {
+    limit
+    incrementBy
+  } = helpers.lineHeight
 
   ##
    # Line Height Helpers
@@ -30,10 +37,4 @@ export default lineHeight = ({
     selectors["lh#{ x }"] =
       lineHeight: "#{ 1 + (x - .1) * incrementBy }"
 
-  ##
-   # Media Queries
-   #
-  if responsive
-      media = addMediaQueries selectors, breakpoints
-
-  { selectors..., media... }
+  selectors

@@ -1,5 +1,3 @@
-import addMediaQueries from '../utils/addMediaQueries'
-
 ##
  # Z-index
  #
@@ -8,18 +6,26 @@ import addMediaQueries from '../utils/addMediaQueries'
  # @param  {object} breakpoints={} (optional)
  # @return {object}
  ##
-export default zindex = ({
-  helpers: {
-    zIndex: {
-      limit
-      incrementBy
-      responsive
-    }
-  }
-  breakpoints
-}) ->
+export default zindex = (helpers) ->
   selectors = {}
-  media = {}
+
+  def_helpers =
+    zIndex:
+      limit: 10
+      incrementBy: 1
+
+  helpers =
+    if helpers
+    then {
+      def_helpers...
+      helpers...
+    }
+    else def_helpers
+
+  {
+    limit
+    incrementBy
+  } = helpers.zIndex
 
   ##
    # z-index
@@ -28,10 +34,4 @@ export default zindex = ({
     selectors["zi#{ x }"] =
       zIndex: "#{ x }"
 
-  ##
-   # Media Queries
-   ##
-  if responsive
-    media = addMediaQueries selectors, breakpoints
-
-  { selectors..., media... }
+  selectors

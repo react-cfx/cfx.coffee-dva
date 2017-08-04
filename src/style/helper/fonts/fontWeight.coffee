@@ -1,5 +1,3 @@
-import addMediaQueries from '../../utils/addMediaQueries'
-
 ##
  # Font Weight
  #
@@ -7,16 +5,8 @@ import addMediaQueries from '../../utils/addMediaQueries'
  # @param  {object} breakpoints={} (optional)
  # @return {object}
  ##
-export default fontWeight = ({
-  helpers: {
-    fontWeight: {
-      responsive
-     }
-  }
-  breakpoints
-}) ->
+export default fontWeight = ->
   selectors = {}
-  media = {}
 
   ##
    # Font Weight Helpers
@@ -37,12 +27,6 @@ export default fontWeight = ({
     'black'
   ]
     selectors["fw#{ v }"] =
-      fontWeight: "#{ k }00"
+      fontWeight: "#{ + k + 1 }00"
 
-  ##
-   # Media Queries
-   ##
-  if responsive
-    media = addMediaQueries selectors, breakpoints
-
-  { selectors..., media... }
+  selectors

@@ -1,5 +1,3 @@
-import addMediaQueries from '../../utils/addMediaQueries'
-
 ##
  # Border Radius
  #
@@ -8,19 +6,24 @@ import addMediaQueries from '../../utils/addMediaQueries'
  # @param  {object} breakpoints={} (optional)
  # @return {object}
  ##
-export default borderRadius = ({
-  helpers: {
-    borderRadius: {
-      limit
-      incrementBy
-      responsive
-    }
-  }
-  breakpoints
-}) ->
+export default borderRadius = (helpers) ->
+  def_helpers =
+    borderRadius:
+      limit: 10
+      incrementBy: 1
 
-  selectors = {}
-  media = {}
+  helpers =
+    if helpers
+    then {
+      def_helpers...
+      helpers...
+    }
+    else def_helpers
+    
+  {
+    limit
+    incrementBy
+  } = helpers.borderRadius
 
   ##
    # Borders
@@ -47,10 +50,4 @@ export default borderRadius = ({
         borderBottomRight: v
     }
 
-  ##
-   # Media Queries
-   ##
-  if responsive
-    media = addMediaQueries selectors, breakpoints
-
-  { selectors..., media... }
+  selectors

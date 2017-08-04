@@ -1,5 +1,4 @@
-import addMediaQueries from '../../utils/addMediaQueries'
-# import dd from 'ddeyes'
+import dd from 'ddeyes'
 
 ##
  # Spacing
@@ -8,22 +7,30 @@ import addMediaQueries from '../../utils/addMediaQueries'
  # @param  {object} breakpoints={} (optional)
  # @return {object}
  ##
-export default spacing = ({
-  helpers: {
-    spacing: {
-      limit = 10
-      incrementBy = 1
-      responsive
-    }
-  }
-  breakpoints
-}) ->
+export default spacing = (helpers) ->
+  def_helpers =
+    spacing:
+      limit: 10
+      incrementBy: 1
 
-  media = {}
+  helpers =
+    if helpers
+    then {
+      def_helpers...
+      helpers...
+    }
+    else def_helpers
+
+  {
+    limit
+    incrementBy
+  } = helpers.spacing
+
+  # dd { helpers }
 
   remTypes = do ->
     r = [ 'default' ]
-    x = incrementBy
+    x = 1
     while x <= limit
       r.push x
       x += incrementBy
@@ -118,10 +125,4 @@ export default spacing = ({
   #   selectors
   # }
 
-  ##
-   # Media Queries
-   ##
-  if responsive
-    media = addMediaQueries selectors, breakpoints
-
-  { selectors..., media... }
+  selectors

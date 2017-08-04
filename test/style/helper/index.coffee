@@ -2,6 +2,13 @@
 require 'shelljs/make'
 echo = console.log
 dd = require 'ddeyes'
+{
+  StyleSheet
+  css
+} = require 'glamor/aphrodite'
+
+g_css = (require 'glamor').css
+
 { gdf } = require 'coffee-require'
 require 'coffee-require/register'
 
@@ -29,7 +36,6 @@ require 'coffee-require/register'
   fontWeight 
 
   # text
-
   textAlignment
   textDecoration
   lineHeight
@@ -43,120 +49,85 @@ require 'coffee-require/register'
 beardColors = gdf require '../../../src/style/utils/setBeardColors'
 
 target.all = ->
-  echo 'Hello World!!'
+  style =
+    red:
+      color: 'red'
+    hoverBlue:
+      ':hover':
+        color: 'blue'
+  dd { style }
+  dd css: css(
+    (StyleSheet.create style).red
+    (StyleSheet.create style).hoverBlue
+  )
+  dd g_css: g_css {
+    style.red... 
+    style.hoverBlue...
+  }
 
-target.border = ->
-  dd border
-    helpers:
-      border: {}
+target.flex = ->
+  dd flex()
 
-target.borderRadius = ->
-  dd borderRadius
-    helpers:
-      borderRadius:
-        limit: 3
-
-target.spacing = ->
-  dd spacing
-    helpers:
-      spacing:
-        incrementBy: 2
-        limit: 6
+target.grid = ->
+  dd grid()
 
 target.display = ->
-  dd display
-    helpers:
-      display: {}
+  dd display()
+
+target.position = ->
+  dd position()
+
+target.spacing = ->
+  dd spacing()
+
+target.float = ->
+  dd float()
+
+target.overflow = ->
+  dd overflow()
+
+target.border = ->
+  dd border()
+
+target.borderRadius = ->
+  dd borderRadius()
 
 target.beardColors = ->
   dd beardColors()
 
-target.colors = ->
-  dd colors
-    helpers:
-      colors: {}
-    colors: beardColors()
+target.zIndex = ->
+  dd zIndex()
 
-target.float = ->
-  dd float
-    helpers:
-      float: {}
-    
 target.fonts = ->
-  dd fontFamily
-    helpers:
-      fontFamily: {}
+  dd fontFamily {}
+  ,
     fonts:
       sans: "Helvetica Neue, Helvetica, Arial, sans-serif"
       serif: "Merriweather, Georgia, serif"
       code: "Consolas, Monaco, 'Andale Mono', monospace"
 
 target.fontSize = ->
-  dd fontSize
-    helpers:
-      fontSize:
-        limit: 10
-        incrementBy: 2
+  dd fontSize()
 
 target.fontWeight = ->
-  dd fontWeight
-    helpers:
-      fontWeight: {}
-
-target.letterSpacing = ->
-  dd letterSpacing
-    helpers:
-      letterSpacing:
-        limit: 3
-        incrementBy: 2
-
-target.lineHeight = ->
-  dd lineHeight
-    helpers:
-      lineHeight:
-        limit: 5
-        incrementBy: 2
-
-target.overflow = ->
-  dd overflow
-    helpers:
-      overflow: {}
-
-target.misc = ->
-  dd misc
-    helpers:
-      misc:
-        siteWidth: 10
+  dd fontWeight()
         
 target.textAlignment = ->
-  dd textAlignment
-    helpers:
-      textAlignment: {}
+  dd textAlignment()
       
 target.textDecoration = ->
-  dd textDecoration
-    helpers:
-      textDecoration: {}
+  dd textDecoration()
 
-target.zIndex = ->
-  dd zIndex
-    helpers:
-      zIndex:
-        limit: 10
+target.lineHeight = ->
+  dd lineHeight()
 
-target.position = ->
-  dd position
-    helpers:
-      position: {}
-      
-target.flex = ->
-  dd flex
-    helpers:
-      flex: {}
+target.letterSpacing = ->
+  dd letterSpacing()
 
-target.grid = ->
-  dd grid
-    helpers:
-      grid:
-        gridGutter: 12
-        gridBlockCount: 12
+target.colors = ->
+  dd colors {}
+  ,
+    colors: beardColors()
+
+target.misc = ->
+  dd misc()
