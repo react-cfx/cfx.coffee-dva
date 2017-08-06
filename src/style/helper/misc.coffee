@@ -5,24 +5,9 @@
  # @param  {object} breakpoints={} (optional)
  # @return {object}
  ##
-export default misc = (helpers) ->
-
-  def_helpers =
-    misc:
-      siteWidth: '114rem'
-
-  helpers =
-    if helpers
-    then {
-      def_helpers...
-      helpers...
-    }
-    else def_helpers
-
-  {
-    siteWidth
-  } = helpers.misc
-
+export default misc = ({
+  siteWidth = '114rem'
+}) ->
   ##
    # Text Alignment Helpers
    ##

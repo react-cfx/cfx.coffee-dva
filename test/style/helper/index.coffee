@@ -11,6 +11,14 @@ g_css = (require 'glamor').css
 
 { gdf } = require 'coffee-require'
 require 'coffee-require/register'
+{
+  getAllSelectorsByGroup
+  getAllSelectors
+} = require '../../../src/style/utils/allSelectors'
+beardColors = gdf require '../../../src/style/utils/setBeardColors'
+config = gdf require '../../../src/style/config'
+helpers = require '../../../src/style/helper'
+Neckbeard = require '../../../src/style'
 
 {
   # Layout
@@ -45,8 +53,7 @@ require 'coffee-require/register'
 
   misc 
 
-} = require '../../../src/style/helper'
-beardColors = gdf require '../../../src/style/utils/setBeardColors'
+} = helpers
 
 target.all = ->
   style =
@@ -66,68 +73,85 @@ target.all = ->
   }
 
 target.flex = ->
-  dd flex()
+  dd flex config.helpers.flex
 
 target.grid = ->
-  dd grid()
+  dd grid config.helpers.grid
 
 target.display = ->
-  dd display()
+  dd display config.helpers.display
 
 target.position = ->
-  dd position()
+  dd position config.helpers.position
 
 target.spacing = ->
-  dd spacing()
+  dd spacing config.helpers.spacing
 
 target.float = ->
-  dd float()
+  dd float config.helpers.float
 
 target.overflow = ->
-  dd overflow()
+  dd overflow config.helpers.float
 
 target.border = ->
-  dd border()
+  dd border config.helpers.border
 
 target.borderRadius = ->
-  dd borderRadius()
-
-target.beardColors = ->
-  dd beardColors()
+  dd borderRadius config.helpers.borderRadius
 
 target.zIndex = ->
-  dd zIndex()
+  dd zIndex config.helpers.zIndex
 
 target.fonts = ->
-  dd fontFamily {}
-  ,
+  dd fontFamily {
+    (config.helpers.fontFamily)...
     fonts:
       sans: "Helvetica Neue, Helvetica, Arial, sans-serif"
       serif: "Merriweather, Georgia, serif"
       code: "Consolas, Monaco, 'Andale Mono', monospace"
+  }
 
 target.fontSize = ->
-  dd fontSize()
+  dd fontSize config.helpers.fontSize
 
 target.fontWeight = ->
-  dd fontWeight()
+  dd fontWeight config.helpers.fontWeig
         
 target.textAlignment = ->
-  dd textAlignment()
-      
+  dd textAlignment config.helpers.textAlignment
+
 target.textDecoration = ->
-  dd textDecoration()
+  dd textDecoration config.helpers.textDecoration
 
 target.lineHeight = ->
-  dd lineHeight()
+  dd lineHeight config.helpers.lineHeight
 
 target.letterSpacing = ->
-  dd letterSpacing()
+  dd letterSpacing config.helpers.letterSpacing
+
+target.beardColors = ->
+  dd beardColors()
 
 target.colors = ->
-  dd colors {}
-  ,
+  dd colors {
+    (config.helpers.colors)... 
     colors: beardColors()
+  }
 
 target.misc = ->
-  dd misc()
+  dd misc config.helpers.misc
+
+target.allSelectorsGroup = ->
+  dd getAllSelectorsByGroup config, helpers
+
+target.allSelectors = ->
+  allSelectorsGroup = getAllSelectorsByGroup config, helpers
+  dd getAllSelectors allSelectorsGroup
+  dd (getAllSelectors allSelectorsGroup)._group
+
+target.nb = ->
+  nb = Neckbeard.create {}
+  dd nb 'ft10 pt1 pb2'
+  nb = Neckbeard.create
+    useGlamor: false
+  dd nb 'ft10 pt1 pb2'

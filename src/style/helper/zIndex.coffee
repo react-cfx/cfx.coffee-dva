@@ -6,26 +6,11 @@
  # @param  {object} breakpoints={} (optional)
  # @return {object}
  ##
-export default zindex = (helpers) ->
+export default zindex = ({
+  limit = 10
+  incrementBy = 1
+}) ->
   selectors = {}
-
-  def_helpers =
-    zIndex:
-      limit: 10
-      incrementBy: 1
-
-  helpers =
-    if helpers
-    then {
-      def_helpers...
-      helpers...
-    }
-    else def_helpers
-
-  {
-    limit
-    incrementBy
-  } = helpers.zIndex
 
   ##
    # z-index

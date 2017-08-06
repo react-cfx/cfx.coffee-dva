@@ -5,7 +5,9 @@
  # @param  {object} breakpoints={} (optional)
  # @return {object}
  ##
-export default fontFamily = (helpers, { fonts }) ->
+export default fontFamily = ({
+  fonts
+}) ->
       
   ##
    # Font Family Helpers

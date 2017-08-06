@@ -5,7 +5,9 @@
  # @param  {object} breakpoints={} (optional)
  # @return {object}
  ##
-export default colors = (helper, {colors}) ->
+export default colors = ({
+  colors
+}) ->
 
   ##
    # Colors

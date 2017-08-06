@@ -1,4 +1,4 @@
-import dd from 'ddeyes'
+# import dd from 'ddeyes'
 
 ##
  # Spacing
@@ -7,24 +7,10 @@ import dd from 'ddeyes'
  # @param  {object} breakpoints={} (optional)
  # @return {object}
  ##
-export default spacing = (helpers) ->
-  def_helpers =
-    spacing:
-      limit: 10
-      incrementBy: 1
-
-  helpers =
-    if helpers
-    then {
-      def_helpers...
-      helpers...
-    }
-    else def_helpers
-
-  {
-    limit
-    incrementBy
-  } = helpers.spacing
+export default spacing = ({
+  limit = 10
+  incrementBy = 1
+}) ->
 
   # dd { helpers }
 

@@ -5,25 +5,10 @@
  # @param  {object} breakpoints={} (optional)
  # @return {object}
  ##
-export default fontSize = ( helpers ) ->
-  def_helpers =
-    fontSize:
-      limit: 17
-      incrementBy: .1
-
-  helpers =
-    if helpers
-    then {
-      def_helpers...
-      helpers...
-    }
-    else def_helpers
-
-  {
-    limit
-    incrementBy
-  } = helpers.fontSize
-
+export default fontSize = ({
+  limit = 17
+  incrementBy = .1
+}) ->
   ##
    # Font Sizes
    ##

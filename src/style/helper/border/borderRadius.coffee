@@ -6,25 +6,10 @@
  # @param  {object} breakpoints={} (optional)
  # @return {object}
  ##
-export default borderRadius = (helpers) ->
-  def_helpers =
-    borderRadius:
-      limit: 10
-      incrementBy: 1
-
-  helpers =
-    if helpers
-    then {
-      def_helpers...
-      helpers...
-    }
-    else def_helpers
-    
-  {
-    limit
-    incrementBy
-  } = helpers.borderRadius
-
+export default borderRadius = ({
+  limit = 10
+  incrementBy = 1
+}) ->
   ##
    # Borders
    ##

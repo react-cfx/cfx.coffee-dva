@@ -8,24 +8,10 @@
  # @param  {object} responsive
  # @return {object}
  ##
-export default grid = (helpers) ->
-  def_helpers =
-    grid:
-      gridGutter: 12
-      gridBlockCount: 30
-
-  helpers =
-    if helpers
-    then {
-      def_helpers...
-      helpers...
-    }
-    else def_helpers
-
-  {
-    gridGutter
-    gridBlockCount
-  } = helpers.grid
+export default grid = ({
+  gridGutter = 12
+  gridBlockCount = 30
+}) ->
 
   # The default column width is 100% divided by the column count
   blockWidth = 100 / gridBlockCount

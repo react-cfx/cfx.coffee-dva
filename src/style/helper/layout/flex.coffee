@@ -5,7 +5,7 @@
  # @param  {object} breakpoints={} (optional)
  # @return {object}
  ##
-export default flex = ->
+export default flex =  ->
 
   ##
    # Flexbox Helpers

@@ -6,23 +6,10 @@
  # @param  {object} breakpoints={} (optional)
  # @return {object}
  ##
-export default border = (helpers) ->
-  def_helpers =
-    border:
-      limit: 3
-      incrementBy: 1
-
-  helpers =
-    if helpers
-    then {
-      def_helpers...
-      helpers...
-    }
-    else def_helpers
-
-  {
-    limit
-  } = helpers.border
+export default border = ({
+  limit = 3
+  incrementBy = 1
+}) ->
 
   ##
    # Borders

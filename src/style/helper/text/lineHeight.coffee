@@ -6,26 +6,10 @@
  # @param  {object} breakpoints={} (optional)
  # @return {object}
  ##
-export default lineHeight = (helpers) ->
-
-  def_helpers =
-    lineHeight:
-      limit: 10
-      incrementBy: .1
-
-  helpers =
-    if helpers
-    then {
-      def_helpers...
-      helpers...
-    }
-    else def_helpers
-
-  {
-    limit
-    incrementBy
-  } = helpers.lineHeight
-
+export default lineHeight = ({
+  limit = 10
+  incrementBy = .1
+}) ->
   ##
    # Line Height Helpers
    ##
