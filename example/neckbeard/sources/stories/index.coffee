@@ -1,3 +1,5 @@
-import H1 from './H1'
+import Component from './Component'
+import Layout from './Layout'
 
-H1()
+Component()
+Layout()

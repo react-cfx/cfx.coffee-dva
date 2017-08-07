@@ -28,7 +28,7 @@ Components = [
 
   'button', 'img'
 
-  'pre', 'code'
+  'pre', 'code', 'blockquote'
 ].reduce (result, component, index, array) ->
   result[component] = cfxify component
   result

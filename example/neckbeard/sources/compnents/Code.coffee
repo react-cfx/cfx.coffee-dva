@@ -4,43 +4,41 @@ nb = Neckbeard.create {}
 
 CFX = prefixDom {
   default: {
-    'h1'
+    'code'
   } 
 }
 
-export default H1 = ({
+export default Code = ({
   children
-  type = 'dark'
+  type = 'gray'
 }) ->
 
   dataStyles = do ->
     baseStyles = [
-      'ft10'
-      'pt1'
-      'pb2'
-      'xmv'
-      'ls1'
-      'uppercase'
-      'fwnormal'
-      'fwsemibold'
+      'ft3'
+      'br3'
+      'pv05'
+      'ph05'
+      'code'
     ]
-    dark: [
+    gray: [
       baseStyles...
-      'tcg90'
-      'sans'
+      'brdr1'
+      'bcg10'
+      'bgg05'
     ]
-    light: [
+    purple: [
       baseStyles...
-      'pb2'
-      'tcg20'
-      'sans'
+      'xbrdr'
+      'bg5'
+      'tcw'
     ]
 
   {
-    c_h1
+    c_code
   } = CFX
 
-  c_h1 {
+  c_code {
     (nb dataStyles[type])...
   }
   , children
