@@ -3,12 +3,14 @@
     "color": "^2.0.0",
     "glamor": "^2.20.38",
     "lodash.has": "^4.5.2",
+    "normalize.css": "^7.0.0",
     "react": "^15.6.1",
     "rgb-hex": "^2.1.0"
   },
   "devDependencies": {
     "coffee-require": "^0.0.3",
     "ddeyes": "^0.0.4",
+    "jsonfile": "^3.0.1",
     "shelljs": "^0.7.8"
   }
 }

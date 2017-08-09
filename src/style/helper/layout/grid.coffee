@@ -66,28 +66,28 @@ export default grid = ({
       order: 1
   }
 
-  selectors
-
-  ##
+  #
   # Response Flexbox Grid
-  ##
-  # selectors = {
-  #   selectors...
-  #   wrap:
-  #     marginLeft: 'auto'
-  #     marginRight: 'auto'
-  #     paddingLeft: "#{ gridGutter }px"
-  #     paddingRight: "#{ gridGutter }px"
-  #   'wrap--xpad':
-  #     paddingLeft: 0
-  #     paddingRight: 0
-  #   frame:
-  #     marginLeft: -gridGutter
-  #     marginRight: -gridGutter
-  #     "@media (min-width: #{ breakpoints[stackAtBreakpoint] }px)":
-  #       display: 'flex'
-  #       flexDirection: 'row'
-  #       flexWrap: 'wrap'
-  #   'frame--stay':
-  #     display: 'flex'
-  # }
+  #
+  selectors = {
+    selectors...
+    wrap:
+      marginLeft: 'auto'
+      marginRight: 'auto'
+      paddingLeft: "#{ gridGutter }px"
+      paddingRight: "#{ gridGutter }px"
+    'wrap--xpad':
+      paddingLeft: 0
+      paddingRight: 0
+    frame:
+      marginLeft: -gridGutter
+      marginRight: -gridGutter
+      # "@media (min-width: #{ breakpoints[stackAtBreakpoint] }px)":
+      #   display: 'flex'
+      #   flexDirection: 'row'
+      #   flexWrap: 'wrap'
+    'frame--stay':
+      display: 'flex'
+  }
+
+  selectors

@@ -4,7 +4,7 @@
  # @param {object} breakpoints
  # @return {object}
  ##
-export default  addMediaQueries = (selectors, breakpoints) ->
+export default addMediaQueries = (selectors, breakpoints) ->
   media = {}
 
   Object.keys breakpoints

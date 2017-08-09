@@ -1,4 +1,5 @@
 import setBeardColors from "./setBeardColors"
+import addMediaQueries from './addMediaQueries'
 import dd from 'ddeyes'
 
 ##
@@ -18,12 +19,24 @@ export getAllSelectorsByGroup = (settings, helperFns) ->
   allSelectors = Object
   .keys helperFns
   .map (fnKey) =>
-    "#{ fnKey }": helperFns[fnKey] settings
-    # helperFns[fnKey] settings
+
+    # dd settings.helpers[fnKey]
+
+    selectors = "#{ fnKey }": helperFns[fnKey] {
+      settings...
+      helpers: settings.helpers[fnKey]
+    }
+
+    if settings.helpers[fnKey].responsive
+      selectors = {
+        selectors...
+        (addMediaQueries selectors, settings.breakpoints)...
+      }
+
+    selectors
+
   .reduce (previous, current) =>
     { previous..., current... }
-
-  # dd allSelectors
 
   allSelectors
 

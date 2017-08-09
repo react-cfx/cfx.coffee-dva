@@ -1,7 +1,7 @@
 import { prefixDom } from '../lib/coffee-dva/rw/Components'
 import * as Neckbeard from '../lib/coffee-dva/style'
 nb = Neckbeard.create {}
-import H3 from '../compnents/H3'
+import H3 from '../components/H3'
 
 CFX = prefixDom {
   default: {

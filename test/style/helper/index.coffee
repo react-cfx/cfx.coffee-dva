@@ -2,6 +2,7 @@
 require 'shelljs/make'
 echo = console.log
 dd = require 'ddeyes'
+jf = require 'jsonfile'
 {
   StyleSheet
   css
@@ -19,6 +20,7 @@ beardColors = gdf require '../../../src/style/utils/setBeardColors'
 config = gdf require '../../../src/style/config'
 helpers = require '../../../src/style/helper'
 Neckbeard = require '../../../src/style'
+
 
 {
   # Layout
@@ -142,7 +144,9 @@ target.misc = ->
   dd misc config.helpers.misc
 
 target.allSelectorsGroup = ->
-  dd getAllSelectorsByGroup config, helpers
+  data = getAllSelectorsByGroup config, helpers
+  jf.writeFileSync './AllSelectorsGroup.json', data
+  , spaces: 2
 
 target.allSelectors = ->
   allSelectorsGroup = getAllSelectorsByGroup config, helpers

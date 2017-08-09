@@ -21,6 +21,7 @@
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-highlight": "^0.10.0",
     "rgb-hex": "^2.1.0"
   }
 }

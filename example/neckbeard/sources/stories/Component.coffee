@@ -1,11 +1,12 @@
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from '../lib/coffee-dva/rw/Components'
-import H1 from '../compnents/H1'
-import H2 from '../compnents/H2'
-import H3 from '../compnents/H3'
-import BlockQuote from '../compnents/BlockQuote'
-import Code from '../compnents/Code'
-import Copy from '../compnents/Copy'
+
+import H1 from '../components/H1'
+import H2 from '../components/H2'
+import H3 from '../components/H3'
+import BlockQuote from '../components/BlockQuote'
+import Code from '../components/Code'
+import Copy from '../components/Copy'
 
 CFX = prefixDom {
   default: {

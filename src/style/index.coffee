@@ -59,7 +59,7 @@ export create = ({
 
     if useGlamor
 
-      css(
+      css (
         Object.keys stylesObj
         .reduce (r, c) =>
           {
