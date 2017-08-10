@@ -28,10 +28,17 @@ export getAllSelectorsByGroup = (settings, helperFns) ->
     }
 
     if settings.helpers[fnKey].responsive
-      selectors = {
-        selectors...
-        (addMediaQueries selectors, settings.breakpoints)...
-      }
+      selectors = Object.keys selectors
+      .reduce (result, groupName) ->
+        _selectors = selectors["#{ groupName }"]
+        {
+          result...
+          "#{ groupName }": {
+            _selectors...
+            (addMediaQueries _selectors, settings.breakpoints)...
+          }
+        }
+      , {}
 
     selectors
 

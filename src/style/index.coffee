@@ -1,6 +1,7 @@
 import * as aphrodite from 'glamor/aphrodite'
 import { css } from 'glamor'
 import dd from 'ddeyes'
+import assign from 'assign-deep'
 
 ##
  # Neckbeard Imported Helpers
@@ -32,15 +33,22 @@ export create = ({
   # Takes a string of selector names or
   # an array of objects selectors and
   # returns a function.
-  self = (selectors) =>
+  self = (selectors, debug = false) =>
     stylesObj = {}
 
     if typeof selectors is 'string'
       selectors = selectors.split ' '
 
+    # dd { selectors }
+
     if Array.isArray selectors
       selectors = selectors
       .reduce (previous, current) =>
+
+        # dd {
+        #   previous
+        #   current
+        # }
 
         if allSelectors.hasOwnProperty current
         then {
@@ -57,25 +65,33 @@ export create = ({
       stylesObj = 
         styles: selectors
 
+    # dd { selectors }
+
     if useGlamor
 
-      css (
+      mergedSelectors =
         Object.keys stylesObj
         .reduce (r, c) =>
-          {
-            r...
-            stylesObj[c]...
-          }
+          assign r, stylesObj[c]
+          # {
+          #   r...
+          #   stylesObj[c]...
+          # }
         , {}
-      )
+        
+      if debug
+      then mergedSelectors
+      else css mergedSelectors
 
     else
 
       stylesArray = Object
       .keys aphrodite.StyleSheet.create stylesObj
       .map (key) => stylesObj[key]
-    
-      aphrodite.css { stylesArray... }
+
+      if debug
+      then stylesObj
+      else aphrodite.css { stylesArray... }
 
   # Add allSelectors to our
   # function as properties

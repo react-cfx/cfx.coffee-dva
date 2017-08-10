@@ -49,7 +49,7 @@ export default Footer = =>
               (nb "tc1")...
             }
             , '©'
-          , '2016 Andrew Del Prete'
+          , ' 2016 Andrew Del Prete'
         c_p {
           (nb "ft4 tcg40")...
         }

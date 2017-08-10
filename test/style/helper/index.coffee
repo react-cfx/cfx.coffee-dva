@@ -154,8 +154,26 @@ target.allSelectors = ->
   dd (getAllSelectors allSelectorsGroup)._group
 
 target.nb = ->
-  nb = Neckbeard.create {}
+  nb = Neckbeard.create
+    debug: true
+  dd (
+    nb 'ft10 pt1 pb2'
+    , debug: true
+  )
   dd nb 'ft10 pt1 pb2'
+
   nb = Neckbeard.create
     useGlamor: false
+  dd (
+    nb 'ft10 pt1 pb2'
+    , debug: true
+  )
   dd nb 'ft10 pt1 pb2'
+
+target.print = ->
+  nb = Neckbeard.create
+    debug: true
+  dd (
+    nb 'flex sm-fdc md-fdr md-jcsb'
+    , debug: true
+  )

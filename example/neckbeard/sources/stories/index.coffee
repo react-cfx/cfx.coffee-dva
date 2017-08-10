@@ -1,4 +1,5 @@
 import 'normalize.css/normalize.css'
+import 'reset-css/reset.css'
 import './style.css'
 
 import Component from './Component'
