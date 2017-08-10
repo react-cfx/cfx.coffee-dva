@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { prefixDom } from '../lib/coffee-dva/rw/Components'
-import * as Neckbeard from '../lib/coffee-dva/style'
-nb = Neckbeard.create {}
+import nb from '../nb'
 
 CFX = prefixDom {
   default: {

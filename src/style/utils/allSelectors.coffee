@@ -12,7 +12,7 @@ import dd from 'ddeyes'
  ##
 export getAllSelectorsByGroup = (settings, helperFns) ->
   # Set colors
-  settings.colors = setBeardColors(settings.colors)
+  settings.colors = setBeardColors settings.colors
 
   # Envokes each helper function passed and returns
   # an aggregrated object of all selector properties.

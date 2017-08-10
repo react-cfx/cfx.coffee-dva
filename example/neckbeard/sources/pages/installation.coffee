@@ -1,8 +1,7 @@
 import Highlight from "react-highlight"
 
 import { prefixDom } from '../lib/coffee-dva/rw/Components'
-import * as Neckbeard from '../lib/coffee-dva/style'
-nb = Neckbeard.create {}
+import nb from '../nb'
 
 import H1 from '../components/H1'
 import H2 from '../components/H2'

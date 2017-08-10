@@ -7,11 +7,13 @@ import assign from 'assign-deep'
  # Neckbeard Imported Helpers
  ##
 import * as helpers from './helper'
-import defaultSettings from './config'
 import {
   getAllSelectorsByGroup
   getAllSelectors
 } from './utils/allSelectors'
+
+import defaultSettings from './config'
+export settings = defaultSettings
 
 ##
  # Returns an object of combined
@@ -27,7 +29,7 @@ export create = ({
 }) ->
   # Invokes each helper function passed and returns
   # an aggregrated object of all selector properties.
-  allSelectorsGroup = getAllSelectorsByGroup defaultSettings, helpers
+  allSelectorsGroup = getAllSelectorsByGroup settings, helperFns
   allSelectors = getAllSelectors allSelectorsGroup
 
   # Takes a string of selector names or
