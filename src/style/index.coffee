@@ -95,7 +95,7 @@ export create = ({
 
   # Add allSelectors to our
   # function as properties
-  for selector in allSelectors
-    self[selector] = allSelectors[selector]
+  for k, v of allSelectors
+    self[k] = allSelectors[k]
 
   self
