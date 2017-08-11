@@ -1,12 +1,14 @@
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from '../lib/coffee-dva/rw/Components'
 
-import Overview from '../pages/Overview'
-import installation from '../pages/installation'
+import Overview from '../pages/00_Overview'
+import Installation from '../pages/01_Installation'
+import Usage from '../pages/02_Usage'
 
 CFX = prefixDom {
   Overview
-  installation
+  Installation
+  Usage
 }
 
 export default ->
@@ -21,10 +23,18 @@ export default ->
 
     c_Overview {}
 
-  .add 'installation'
+  .add 'Installation'
   , =>
     {
-      c_installation
+      c_Installation
     } = CFX
 
-    c_installation {}
+    c_Installation {}
+
+  .add 'Usage'
+  , =>
+    {
+      c_Usage
+    } = CFX
+
+    c_Usage {}
