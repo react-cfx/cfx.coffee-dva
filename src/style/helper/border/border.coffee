@@ -40,7 +40,7 @@ export default border = ({
       ''
       'top'
       'right'
-      'buttom'
+      'bottom'
       'left'
     ]
 

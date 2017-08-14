@@ -13,6 +13,9 @@ Components = [
   'ul', 'ol', 'li'
   'dl', 'dt', 'dd'
 
+  'table', 'thead', 'tbody'
+  'tr', 'th', 'td'
+
   'nav', 'aside'
   'header', 'footer'
   'article', 'section'

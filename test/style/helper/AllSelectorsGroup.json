@@ -19295,9 +19295,9 @@
       "borderRightStyle": "solid",
       "borderRightWidth": "1px"
     },
-    "brdr1--buttom": {
-      "borderButtomStyle": "solid",
-      "borderButtomWidth": "1px"
+    "brdr1--bottom": {
+      "borderBottomStyle": "solid",
+      "borderBottomWidth": "1px"
     },
     "brdr1--left": {
       "borderLeftStyle": "solid",
@@ -19315,9 +19315,9 @@
       "borderRightStyle": "solid",
       "borderRightWidth": "2px"
     },
-    "brdr2--buttom": {
-      "borderButtomStyle": "solid",
-      "borderButtomWidth": "2px"
+    "brdr2--bottom": {
+      "borderBottomStyle": "solid",
+      "borderBottomWidth": "2px"
     },
     "brdr2--left": {
       "borderLeftStyle": "solid",
@@ -19335,9 +19335,9 @@
       "borderRightStyle": "solid",
       "borderRightWidth": "3px"
     },
-    "brdr3--buttom": {
-      "borderButtomStyle": "solid",
-      "borderButtomWidth": "3px"
+    "brdr3--bottom": {
+      "borderBottomStyle": "solid",
+      "borderBottomWidth": "3px"
     },
     "brdr3--left": {
       "borderLeftStyle": "solid",
@@ -19389,16 +19389,16 @@
         "borderRightWidth": "1px"
       }
     },
-    "sm-brdr1--buttom": {
+    "sm-brdr1--bottom": {
       "@media (min-width: 300px)": {
-        "borderButtomStyle": "solid",
-        "borderButtomWidth": "1px"
+        "borderBottomStyle": "solid",
+        "borderBottomWidth": "1px"
       }
     },
-    "only-sm-brdr1--buttom": {
+    "only-sm-brdr1--bottom": {
       "@media (max-width: 300px)": {
-        "borderButtomStyle": "solid",
-        "borderButtomWidth": "1px"
+        "borderBottomStyle": "solid",
+        "borderBottomWidth": "1px"
       }
     },
     "sm-brdr1--left": {
@@ -19449,16 +19449,16 @@
         "borderRightWidth": "2px"
       }
     },
-    "sm-brdr2--buttom": {
+    "sm-brdr2--bottom": {
       "@media (min-width: 300px)": {
-        "borderButtomStyle": "solid",
-        "borderButtomWidth": "2px"
+        "borderBottomStyle": "solid",
+        "borderBottomWidth": "2px"
       }
     },
-    "only-sm-brdr2--buttom": {
+    "only-sm-brdr2--bottom": {
       "@media (max-width: 300px)": {
-        "borderButtomStyle": "solid",
-        "borderButtomWidth": "2px"
+        "borderBottomStyle": "solid",
+        "borderBottomWidth": "2px"
       }
     },
     "sm-brdr2--left": {
@@ -19509,16 +19509,16 @@
         "borderRightWidth": "3px"
       }
     },
-    "sm-brdr3--buttom": {
+    "sm-brdr3--bottom": {
       "@media (min-width: 300px)": {
-        "borderButtomStyle": "solid",
-        "borderButtomWidth": "3px"
+        "borderBottomStyle": "solid",
+        "borderBottomWidth": "3px"
       }
     },
-    "only-sm-brdr3--buttom": {
+    "only-sm-brdr3--bottom": {
       "@media (max-width: 300px)": {
-        "borderButtomStyle": "solid",
-        "borderButtomWidth": "3px"
+        "borderBottomStyle": "solid",
+        "borderBottomWidth": "3px"
       }
     },
     "sm-brdr3--left": {
@@ -19579,16 +19579,16 @@
         "borderRightWidth": "1px"
       }
     },
-    "md-brdr1--buttom": {
+    "md-brdr1--bottom": {
       "@media (min-width: 600px)": {
-        "borderButtomStyle": "solid",
-        "borderButtomWidth": "1px"
+        "borderBottomStyle": "solid",
+        "borderBottomWidth": "1px"
       }
     },
-    "only-md-brdr1--buttom": {
+    "only-md-brdr1--bottom": {
       "@media (min-width: 600px) and (max-width: 899px)": {
-        "borderButtomStyle": "solid",
-        "borderButtomWidth": "1px"
+        "borderBottomStyle": "solid",
+        "borderBottomWidth": "1px"
       }
     },
     "md-brdr1--left": {
@@ -19639,16 +19639,16 @@
         "borderRightWidth": "2px"
       }
     },
-    "md-brdr2--buttom": {
+    "md-brdr2--bottom": {
       "@media (min-width: 600px)": {
-        "borderButtomStyle": "solid",
-        "borderButtomWidth": "2px"
+        "borderBottomStyle": "solid",
+        "borderBottomWidth": "2px"
       }
     },
-    "only-md-brdr2--buttom": {
+    "only-md-brdr2--bottom": {
       "@media (min-width: 600px) and (max-width: 899px)": {
-        "borderButtomStyle": "solid",
-        "borderButtomWidth": "2px"
+        "borderBottomStyle": "solid",
+        "borderBottomWidth": "2px"
       }
     },
     "md-brdr2--left": {
@@ -19699,16 +19699,16 @@
         "borderRightWidth": "3px"
       }
     },
-    "md-brdr3--buttom": {
+    "md-brdr3--bottom": {
       "@media (min-width: 600px)": {
-        "borderButtomStyle": "solid",
-        "borderButtomWidth": "3px"
+        "borderBottomStyle": "solid",
+        "borderBottomWidth": "3px"
       }
     },
-    "only-md-brdr3--buttom": {
+    "only-md-brdr3--bottom": {
       "@media (min-width: 600px) and (max-width: 899px)": {
-        "borderButtomStyle": "solid",
-        "borderButtomWidth": "3px"
+        "borderBottomStyle": "solid",
+        "borderBottomWidth": "3px"
       }
     },
     "md-brdr3--left": {
@@ -19769,16 +19769,16 @@
         "borderRightWidth": "1px"
       }
     },
-    "lg-brdr1--buttom": {
+    "lg-brdr1--bottom": {
       "@media (min-width: 900px)": {
-        "borderButtomStyle": "solid",
-        "borderButtomWidth": "1px"
+        "borderBottomStyle": "solid",
+        "borderBottomWidth": "1px"
       }
     },
-    "only-lg-brdr1--buttom": {
+    "only-lg-brdr1--bottom": {
       "@media (min-width: 900px) and (max-width: 1439px)": {
-        "borderButtomStyle": "solid",
-        "borderButtomWidth": "1px"
+        "borderBottomStyle": "solid",
+        "borderBottomWidth": "1px"
       }
     },
     "lg-brdr1--left": {
@@ -19829,16 +19829,16 @@
         "borderRightWidth": "2px"
       }
     },
-    "lg-brdr2--buttom": {
+    "lg-brdr2--bottom": {
       "@media (min-width: 900px)": {
-        "borderButtomStyle": "solid",
-        "borderButtomWidth": "2px"
+        "borderBottomStyle": "solid",
+        "borderBottomWidth": "2px"
       }
     },
-    "only-lg-brdr2--buttom": {
+    "only-lg-brdr2--bottom": {
       "@media (min-width: 900px) and (max-width: 1439px)": {
-        "borderButtomStyle": "solid",
-        "borderButtomWidth": "2px"
+        "borderBottomStyle": "solid",
+        "borderBottomWidth": "2px"
       }
     },
     "lg-brdr2--left": {
@@ -19889,16 +19889,16 @@
         "borderRightWidth": "3px"
       }
     },
-    "lg-brdr3--buttom": {
+    "lg-brdr3--bottom": {
       "@media (min-width: 900px)": {
-        "borderButtomStyle": "solid",
-        "borderButtomWidth": "3px"
+        "borderBottomStyle": "solid",
+        "borderBottomWidth": "3px"
       }
     },
-    "only-lg-brdr3--buttom": {
+    "only-lg-brdr3--bottom": {
       "@media (min-width: 900px) and (max-width: 1439px)": {
-        "borderButtomStyle": "solid",
-        "borderButtomWidth": "3px"
+        "borderBottomStyle": "solid",
+        "borderBottomWidth": "3px"
       }
     },
     "lg-brdr3--left": {
@@ -19959,16 +19959,16 @@
         "borderRightWidth": "1px"
       }
     },
-    "xlg-brdr1--buttom": {
+    "xlg-brdr1--bottom": {
       "@media (min-width: 1440px)": {
-        "borderButtomStyle": "solid",
-        "borderButtomWidth": "1px"
+        "borderBottomStyle": "solid",
+        "borderBottomWidth": "1px"
       }
     },
-    "only-xlg-brdr1--buttom": {
+    "only-xlg-brdr1--bottom": {
       "@media (min-width: 1440px)": {
-        "borderButtomStyle": "solid",
-        "borderButtomWidth": "1px"
+        "borderBottomStyle": "solid",
+        "borderBottomWidth": "1px"
       }
     },
     "xlg-brdr1--left": {
@@ -20019,16 +20019,16 @@
         "borderRightWidth": "2px"
       }
     },
-    "xlg-brdr2--buttom": {
+    "xlg-brdr2--bottom": {
       "@media (min-width: 1440px)": {
-        "borderButtomStyle": "solid",
-        "borderButtomWidth": "2px"
+        "borderBottomStyle": "solid",
+        "borderBottomWidth": "2px"
       }
     },
-    "only-xlg-brdr2--buttom": {
+    "only-xlg-brdr2--bottom": {
       "@media (min-width: 1440px)": {
-        "borderButtomStyle": "solid",
-        "borderButtomWidth": "2px"
+        "borderBottomStyle": "solid",
+        "borderBottomWidth": "2px"
       }
     },
     "xlg-brdr2--left": {
@@ -20079,16 +20079,16 @@
         "borderRightWidth": "3px"
       }
     },
-    "xlg-brdr3--buttom": {
+    "xlg-brdr3--bottom": {
       "@media (min-width: 1440px)": {
-        "borderButtomStyle": "solid",
-        "borderButtomWidth": "3px"
+        "borderBottomStyle": "solid",
+        "borderBottomWidth": "3px"
       }
     },
-    "only-xlg-brdr3--buttom": {
+    "only-xlg-brdr3--bottom": {
       "@media (min-width: 1440px)": {
-        "borderButtomStyle": "solid",
-        "borderButtomWidth": "3px"
+        "borderBottomStyle": "solid",
+        "borderBottomWidth": "3px"
       }
     },
     "xlg-brdr3--left": {

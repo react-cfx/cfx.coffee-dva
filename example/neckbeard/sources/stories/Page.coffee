@@ -4,11 +4,13 @@ import { prefixDom } from '../lib/coffee-dva/rw/Components'
 import Overview from '../pages/00_Overview'
 import Installation from '../pages/01_Installation'
 import Usage from '../pages/02_Usage'
+import Breakpoints from '../pages/03_Breakpoints'
 
 CFX = prefixDom {
   Overview
   Installation
   Usage
+  Breakpoints
 }
 
 export default ->
@@ -38,3 +40,11 @@ export default ->
     } = CFX
 
     c_Usage {}
+
+  .add 'Breakpoints'
+  , =>
+    {
+      c_Breakpoints
+    } = CFX
+
+    c_Breakpoints {}
