@@ -82,7 +82,10 @@ export create = ({
         , {}
         
       if debug
-      then mergedSelectors
+      then {
+        preMerge: stylesObj
+        merged: mergedSelectors
+      }
       else css mergedSelectors
 
     else

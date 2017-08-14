@@ -154,8 +154,7 @@ target.allSelectors = ->
   dd (getAllSelectors allSelectorsGroup)._group
 
 target.nb = ->
-  nb = Neckbeard.create
-    debug: true
+  nb = Neckbeard.create {}
   dd (
     nb 'ft10 pt1 pb2'
     , debug: true
@@ -171,9 +170,8 @@ target.nb = ->
   dd nb 'ft10 pt1 pb2'
 
 target.print = ->
-  nb = Neckbeard.create
-    debug: true
+  nb = Neckbeard.create {}
   dd (
-    nb 'flex sm-fdc md-fdr md-jcsb'
+    nb 'blk6 xph'
     , debug: true
   )
