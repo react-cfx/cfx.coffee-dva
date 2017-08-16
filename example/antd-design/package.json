@@ -1,0 +1,27 @@
+{
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.1.8",
+    "@storybook/addon-centered": "^3.1.2",
+    "@storybook/addon-events": "^3.1.6",
+    "@storybook/addon-info": "^3.1.6",
+    "@storybook/addon-knobs": "^3.1.8",
+    "@storybook/addon-links": "^3.1.6",
+    "@storybook/addon-notes": "^3.1.6",
+    "@storybook/addon-options": "^3.1.6",
+    "@storybook/addon-storyshots": "^3.1.8",
+    "@storybook/addons": "^3.1.6",
+    "@storybook/react": "^3.1.8",
+    "coffeescript": "next",
+    "pug-cli": "^1.0.0-alpha6",
+    "stylus": "^0.54.5"
+  },
+  "dependencies": {
+    "antd": "^2.12.6",
+    "color": "^2.0.0",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "reset-css": "^2.2.1",
+    "rgb-hex": "^2.1.0"
+  }
+}

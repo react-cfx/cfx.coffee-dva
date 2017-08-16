@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "antd": "^2.12.6",
     "assign-deep": "^0.4.6",
     "color": "^2.0.0",
     "glamor": "^2.20.38",
