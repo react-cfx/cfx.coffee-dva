@@ -25,6 +25,9 @@ btnDefaultColor = textColor
 btnDefaultBg = '#fff'
 btnDefaultBorder = borderColorBase
 
+btnPrimaryColor = '#fff'
+btnPrimaryBg = primaryColor
+
 fontSizeBase = '12px'
 borderRadiusBase = '4px'
 borderRadiusSm = '2px'
@@ -89,6 +92,9 @@ export {
   btnDefaultColor
   btnDefaultBg
   btnDefaultBorder
+
+  btnPrimaryColor
+  btnPrimaryBg
 
   easeOut
   easeIn

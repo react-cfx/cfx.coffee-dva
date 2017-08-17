@@ -19,6 +19,9 @@ import {
   btnDefaultBg
   btnDefaultBorder
 
+  btnPrimaryColor
+  btnPrimaryBg
+
   easeInOut
 } from '../../../Style/themes/default'
 
@@ -38,7 +41,7 @@ buttonSize = (
 
 buttonColor = (color, backgroud, border) ->
   color: color
-  backgroudColor: backgroud
+  backgroundColor: backgroud
   borderColor: border
 
   '> a:only-child':
@@ -53,8 +56,6 @@ buttonColor = (color, backgroud, border) ->
       background: 'transparent'
 
 buttonVariantOther = (color, backgroud, border) ->
-  # color5 = tinycolor color, '#fff', 20
-  # color7 = tinycolor color, '#000', 5
   {
     (buttonColor color, backgroud, border)...
     ':hover': buttonColor primaryColor, backgroud, primaryColor
@@ -62,6 +63,18 @@ buttonVariantOther = (color, backgroud, border) ->
 
     ':active': buttonColor primary7, backgroud, primary7
     '.active': buttonColor primary7, backgroud, primary7
+  }
+
+buttonVariantPrimary = (color, backgroud) ->
+  color5 = (tinycolor.mix color, '#fff', 20).toHexString()
+  color7 = (tinycolor.mix color, '#000', 5).toHexString()
+  {
+    (buttonColor color, backgroud, backgroud)...
+    ':hover': buttonColor color, color5, color5
+    ':focus': buttonColor color, color5, color5
+
+    ':active': buttonColor color, color7, color7
+    '.active': buttonColor color, color7, color7
   }
 
 btn = {
@@ -133,8 +146,18 @@ btnDefault = do ->
     '.active': defaultBackground
   }
 
-export default
+btnPrimary =
+  buttonVariantPrimary(
+    btnPrimaryColor
+    btnPrimaryBg
+  )
+
+export default {
   ".#{btnPrefixCls}": {
     btn...
     btnDefault...
   }
+  ".#{btnPrefixCls}-primary": {
+    btnPrimary...
+  }
+}
