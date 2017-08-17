@@ -1,4 +1,29 @@
+import tinycolor from 'tinycolor2'
+import colors from '../color/colors'
+
 antPrefix = 'ant'
+
+primaryColor = colors.blue6
+infoColor = colors.blue6
+successColor = colors.green6
+errorColor = colors.red6
+highlightColor = colors.red6
+warningColor = colors.yellow6
+normalColor = #d9d9d9
+
+primary1 = colors.blue1
+primary2 = colors.blue2
+primary5 = colors.blue5
+primary7 = colors.blue7
+
+textColor = (
+  (tinycolor '#000').setAlpha .65
+).toHexString()
+borderColorBase = '#d9d9d9' 
+
+btnDefaultColor = textColor
+btnDefaultBg = '#fff'
+btnDefaultBorder = borderColorBase
 
 fontSizeBase = '12px'
 borderRadiusBase = '4px'
@@ -37,6 +62,19 @@ easeInOutQuint = 'cubic-bezier(0.86, 0, 0.07, 1)'
 export {
   antPrefix
 
+  primaryColor
+  infoColor
+  successColor
+  errorColor
+  highlightColor
+  warningColor
+  normalColor
+
+  primary1
+  primary2 
+  primary5
+  primary7
+
   fontSizeBase
 
   btnFontWeight
@@ -47,6 +85,10 @@ export {
 
   btnHeightBase
   btnPaddingBase
+
+  btnDefaultColor
+  btnDefaultBg
+  btnDefaultBorder
 
   easeOut
   easeIn

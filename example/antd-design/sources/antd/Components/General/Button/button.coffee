@@ -1,5 +1,8 @@
+import tinycolor from 'tinycolor2'
 import {
   antPrefix
+  primaryColor
+  primary7
 
   fontSizeBase
 
@@ -11,6 +14,10 @@ import {
 
   btnHeightBase
   btnPaddingBase
+
+  btnDefaultColor
+  btnDefaultBg
+  btnDefaultBorder
 
   easeInOut
 } from '../../../Style/themes/default'
@@ -28,6 +35,34 @@ buttonSize = (
   borderRadius
   height
 }
+
+buttonColor = (color, backgroud, border) ->
+  color: color
+  backgroudColor: backgroud
+  borderColor: border
+
+  '> a:only-child':
+    color: 'currentColor'
+    ':after':
+      content: ''
+      position: 'absolute'
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      background: 'transparent'
+
+buttonVariantOther = (color, backgroud, border) ->
+  # color5 = tinycolor color, '#fff', 20
+  # color7 = tinycolor color, '#000', 5
+  {
+    (buttonColor color, backgroud, border)...
+    ':hover': buttonColor primaryColor, backgroud, primaryColor
+    ':focus': buttonColor primaryColor, backgroud, primaryColor
+
+    ':active': buttonColor primary7, backgroud, primary7
+    '.active': buttonColor primary7, backgroud, primary7
+  }
 
 btn = {
   display: 'inline-block'
@@ -84,10 +119,19 @@ btn = {
 btnDefault = do ->
   defaultBackground =
     backgroundColor: '#fff'
-  ':hover': defaultBackground
-  ':focus': defaultBackground
-  ':active': defaultBackground
-  '.active': defaultBackground
+  {
+    (
+      buttonVariantOther(
+        btnDefaultColor
+        btnDefaultBg
+        btnDefaultBorder
+      )
+    )...
+    ':hover': defaultBackground
+    ':focus': defaultBackground
+    ':active': defaultBackground
+    '.active': defaultBackground
+  }
 
 export default
   ".#{btnPrefixCls}": {

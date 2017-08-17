@@ -16,10 +16,9 @@ export default =>
   } = CFX
 
   buttonStyle =
-    nb
-      '.ant-btn':
-        marginRight: '8px'
-        marginBottom: '12px'
+    style:
+      marginRight: '8px'
+      marginBottom: '12px'
 
   c_div {}
   ,

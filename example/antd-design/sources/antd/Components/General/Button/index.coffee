@@ -8,6 +8,8 @@ CFX = prefixDom {
   Button
 }
 
+console.log buttonStyle
+
 export default (prop, state) ->
 
   {
@@ -20,7 +22,7 @@ export default (prop, state) ->
   } = prop
 
   c_Button {
-    otherProps...
     (nb buttonStyle)...
+    otherProps...
   }
   , children
