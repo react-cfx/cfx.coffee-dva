@@ -1,97 +1,60 @@
 import {
   antPrefix
+  color
+  border
+  btn
+  font
+  # animation
+} from '../../../Style/themes'
+import merge from 'lodash.merge'
 
-  fontSizeBase
+import mixin from './mixin'
 
-  btnFontWeight
-  btnBorderRadiusBase
+config =
+  prefixCls: "#{antPrefix}-btn"
+  ghost:
+    color: color.text.base
+    bg: 'transparent'
+    border: border.color.base
 
-  borderWidthBase
-  borderStyleBase
-
-  btnHeightBase
-  btnPaddingBase
-
-  btnDefaultColor
-  btnDefaultBg
-  btnDefaultBorder
-
-  btnPrimaryColor
-  btnPrimaryBg
-
-  btnDangerColor
-  btnDangerBg
-  btnDangerBorder
-
-  btnHeightLg
-  btnPaddingLg
-  btnFontSizeLg
-  btnHeightSm
-  btnPaddingSm
-  btnBorderRadiusSm
-
-  textColor
-
-  borderColorBase
-
-  easeInOut
-
-  iconfontCssPrefix
-} from '../../../Style/themes/default'
-
-import {
-  buttonVariantOther
-  buttonVariantPrimary
-  buttonVariantGhost
-  buttonVariantDanger
-} from './variant'
-
-import { buttonSize } from './mixin' 
-
-btnPrefixCls = "#{antPrefix}-btn"
-
-btnGhostColor = textColor
-btnGhostBg = 'transparent'
-btnGhostBorder = borderColorBase
-
-btn = {
+button = {
   display: 'inline-block'
   marginBottom: 0
-  fontWeight: btnFontWeight
+  fontWeight: btn.font.weight
   textAlign: 'center'
   touchAction: 'manipulation'
   cursor: 'pointer'
   backgroundImage: 'none'
-  border: "#{borderWidthBase} #{borderStyleBase} transparent"
+  border: "#{border.base.width} #{border.base.style} transparent"
   whiteSpace: 'nowrap'
 
   # https://github.com/ant-design/ant-design/issues/7070
   lineHeight: 1.15
 
   (
-    buttonSize(
-      btnHeightBase
-      btnPaddingBase
-      fontSizeBase
-      btnBorderRadiusBase
+    mixin.btn.size(
+      btn.height.base
+      btn.padding.base
+      font.size.base
+      btn.border.radius.base
     )
   )...
 
   userSelect: 'none'
-  # transition: 'all .3s #{easeInOut}'
+  # transition: 'all .3s #{animation.ease.inOut}'
   position: 'relative'
 
-  "> .#{iconfontCssPrefix}":
+  "> .#{font.icon.prefix}":
     lineHeight: 1
 
   (
     do ->
-      defaultOutline =
+      base =
         outline: 0
       {
-        defaultOutline...
-        ':active': defaultOutline
-        ':focus': defaultOutline
+        base...
+        ':active': base
+        ':focus': base
       }
   )...
 
@@ -112,77 +75,81 @@ btn = {
       '[disabled]': disabled
   )...
 
-  
-
 }
 
 btnDefault = do ->
-  defaultBackground =
-    backgroundColor: '#fff'
-  {
-    (
-      buttonVariantOther(
-        btnDefaultColor
-        btnDefaultBg
-        btnDefaultBorder
-      )
-    )...
-    ':hover': defaultBackground
-    ':focus': defaultBackground
-    ':active': defaultBackground
-    '.active': defaultBackground
-  }
+  baseBg =
+    backgroundColor: color.fff
+  merge(
+    mixin.btn.variant.other(
+      btn.default.color
+      btn.default.bg
+      btn.default.border
+    )
+    ':hover': baseBg
+    ':focus': baseBg
+    ':active': baseBg
+    '.active': baseBg
+  )
 
 btnPrimary =
-  buttonVariantPrimary(
-    btnPrimaryColor
-    btnPrimaryBg
+  mixin.btn.variant.primary(
+    btn.primary.color
+    btn.primary.bg
   )
 
 btnGhost =
-  buttonVariantOther(
-    btnGhostColor
-    btnGhostBg
-    btnGhostBorder
+  mixin.btn.variant.other(
+    config.ghost.color
+    config.ghost.bg
+    config.ghost.border
   )
 
 btnDashed = {
   (
-    buttonVariantOther(
-      btnDefaultColor
-      btnDefaultBg
-      btnDefaultBorder
+    mixin.btn.variant.other(
+      btn.default.color
+      btn.default.bg
+      btn.default.border
     )
   )...
   borderStyle: 'dashed'
 }
 
 btnDanger =
-  buttonVariantDanger(
-    btnDangerColor
-    btnDangerBg
-    btnDangerBorder
+  mixin.btn.variant.danger(
+    btn.danger.color
+    btn.danger.bg
+    btn.danger.border
   )
 
+export {
+  button
+  btnDefault
+  btnPrimary
+  btnGhost
+  btnDashed
+  btnDanger
+}
 export default {
-  ".#{btnPrefixCls}": {
-    btn...
+  ".#{config.prefixCls}": {
+    button...
     btnDefault...
   }
 
-  ".#{btnPrefixCls}-primary": {
+  ".#{config.prefixCls}-primary": {
     btnPrimary...
   }
 
-  ".#{btnPrefixCls}-ghost": {
+  ".#{config.prefixCls}-ghost": {
     btnGhost...
   }
 
-  ".#{btnPrefixCls}-dashed": {
+  ".#{config.prefixCls}-dashed": {
     btnDashed...
   }
 
-  ".#{btnPrefixCls}-danger": {
+  ".#{config.prefixCls}-danger": {
     btnDanger...
   }
 
@@ -191,19 +158,20 @@ export default {
   '> span':
     pointerEvents: 'none'
 
-  ".#{btnPrefixCls}-lg":
-    buttonSize(
-      btnHeightLg
-      btnPaddingLg
-      btnFontSizeLg
-      btnBorderRadiusBase
+  ".#{config.prefixCls}-lg":
+    mixin.btn.size(
+      btn.height.lg
+      btn.padding.lg
+      btn.font.size.lg
+      btn.border.radius.base
     )
-  ".#{btnPrefixCls}-sm":
-    buttonSize(
-      btnHeightSm
-      btnPaddingSm
-      fontSizeBase
-      btnBorderRadiusSm
+
+  ".#{config.prefixCls}-sm":
+    mixin.btn.size(
+      btn.height.sm
+      btn.padding.sm
+      font.size.base
+      btn.border.radius.sm
     )
 
   ':before':
@@ -214,7 +182,7 @@ export default {
     right: '-1px'
     background: '#fff'
     opacity: '0.35'
-    content: '';
+    content: '""'
     borderRadius: 'inherit'
     zIndex: 1
     transition: 'opacity .2s'

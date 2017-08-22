@@ -40,6 +40,29 @@ colorPalette = (colorName, colorValue) ->
     }
   , {}
 
+fade = (color, percent) ->
+  (
+    (tinycolor color).setAlpha percent
+  ).toHexString()
+
+tint = (color, amount) ->
+  tinycolor
+  .mix '#ffffff'
+  , color, amount
+  .toHexString()
+
+shade = (color, amount) ->
+  tinycolor
+  .mix '#000000'
+  , color, amount
+  .toHexString()
+
+export {
+  fade
+  tint
+  shade
+}
+
 export default
   (Object.keys colors)
   .reduce (result, colorName) ->

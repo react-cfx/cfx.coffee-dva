@@ -1,0 +1,426 @@
+{
+  "default": {
+    ".ant-btn": {
+      "display": "inline-block",
+      "marginBottom": 0,
+      "fontWeight": 500,
+      "textAlign": "center",
+      "touchAction": "manipulation",
+      "cursor": "pointer",
+      "backgroundImage": "none",
+      "border": "1px solid transparent",
+      "whiteSpace": "nowrap",
+      "lineHeight": 1.15,
+      "padding": "0 15px",
+      "fontSize": "12px",
+      "borderRadius": "4px",
+      "height": "28px",
+      "userSelect": "none",
+      "position": "relative",
+      "> .anticon": {
+        "lineHeight": 1
+      },
+      "outline": 0,
+      ":active": {
+        "backgroundColor": "#fff"
+      },
+      ":focus": {
+        "backgroundColor": "#fff"
+      },
+      ":not([disabled]):hover": {
+        "textDecoration": "none"
+      },
+      ":not([disabled]):active": {
+        "outline": 0,
+        "transition": "none"
+      },
+      ".disabled": {
+        "cursor": "not-allowed",
+        "> *": {
+          "pointerEvents": "none"
+        }
+      },
+      "[disabled]": {
+        "cursor": "not-allowed",
+        "> *": {
+          "pointerEvents": "none"
+        }
+      },
+      "color": "#000000",
+      "backgroundColor": "#fff",
+      "borderColor": "#d9d9d9",
+      "> a:only-child": {
+        "color": "currentColor",
+        ":after": {
+          "content": "",
+          "position": "absolute",
+          "top": 0,
+          "left": 0,
+          "bottom": 0,
+          "right": 0,
+          "background": "transparent"
+        }
+      },
+      ":hover": {
+        "backgroundColor": "#fff"
+      },
+      ".active": {
+        "backgroundColor": "#fff"
+      }
+    },
+    ".ant-btn-primary": {
+      "color": "#fff",
+      "backgroundColor": "#fff",
+      "borderColor": "#fff",
+      "> a:only-child": {
+        "color": "currentColor",
+        ":after": {
+          "content": "",
+          "position": "absolute",
+          "top": 0,
+          "left": 0,
+          "bottom": 0,
+          "right": 0,
+          "background": "transparent"
+        }
+      },
+      ":hover": {
+        "color": "#fff",
+        "backgroundColor": "#ffffff",
+        "borderColor": "#ffffff",
+        "> a:only-child": {
+          "color": "currentColor",
+          ":after": {
+            "content": "",
+            "position": "absolute",
+            "top": 0,
+            "left": 0,
+            "bottom": 0,
+            "right": 0,
+            "background": "transparent"
+          }
+        }
+      },
+      ":focus": {
+        "color": "#fff",
+        "backgroundColor": "#ffffff",
+        "borderColor": "#ffffff",
+        "> a:only-child": {
+          "color": "currentColor",
+          ":after": {
+            "content": "",
+            "position": "absolute",
+            "top": 0,
+            "left": 0,
+            "bottom": 0,
+            "right": 0,
+            "background": "transparent"
+          }
+        }
+      },
+      ":active": {
+        "color": "#fff",
+        "backgroundColor": "#f2f2f2",
+        "borderColor": "#f2f2f2",
+        "> a:only-child": {
+          "color": "currentColor",
+          ":after": {
+            "content": "",
+            "position": "absolute",
+            "top": 0,
+            "left": 0,
+            "bottom": 0,
+            "right": 0,
+            "background": "transparent"
+          }
+        }
+      },
+      ".active": {
+        "color": "#fff",
+        "backgroundColor": "#f2f2f2",
+        "borderColor": "#f2f2f2",
+        "> a:only-child": {
+          "color": "currentColor",
+          ":after": {
+            "content": "",
+            "position": "absolute",
+            "top": 0,
+            "left": 0,
+            "bottom": 0,
+            "right": 0,
+            "background": "transparent"
+          }
+        }
+      }
+    },
+    ".ant-btn-ghost": {
+      "color": "#000000",
+      "backgroundColor": "transparent",
+      "borderColor": "#d9d9d9",
+      "> a:only-child": {
+        "color": "currentColor",
+        ":after": {
+          "content": "",
+          "position": "absolute",
+          "top": 0,
+          "left": 0,
+          "bottom": 0,
+          "right": 0,
+          "background": "transparent"
+        }
+      },
+      ":hover": {
+        "backgroundColor": "transparent",
+        "> a:only-child": {
+          "color": "currentColor",
+          ":after": {
+            "content": "",
+            "position": "absolute",
+            "top": 0,
+            "left": 0,
+            "bottom": 0,
+            "right": 0,
+            "background": "transparent"
+          }
+        }
+      },
+      ":focus": {
+        "backgroundColor": "transparent",
+        "> a:only-child": {
+          "color": "currentColor",
+          ":after": {
+            "content": "",
+            "position": "absolute",
+            "top": 0,
+            "left": 0,
+            "bottom": 0,
+            "right": 0,
+            "background": "transparent"
+          }
+        }
+      },
+      ":active": {
+        "backgroundColor": "transparent",
+        "> a:only-child": {
+          "color": "currentColor",
+          ":after": {
+            "content": "",
+            "position": "absolute",
+            "top": 0,
+            "left": 0,
+            "bottom": 0,
+            "right": 0,
+            "background": "transparent"
+          }
+        }
+      },
+      ".active": {
+        "backgroundColor": "transparent",
+        "> a:only-child": {
+          "color": "currentColor",
+          ":after": {
+            "content": "",
+            "position": "absolute",
+            "top": 0,
+            "left": 0,
+            "bottom": 0,
+            "right": 0,
+            "background": "transparent"
+          }
+        }
+      }
+    },
+    ".ant-btn-dashed": {
+      "color": "#000000",
+      "backgroundColor": "#fff",
+      "borderColor": "#d9d9d9",
+      "> a:only-child": {
+        "color": "currentColor",
+        ":after": {
+          "content": "",
+          "position": "absolute",
+          "top": 0,
+          "left": 0,
+          "bottom": 0,
+          "right": 0,
+          "background": "transparent"
+        }
+      },
+      ":hover": {
+        "backgroundColor": "#fff",
+        "> a:only-child": {
+          "color": "currentColor",
+          ":after": {
+            "content": "",
+            "position": "absolute",
+            "top": 0,
+            "left": 0,
+            "bottom": 0,
+            "right": 0,
+            "background": "transparent"
+          }
+        }
+      },
+      ":focus": {
+        "backgroundColor": "#fff",
+        "> a:only-child": {
+          "color": "currentColor",
+          ":after": {
+            "content": "",
+            "position": "absolute",
+            "top": 0,
+            "left": 0,
+            "bottom": 0,
+            "right": 0,
+            "background": "transparent"
+          }
+        }
+      },
+      ":active": {
+        "backgroundColor": "#fff",
+        "> a:only-child": {
+          "color": "currentColor",
+          ":after": {
+            "content": "",
+            "position": "absolute",
+            "top": 0,
+            "left": 0,
+            "bottom": 0,
+            "right": 0,
+            "background": "transparent"
+          }
+        }
+      },
+      ".active": {
+        "backgroundColor": "#fff",
+        "> a:only-child": {
+          "color": "currentColor",
+          ":after": {
+            "content": "",
+            "position": "absolute",
+            "top": 0,
+            "left": 0,
+            "bottom": 0,
+            "right": 0,
+            "background": "transparent"
+          }
+        }
+      },
+      "borderStyle": "dashed"
+    },
+    ".ant-btn-danger": {
+      "color": "#f04134",
+      "backgroundColor": "#f7f7f7",
+      "borderColor": "#d9d9d9",
+      "> a:only-child": {
+        "color": "currentColor",
+        ":after": {
+          "content": "",
+          "position": "absolute",
+          "top": 0,
+          "left": 0,
+          "bottom": 0,
+          "right": 0,
+          "background": "transparent"
+        }
+      },
+      ":hover": {
+        "backgroundColor": "#f04134",
+        "borderColor": "#f04134",
+        "> a:only-child": {
+          "color": "currentColor",
+          ":after": {
+            "content": "",
+            "position": "absolute",
+            "top": 0,
+            "left": 0,
+            "bottom": 0,
+            "right": 0,
+            "background": "transparent"
+          }
+        }
+      },
+      ":focus": {
+        "backgroundColor": "#f04134",
+        "borderColor": "#f04134",
+        "> a:only-child": {
+          "color": "currentColor",
+          ":after": {
+            "content": "",
+            "position": "absolute",
+            "top": 0,
+            "left": 0,
+            "bottom": 0,
+            "right": 0,
+            "background": "transparent"
+          }
+        }
+      },
+      ":active": {
+        "backgroundColor": "#e43e31",
+        "borderColor": "#e43e31",
+        "> a:only-child": {
+          "color": "currentColor",
+          ":after": {
+            "content": "",
+            "position": "absolute",
+            "top": 0,
+            "left": 0,
+            "bottom": 0,
+            "right": 0,
+            "background": "transparent"
+          }
+        }
+      },
+      ".active": {
+        "backgroundColor": "#e43e31",
+        "borderColor": "#e43e31",
+        "> a:only-child": {
+          "color": "currentColor",
+          ":after": {
+            "content": "",
+            "position": "absolute",
+            "top": 0,
+            "left": 0,
+            "bottom": 0,
+            "right": 0,
+            "background": "transparent"
+          }
+        }
+      }
+    },
+    "> i": {
+      "pointerEvents": "none"
+    },
+    "> span": {
+      "pointerEvents": "none"
+    },
+    ".ant-btn-lg": {
+      "padding": "0 15px",
+      "fontSize": "14px",
+      "borderRadius": "4px",
+      "height": "32px"
+    },
+    ".ant-btn-sm": {
+      "padding": "0 7px",
+      "fontSize": "12px",
+      "borderRadius": "4px",
+      "height": "22px"
+    },
+    ":before": {
+      "position": "absolute",
+      "top": "-1px",
+      "left": "-1px",
+      "bottom": "-1px",
+      "right": "-1px",
+      "background": "#fff",
+      "opacity": "0.35",
+      "content": "",
+      "borderRadius": "inherit",
+      "zIndex": 1,
+      "transition": "opacity .2s",
+      "pointerEvents": "none",
+      "display": "none"
+    }
+  }
+}

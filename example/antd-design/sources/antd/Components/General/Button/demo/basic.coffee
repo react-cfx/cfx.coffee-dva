@@ -30,7 +30,7 @@ export default =>
     , 'Primary'
 
     c_nbButton {
-      className: 'active'
+      # className: 'active'
       buttonStyle...
     }
     , 'Default'

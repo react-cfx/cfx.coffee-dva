@@ -1,4 +1,6 @@
-buttonSize = (
+import { btn } from '../../../../Style/themes'
+
+btnSize = (
   height
   padding
   fontSize
@@ -10,7 +12,7 @@ buttonSize = (
   height
 }
 
-buttonColor = (color, backgroud, border) ->
+btnColor = (color, backgroud, border) ->
   color: color
   backgroundColor: backgroud
   borderColor: border
@@ -18,7 +20,7 @@ buttonColor = (color, backgroud, border) ->
   '> a:only-child':
     color: 'currentColor'
     ':after':
-      content: ''
+      content: '""'
       position: 'absolute'
       top: 0
       left: 0
@@ -26,14 +28,14 @@ buttonColor = (color, backgroud, border) ->
       right: 0
       background: 'transparent'
 
-buttonDisabled = ->
-  disabledButtonColor = buttonColor(
-    btnDisableColor
-    btnDisableBg
-    btnDisableBorder
+btnDisabled = ->
+  btnColor(
+    btn.disable.color
+    btn.disable.bg
+    btn.disable.border
   )
 
-export {
-  buttonSize
-  buttonColor
-}
+export default
+  size: btnSize
+  color: btnColor
+  disabled: btnDisabled
