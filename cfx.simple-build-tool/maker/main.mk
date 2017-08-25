@@ -8,7 +8,8 @@ build:
 	mkdir -p ./public
 
 	if [ -d './sources/assets' ]; then \
-		cp -R ./sources/assets/* ./public; \
+		mkdir -p ./public/assets; \
+		cp -R ./sources/assets/* ./public/assets; \
 	fi
 
 	make .pug

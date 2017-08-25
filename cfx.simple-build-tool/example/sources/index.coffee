@@ -1,4 +1,3 @@
-import React from 'react'
 import dva, { connect } from 'dva'
 import { Router, Route } from 'dva/router'
 import { prefixDom } from 'cfx.dom'
