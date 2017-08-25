@@ -14,7 +14,7 @@ app.model
     add: (count) -> count + 1
     minus: (count) -> count - 1
 
-CFX = prefixDom
+CFX = prefixDom {
   default: {
     'div'
     'h2'
@@ -22,6 +22,7 @@ CFX = prefixDom
   }
   Router
   Route
+}
 
 # 3. View
 app.reducers = ({ count }) => { count }
@@ -48,25 +49,23 @@ app.components = (props) ->
         props.dispatch
           type: 'count/minus'
     , "-"
+
 App = (connect app.reducers) app.components
 
 # 4. Router
 app.router ({history}) =>
-  # {
-  #   c_Router
-  #   c_Route
-  # } = CFX
+  {
+    c_Router
+    c_Route
+  } = CFX
 
-  React.createElement(
-    Router
-    { history }
-    React.createElement(
-      Route
-      ,
-        path: "/"
-        component: App
-    )
-  )
+  c_Router {
+    history
+  }
+  ,
+    c_Route
+      path: "/"
+      component: App
 
 # 5. Start
 app.start '#root'
