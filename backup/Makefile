@@ -1,4 +1,4 @@
-pjName := cfx.coffee-dva
+pjName := cfx.coffe-dva
 
 docker:
 	docker run \

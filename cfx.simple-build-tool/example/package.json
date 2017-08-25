@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "cfx.dom": "file:../../cfx.dom",
+    "dva": "^1.2.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-runtime": "^6.26.0",
+    "coffeescript": "next",
+    "pug-cli": "^1.0.0-alpha6",
+    "roadhog": "^1.1.2"
+  }
+}
