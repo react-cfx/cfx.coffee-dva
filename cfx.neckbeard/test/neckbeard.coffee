@@ -67,7 +67,9 @@ import * as helpers from '../src/helper'
   misc
 } = helpers
 
-import * as Neckbeard from '../src'
+import Neckbeard from '../src'
+import cfxStyle from 'cfx.style/index.coffee'
+{ create } = Neckbeard cfxStyle
 
 target.flex = ->
   dd flex config.helpers.flex
@@ -149,14 +151,14 @@ target.allSelectors = ->
   dd (getAllSelectors allSelectorsGroup)._group
 
 target.nb = ->
-  nb = Neckbeard.create {}
+  nb = create {}
   dd (
     nb 'ft10 pt1 pb2'
     , debug: true
   )
   dd nb 'ft10 pt1 pb2'
 
-  nb = Neckbeard.create
+  nb = create
     useGlamor: false
   dd (
     nb 'ft10 pt1 pb2'
@@ -165,7 +167,7 @@ target.nb = ->
   dd nb 'ft10 pt1 pb2'
 
 target.print = ->
-  nb = Neckbeard.create {}
+  nb = create {}
   dd (
     nb 'blk6 xph'
     , debug: true

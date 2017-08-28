@@ -1,4 +1,10 @@
 {
+  "name": "cfx.neckbeard",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "make rebuild"
+  },
   "dependencies": {
     "assign-deep": "^0.4.6",
     "color": "^2.0.0",

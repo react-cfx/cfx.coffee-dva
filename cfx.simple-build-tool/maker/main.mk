@@ -80,7 +80,7 @@ extHandler = extHandler() { \
 	fi
 
 rebuild: clean
-	if [ -d './.storybook' ]; then \
+	if [ -d './sources/stories' ]; then \
 		make story_book; \
 	fi
 	make build
