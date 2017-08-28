@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "assign-deep": "^0.4.6",
+    "color": "^2.0.0",
+    "rgb-hex": "^2.1.0",
+    "cfx.style": "file:../cfx.style"
+  },
+  "devDependencies": {
+    "coffee-require": "^0.0.3",
+    "ddeyes": "^0.0.4",
+    "glamor": "^2.20.40",
+    "jsonfile": "^3.0.1",
+    "shelljs": "^0.7.8"
+  }
+}

@@ -1,16 +1,16 @@
 {
-  "name": "cfx.dom",
+  "name": "cfx.style",
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
     "postinstall": "make rebuild"
   },
   "dependencies": {
-    "react": "^15.6.1"
+    "assign-deep": "^0.4.6",
+    "glamor": "^2.20.40"
   },
   "devDependencies": {
     "coffee-require": "^0.0.3",
-    "coffeescript": "next",
-    "ddeyes": "^0.0.4"
+    "coffeescript": "next"
   }
 }
