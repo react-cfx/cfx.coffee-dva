@@ -21,4 +21,4 @@ yarn.lock
 yarn*log
 .yarn*
 
-./index.js
+/index.js
