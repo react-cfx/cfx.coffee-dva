@@ -1,5 +1,3 @@
-import React from "react"
-
 import Highlight from "react-highlight"
 
 import { prefixDom } from 'cfx.dom'
@@ -10,7 +8,6 @@ import H2 from '../components/H2'
 import H3 from '../components/H3'
 import Code from '../components/Code'
 import Copy from '../components/Copy'
-
 
 CFX = prefixDom {
   default: {

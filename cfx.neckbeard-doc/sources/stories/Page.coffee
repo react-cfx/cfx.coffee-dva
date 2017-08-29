@@ -5,12 +5,14 @@ import Overview from '../pages/00_Overview'
 import Installation from '../pages/01_Installation'
 import Usage from '../pages/02_Usage'
 import Breakpoints from '../pages/03_Breakpoints'
+import Examples from '../pages/04_Examples'
 
 CFX = prefixDom {
   Overview
   Installation
   Usage
   Breakpoints
+  Examples
 }
 
 export default ->
@@ -48,3 +50,11 @@ export default ->
     } = CFX
 
     c_Breakpoints {}
+
+  .add 'Examples'
+  , =>
+    {
+      c_Examples
+    } = CFX
+
+    c_Examples {}
