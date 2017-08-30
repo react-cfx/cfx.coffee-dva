@@ -44,16 +44,18 @@ export default Examples = =>
     c_H3 {}
     , 'Button Component - ReactJS'
 
-    c_div
-      className: "#{nb 'mb3'}"
+    c_div {
+      (nb 'mb3')...
+    }
     ,
-      c_iframe
+      c_iframe {
+        (nb 'w100')...
         height: "400"
         scrolling: "no"
         src: "//codepen.io/andrewdelprete/embed/VKYQqb/?height=400&theme-id=0&default-tab=js,result&embed-version=2"
         frameBorder: "no"
         allowTransparency: true
-        className: "#{nb 'w100'}"
+      }
       , 'See the Pen'
       ,
         c_a
@@ -76,26 +78,30 @@ export default Examples = =>
     ,
       c_div {}
       ,
-        c_iframe
+        c_iframe {
+          (nb 'w100')...
           height: "400"
           scrolling: "no"
           src: "//codepen.io/andrewdelprete/embed/JRdQWR/?height=400&theme-id=0&default-tab=js,result&embed-version=2"
           frameBorder: "no"
           allowTransparency: true
-          className: "#{nb 'w100'}"
+        }
         , "See the Pen "
         ,
-          c_a
+          c_a {
             href: "http://codepen.io/andrewdelprete/pen/JRdQWR/"
+          }
           , 'Neckbeard Field  Component Demo in ReactJS'
         , ' by Andrew Del Prete ('
         ,
-          c_a
+          c_a {
             href: 'http://codepen.io/andrewdelprete'
+          }
           , '@andrewdelprete'
         , ") on "
         ,
-          c_a
+          c_a {
             href:'http://codepen.io'
+          }
           , 'CodePen'
         , '.'

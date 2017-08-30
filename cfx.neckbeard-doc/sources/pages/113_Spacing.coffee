@@ -1,5 +1,7 @@
 import React from "react"
+
 import Highlight from "react-highlight"
+
 import { prefixDom } from 'cfx.dom'
 import nb from '../nb'
 
@@ -10,17 +12,19 @@ import Code from '../components/Code'
 import Copy from '../components/Copy'
 
 
+
+
 CFX = prefixDom {
-  default: {
+  default :{
+    'div'
     'table'
     'thead'
-    'tr'
-    'th'
     'tbody'
+    'th'
+    'tr'
     'td'
-    'div'
-    'a'
     'span'
+    'a'
   }
   H1
   H2
@@ -30,25 +34,27 @@ CFX = prefixDom {
   Highlight
 }
 
+
 ##
-  # Overview Page
+  # Spacing Page
   ##
 
-snippet ="""
-<div className={ nb("lg-dn") }>.lg-dn</div>
+snippet = """
+<div className={ nb("md-pa1 lg-pa3 xlg-pa5 mb2 brdr1 br5 tac") }>
+    Different Spacing Depending on Breakpoint
+</div>
 """
-snippet2 ="""
-// Neckbeard.defaultSettings.breakpoints
+
+snippet1 = """
+// Neckbeard.defaultSettings.helpers.spacing
 {
-    "sm": 300,
-    "md": 600,
-    "lg": 900,
-    "xlg": 1440
+    "limit": 10,
+    "incrementBy": 1,
+    "responsive": true
 }
 """
 
-export default BreakPoints = =>
-
+export default Spacing = =>
   {
     c_table
     c_thead
@@ -70,11 +76,29 @@ export default BreakPoints = =>
   c_div {}
   ,
     c_H1 {}
-    , 'Breakpoints'
+    ,'Spacing'
+    ,
+      c_span {
+        (nb 'tc1 ft3 capitalize fw3 ml1')...
+      },'Responsive'
+
     c_Copy {}
-    , ' Because Neckbeard ships with a standard set of breakpoints, many of the helpers are responsive. These helpers are generated from the breakpoints in your configuration. These are the default breakpoints:'
+    ,'The spacing system is set up by default to have 10 increments, each representing 1rem in size. For example, to achieve a'
+    ,
+      c_Code {}
+      ,'margin-top'
+    ,'which uses the 2nd step in the spacing scale (2rems by deafult), you would use'
+    ,
+      c_Code {}
+      ,'.mt2'
+    ,'If you wanted a <Code>padding-left</Code> with the 8th step in the scale, it‘s'
+    ,
+      c_Code {}
+      ,'.pl8'
+
     c_H2 {}
-    , 'Options'
+    ,'Options'
+
     c_table {
       (nb 'w100 mb2 ft4 tcg60 lh2 sans')...
     }
@@ -90,10 +114,7 @@ export default BreakPoints = =>
           },'Name'
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Prefix'
-          c_th {
-            (nb 'pa1 tal fwsemibold ph1')...
-          },'Target'
+          },'Class'
       c_tbody {}
       ,
         c_tr {
@@ -102,19 +123,13 @@ export default BreakPoints = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Small'
+          },'Margin All'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'.sm'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          ,
-            c_Code {}
-            ,'(min-width: 300px)'
+            ,'.ma'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -122,19 +137,13 @@ export default BreakPoints = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Medium'
+          },'Margin Vertical'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'.md-'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          ,
-            c_Code {}
-            ,'(min-width: 600px)'
+            ,'.mv'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -142,19 +151,13 @@ export default BreakPoints = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Large'
+          },'Margin Horizontal'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'.lg-'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          ,
-            c_Code {}
-            ,'(min-width: 900px)'
+            ,'.mh'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -162,19 +165,13 @@ export default BreakPoints = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Extra Large'
+          },'Margin Top'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'.xlg-'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          ,
-            c_Code {}
-            ,'(min-width: 1440px)'
+            ,'.mt'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -182,19 +179,13 @@ export default BreakPoints = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Only Small'
+          },'Margin Right'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'.only-sm-'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          ,
-            c_Code {}
-            ,'(max-width: 599px)'
+            ,'.mr'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -202,19 +193,13 @@ export default BreakPoints = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Only Medium'
+          },'Margin Bottom'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'.only-md-'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          ,
-            c_Code {}
-            ,'(min-width: 600px) and (max-width: 899px)'
+            ,'.mb'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -222,19 +207,13 @@ export default BreakPoints = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Only Large'
+          },'Margin Left'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'.only-lg-'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          ,
-            c_Code {}
-            ,'(min-width: 900px) and (max-width: 1439px)'
+            ,'.ml'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -242,28 +221,107 @@ export default BreakPoints = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Only Extra Large'
+          },'Padding All'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'.only-xlg-'
+            ,'.pa'
+
+        c_tr {
+          (nb 'brdr1--bottom bcg10')...
+        }
+        ,
+          c_td {
+            (nb 'tcg50 fw3 pv2 ph1')...
+          },'Padding Vertical'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'(min-width: 1440px)'
+            ,'.pv'
+
+        c_tr {
+          (nb 'brdr1--bottom bcg10')...
+        }
+        ,
+          c_td {
+            (nb 'tcg50 fw3 pv2 ph1')...
+          },'Padding Horizontal'
+          c_td {
+            (nb 'tcg50 fw3 pv2 ph1')...
+          }
+          ,
+            c_Code {}
+            ,'.ph'
+
+        c_tr {
+          (nb 'brdr1--bottom bcg10')...
+        }
+        ,
+          c_td {
+            (nb 'tcg50 fw3 pv2 ph1')...
+          },'Padding Top'
+          c_td {
+            (nb 'tcg50 fw3 pv2 ph1')...
+          }
+          ,
+            c_Code {}
+            ,'.pt'
+
+        c_tr {
+          (nb 'brdr1--bottom bcg10')...
+        }
+        ,
+          c_td {
+            (nb 'tcg50 fw3 pv2 ph1')...
+          },'Padding Right'
+          c_td {
+            (nb 'tcg50 fw3 pv2 ph1')...
+          }
+          ,
+            c_Code {}
+            ,'.pr'
+
+        c_tr {
+          (nb 'brdr1--bottom bcg10')...
+        }
+        ,
+          c_td {
+            (nb 'tcg50 fw3 pv2 ph1')...
+          },'Padding Bottom'
+          c_td {
+            (nb 'tcg50 fw3 pv2 ph1')...
+          }
+          ,
+            c_Code {}
+            ,'.pb'
+
+        c_tr {
+          (nb 'brdr1--bottom bcg10')...
+        }
+        ,
+          c_td {
+            (nb 'tcg50 fw3 pv2 ph1')...
+          },'Padding Left'
+          c_td {
+            (nb 'tcg50 fw3 pv2 ph1')...
+          }
+          ,
+            c_Code {}
+            ,'.pl'
 
     c_H2 {}
     ,'Example'
-    c_Copy {}
-    ,'You can use responsive prefixes to specify when an element should be shown on a page. The following would hide the element on the "lg" breakpoint.'
     c_Highlight {
       (nb 'pa2 mb2 lh5 ft4')...
-    }
-    ,snippet
+    },snippet
+
+    c_div {
+      (nb 'md-pa1 lg-pa3 xlg-pa5 mt2 mb2 brdr1 br5 tac')...
+    },'Different Spacing Depending on Breakpoint'
 
     c_H2 {}
     ,'Default Settings'
@@ -277,5 +335,6 @@ export default BreakPoints = =>
       },'Configuration'
     ,'to learn how to overwrite helper settings.'
 
-    c_Highlight {}
-    ,snippet2
+    c_Highlight {
+      (nb 'pa2 lh5 ft4')...
+    },snippet1

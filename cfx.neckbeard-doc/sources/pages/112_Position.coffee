@@ -1,5 +1,7 @@
 import React from "react"
+
 import Highlight from "react-highlight"
+
 import { prefixDom } from 'cfx.dom'
 import nb from '../nb'
 
@@ -10,17 +12,19 @@ import Code from '../components/Code'
 import Copy from '../components/Copy'
 
 
+
+
 CFX = prefixDom {
-  default: {
+  default :{
+    'div'
     'table'
     'thead'
-    'tr'
-    'th'
     'tbody'
+    'th'
+    'tr'
     'td'
-    'div'
-    'a'
     'span'
+    'a'
   }
   H1
   H2
@@ -30,25 +34,21 @@ CFX = prefixDom {
   Highlight
 }
 
+
 ##
-  # Overview Page
+  # Position Page
   ##
 
-snippet ="""
-<div className={ nb("lg-dn") }>.lg-dn</div>
-"""
-snippet2 ="""
-// Neckbeard.defaultSettings.breakpoints
+snippet = """
+// Neckbeard.defaultSettings.helpers.position
 {
-    "sm": 300,
-    "md": 600,
-    "lg": 900,
-    "xlg": 1440
+    "responsive": true
 }
 """
 
-export default BreakPoints = =>
 
+
+export default Position = =>
   {
     c_table
     c_thead
@@ -70,11 +70,15 @@ export default BreakPoints = =>
   c_div {}
   ,
     c_H1 {}
-    , 'Breakpoints'
-    c_Copy {}
-    , ' Because Neckbeard ships with a standard set of breakpoints, many of the helpers are responsive. These helpers are generated from the breakpoints in your configuration. These are the default breakpoints:'
+    ,'Position'
+    ,
+      c_span {
+        (nb 'tc1 ft3 capitalize fw3 ml1')...
+      },'Responsive'
+
     c_H2 {}
-    , 'Options'
+    ,'Options'
+
     c_table {
       (nb 'w100 mb2 ft4 tcg60 lh2 sans')...
     }
@@ -87,13 +91,10 @@ export default BreakPoints = =>
         ,
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Name'
+          },'Class'
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Prefix'
-          c_th {
-            (nb 'pa1 tal fwsemibold ph1')...
-          },'Target'
+          },'Value'
       c_tbody {}
       ,
         c_tr {
@@ -101,173 +102,139 @@ export default BreakPoints = =>
         }
         ,
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          },'Small'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'.sm'
+            ,'.relative'
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'(min-width: 300px)'
+            ,'position: relative'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
         ,
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          },'Medium'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'.md-'
+            ,'.absolute'
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'(min-width: 600px)'
+            ,'position: absolute'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
         ,
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          },'Large'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'.lg-'
+            ,'.fixed'
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'(min-width: 900px)'
+            ,'position: fixed'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
         ,
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          },'Extra Large'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'.xlg-'
+            ,'.pin-top'
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'(min-width: 1440px)'
+            ,'top: 0'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
         ,
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          },'Only Small'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'.only-sm-'
+            ,'.pin-right'
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'(max-width: 599px)'
+            ,'right: 0'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
         ,
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          },'Only Medium'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'.only-md-'
+            ,'.pin-bottom'
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'(min-width: 600px) and (max-width: 899px)'
+            ,'bottom: 0'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
         ,
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          },'Only Large'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'.only-lg-'
+            ,'.pin-left'
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'(min-width: 900px) and (max-width: 1439px)'
+            ,'left: 0'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
         ,
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          },'Only Extra Large'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'.only-xlg-'
+            ,'.pin-edges'
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'(min-width: 1440px)'
-
-    c_H2 {}
-    ,'Example'
-    c_Copy {}
-    ,'You can use responsive prefixes to specify when an element should be shown on a page. The following would hide the element on the "lg" breakpoint.'
-    c_Highlight {
-      (nb 'pa2 mb2 lh5 ft4')...
-    }
-    ,snippet
+            ,'top: 0; right: 0; bottom: 0; left: 0;'
 
     c_H2 {}
     ,'Default Settings'
-
     c_Copy {}
     ,'See'
     ,
@@ -277,5 +244,6 @@ export default BreakPoints = =>
       },'Configuration'
     ,'to learn how to overwrite helper settings.'
 
-    c_Highlight {}
-    ,snippet2
+    c_Highlight {
+      (nb 'pa2 lh5 ft4')...
+    },snippet
