@@ -12,6 +12,7 @@
     "@storybook/addons": "^3.2.6",
     "@storybook/react": "^3.2.8",
     "cfx.simple-build-tool": "file:../cfx.simple-build-tool",
+    "coffee-require": "^0.0.3",
     "coffeescript": "next",
     "ddeyes": "^0.0.4",
     "pug-cli": "^1.0.0-alpha6",

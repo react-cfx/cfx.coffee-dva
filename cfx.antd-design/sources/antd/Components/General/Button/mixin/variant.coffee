@@ -22,6 +22,7 @@ export default variant =
 
       ':active': active
       '.active': active
+      btn.disabled()...
     }
 
   primary: (color, backgroud) ->
@@ -36,6 +37,7 @@ export default variant =
 
       ':active': btn.color color, color7, color7
       '.active': btn.color color, color7, color7
+      btn.disabled()...
     }
 
   ghost: (color) ->
@@ -50,6 +52,7 @@ export default variant =
 
       ':active': btn.color color7, 'transparent', color7
       '.active': btn.color color7, 'transparent', color7
+      btn.disabled()...
     }
 
   danger: (color, backgroud, border) ->
@@ -62,4 +65,5 @@ export default variant =
 
       ':active': btn.color theme.btn.primary.color, color7, color7
       '.active': btn.color theme.btn.primary.color, color7, color7
+      btn.disabled()...
     }

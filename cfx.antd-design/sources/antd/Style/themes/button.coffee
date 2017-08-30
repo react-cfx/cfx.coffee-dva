@@ -16,8 +16,8 @@ btnHeight =
 export default btn = do ->
 
   height: btnHeight
-  default: btnDefault 
-  
+  default: btnDefault
+
   font:
     weight: 500
     size:

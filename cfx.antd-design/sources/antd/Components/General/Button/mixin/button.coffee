@@ -32,20 +32,58 @@ btnColor = (color, backgroud, border) ->
       right: 0
       background: 'transparent'
 
-btnDisabled = ->
-  btnColor(
-    btn.disable.color
-    btn.disable.bg
-    btn.disable.border
-  )
+export default button =
 
-btnCircle = (btnClassName = 'btn') ->
-  square btn.circle.size
-  btnSize btn.circle.size, 0
-  , "#{font.size.base + 2}px", '50%'
-
-export default
   size: btnSize
   color: btnColor
-  disabled: btnDisabled
-  circle: btnCircle
+
+  disabled: ->
+    disabled = btnColor(
+      btn.disable.color
+      btn.disable.bg
+      btn.disable.border
+    )
+    '.disabled': disabled
+    '[disabled]':
+      ':hover': disabled
+      ':focus': disabled
+      ':active': disabled
+      '.active': disabled
+
+  circle: (btnClassName = 'btn') -> {
+
+    (square btn.circle.size)...
+
+    (
+      btnSize(
+        btn.circle.size
+        0
+        "#{font.size.base} + 2px"
+        '50%'
+      )
+    )...
+
+    "&.#{btnClassName}-lg": {
+      (square btn.circle.size.lg)...
+      (
+        btnSize(
+          btn.circle.size.lg
+          0
+          "#{btn.font.size.lg} + 2px"
+          '50%'
+        )
+      )...
+    }
+
+    "&.#{btnClassName}-sm": {
+      (square btn.circle.size.sm)...
+      (
+        btnSize(
+          btn.circle.size.sm
+          0
+          "#{btn.font.size.sm} + 2px"
+          '50%'
+        )
+      )...
+    }
+  }
