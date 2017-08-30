@@ -174,6 +174,11 @@ export default {
       btn.border.radius.sm
     )
 
+  ".#{config.prefixCls}-circle":
+    mixin.btn.circle config.prefixCls
+  ".#{config.prefixCls}-circle-outline":
+    mixin.btn.circle config.prefixCls
+
   ':before':
     position: 'absolute'
     top: '-1px'

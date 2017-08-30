@@ -1,4 +1,8 @@
-import { btn } from '../../../../Style/themes'
+import {
+  btn
+  font
+} from '../../../../Style/themes'
+import { square } from '../../../../Style/mixins/size'
 
 btnSize = (
   height
@@ -35,7 +39,13 @@ btnDisabled = ->
     btn.disable.border
   )
 
+btnCircle = (btnClassName = 'btn') ->
+  square btn.circle.size
+  btnSize btn.circle.size, 0
+  , "#{font.size.base + 2}px", '50%'
+
 export default
   size: btnSize
   color: btnColor
   disabled: btnDisabled
+  circle: btnCircle
