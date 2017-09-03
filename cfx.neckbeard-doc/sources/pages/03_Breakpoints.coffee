@@ -87,13 +87,13 @@ export default BreakPoints = =>
         ,
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Name'
+          }, 'Name'
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Prefix'
+          }, 'Prefix'
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Target'
+          }, 'Target'
       c_tbody {}
       ,
         c_tr {
@@ -108,13 +108,13 @@ export default BreakPoints = =>
           }
           ,
             c_Code {}
-            ,'.sm'
+            , '.sm'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'(min-width: 300px)'
+            , '(min-width: 300px)'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -122,7 +122,7 @@ export default BreakPoints = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Medium'
+          }, 'Medium'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }

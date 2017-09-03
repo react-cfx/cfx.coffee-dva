@@ -70,14 +70,14 @@ export default TextDecoration = =>
   c_div {}
   ,
     c_H1 {}
-    ,'Text Decoration'
+    , 'Text Decoration'
     ,
       c_span {
         (nb 'tc1 ft3 capitalize fw3 ml1')...
-      },'Not Responsive'
+      }, 'Not Responsive'
 
     c_H2 {}
-    ,'Options'
+    , 'Options'
 
     c_table {
       (nb 'w100 mb2 ft4 tcg60 lh2 sans')...
@@ -91,10 +91,10 @@ export default TextDecoration = =>
         ,
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Name'
+          }, 'Name'
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Class'
+          }, 'Class'
       c_tbody {}
       ,
         c_tr {
@@ -106,13 +106,13 @@ export default TextDecoration = =>
           }
           ,
             c_Code {}
-            ,'Overline'
+            , 'Overline'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'.overline'
+            , '.overline'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -123,13 +123,13 @@ export default TextDecoration = =>
           }
           ,
             c_Code {}
-            ,'Line Through'
+            , 'Line Through'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'.line-through'
+            , '.line-through'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -140,13 +140,13 @@ export default TextDecoration = =>
           }
           ,
             c_Code {}
-            ,'Underline'
+            , 'Underline'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'.underline'
+            , '.underline'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -157,25 +157,25 @@ export default TextDecoration = =>
           }
           ,
             c_Code {}
-            ,'Remove Text Decoration'
+            , 'Remove Text Decoration'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'.xtd'
+            , '.xtd'
 
     c_H2 {}
-    ,'Default Settings'
+    , 'Default Settings'
 
     c_Copy {}
-    ,'See'
+    , 'See'
     ,
       c_a {
         (nb 'tc5 xtd h-tc1')...
         href:'https://www.neckbeardjs.com/usage#configuration'
-      },'Configuration'
-    ,'to learn how to overwrite helper settings.'
+      }, 'Configuration'
+    , 'to learn how to overwrite helper settings.'
 
     c_Highlight {
       (nb 'pa2 lh5 ft4')...

@@ -70,14 +70,14 @@ export default Position = =>
   c_div {}
   ,
     c_H1 {}
-    ,'Position'
+    , 'Position'
     ,
       c_span {
         (nb 'tc1 ft3 capitalize fw3 ml1')...
-      },'Responsive'
+      }, 'Responsive'
 
     c_H2 {}
-    ,'Options'
+    , 'Options'
 
     c_table {
       (nb 'w100 mb2 ft4 tcg60 lh2 sans')...
@@ -91,10 +91,10 @@ export default Position = =>
         ,
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Class'
+          }, 'Class'
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Value'
+          }, 'Value'
       c_tbody {}
       ,
         c_tr {
@@ -106,13 +106,13 @@ export default Position = =>
           }
           ,
             c_Code {}
-            ,'.relative'
+            , '.relative'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'position: relative'
+            , 'position: relative'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -123,13 +123,13 @@ export default Position = =>
           }
           ,
             c_Code {}
-            ,'.absolute'
+            , '.absolute'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'position: absolute'
+            , 'position: absolute'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -140,13 +140,13 @@ export default Position = =>
           }
           ,
             c_Code {}
-            ,'.fixed'
+            , '.fixed'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'position: fixed'
+            , 'position: fixed'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -157,13 +157,13 @@ export default Position = =>
           }
           ,
             c_Code {}
-            ,'.pin-top'
+            , '.pin-top'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'top: 0'
+            , 'top: 0'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -174,13 +174,13 @@ export default Position = =>
           }
           ,
             c_Code {}
-            ,'.pin-right'
+            , '.pin-right'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'right: 0'
+            , 'right: 0'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -191,13 +191,13 @@ export default Position = =>
           }
           ,
             c_Code {}
-            ,'.pin-bottom'
+            , '.pin-bottom'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'bottom: 0'
+            , 'bottom: 0'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -208,13 +208,13 @@ export default Position = =>
           }
           ,
             c_Code {}
-            ,'.pin-left'
+            , '.pin-left'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'left: 0'
+            , 'left: 0'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -225,24 +225,24 @@ export default Position = =>
           }
           ,
             c_Code {}
-            ,'.pin-edges'
+            , '.pin-edges'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'top: 0; right: 0; bottom: 0; left: 0;'
+            , 'top: 0; right: 0; bottom: 0; left: 0;'
 
     c_H2 {}
-    ,'Default Settings'
+    , 'Default Settings'
     c_Copy {}
-    ,'See'
+    , 'See'
     ,
       c_a {
         (nb 'tc5 xtd h-tc1')...
         href:'https://www.neckbeardjs.com/usage#configuration'
-      },'Configuration'
-    ,'to learn how to overwrite helper settings.'
+      }, 'Configuration'
+    , 'to learn how to overwrite helper settings.'
 
     c_Highlight {
       (nb 'pa2 lh5 ft4')...

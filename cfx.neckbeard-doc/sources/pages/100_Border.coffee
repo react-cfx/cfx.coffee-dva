@@ -73,7 +73,7 @@ export default Border = =>
         (nb 'tc1 ft3 capitalize fw3 ml1')...
       },'Responsive'
     c_H2 {}
-    ,'Options'
+    , 'Options'
     c_table {
       (nb 'w100 mb2 ft4 tcg60 lh2 sans')...
     },
@@ -81,7 +81,8 @@ export default Border = =>
       ,
         c_tr {
           (nb 'brdr1--bottom bcg10 bgg05')...
-        },
+        }
+        ,
           c_th {
             (nb 'tcg50 fw3 pv1 ph1 tal fwsemibold ph1')...
           },'Class'
@@ -89,6 +90,7 @@ export default Border = =>
             (nb 'tcg50 fw3 pv1 ph1 tal fwsemibold ph1')...
           },'Purpose'
       c_tbody {}
+      ,
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         },
@@ -104,12 +106,13 @@ export default Border = =>
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
+        ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'.brdr1'
+            , '.brdr1'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           },'Add a border to all sides of an element'
@@ -138,7 +141,7 @@ export default Border = =>
             ,'.brdr1--right'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Add a border to the right side of an element'
+          }, 'Add a border to the right side of an element'
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }

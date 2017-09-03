@@ -85,9 +85,9 @@ export default Float = =>
     ,
       c_span {
         (nb 'tc1 ft3 capitalize fw3 ml1')...
-      },'Responsive'
+      }, 'Responsive'
     c_H2 {}
-    ,'Options'
+    , 'Options'
 
     c_table {
       (nb 'w100 mb2 ft4 tcg60 lh2 sans')...
@@ -101,10 +101,10 @@ export default Float = =>
         ,
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Name'
+          }, 'Name'
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Class'
+          }, 'Class'
 
       c_tbody {}
       ,
@@ -117,14 +117,14 @@ export default Float = =>
           }
           ,
             c_Code {}
-            ,'.fl'
+            , '.fl'
 
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'float: left'
+            , 'float: left'
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
@@ -134,32 +134,14 @@ export default Float = =>
           }
           ,
             c_Code {}
-            ,'.fr'
+            , '.fr'
 
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'float: right'
-
-        c_tr {
-          (nb 'brdr1--bottom bcg10')...
-        }
-        ,
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          ,
-            c_Code {}
-            ,'.fn'
-
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          ,
-            c_Code {}
-            ,'float: none'
+            , 'float: right'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -170,14 +152,14 @@ export default Float = =>
           }
           ,
             c_Code {}
-            ,'.finit'
+            , '.fn'
 
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'float: initial'
+            , 'float: none'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -188,17 +170,35 @@ export default Float = =>
           }
           ,
             c_Code {}
-            ,'.finhe'
+            , '.finit'
 
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'float: inherit'
+            , 'float: initial'
+
+        c_tr {
+          (nb 'brdr1--bottom bcg10')...
+        }
+        ,
+          c_td {
+            (nb 'tcg50 fw3 pv2 ph1')...
+          }
+          ,
+            c_Code {}
+            , '.finhe'
+
+          c_td {
+            (nb 'tcg50 fw3 pv2 ph1')...
+          }
+          ,
+            c_Code {}
+            , 'float: inherit'
 
     c_H2 {}
-    ,'Example'
+    , 'Example'
     c_Highlight {
       (nb 'pa2 mb2 lh5 ft4')...
     },snippet
@@ -209,16 +209,16 @@ export default Float = =>
     ,
       c_div {
         (nb 'md-fl lg-fr mb2 brdr1 br5 tac pv1')...
-      },' Float right large breakpoint, Float left medium breakpoint.'
+      }, ' Float right large breakpoint, Float left medium breakpoint.'
     c_H2 {}
-    ,'Default Settings'
+    , 'Default Settings'
     c_Copy {}
-    ,'See'
+    , 'See'
     ,
       c_a {
         (nb 'tc5 xtd h-tc1')...
-      },'Configuration'
-    ,'to learn how to overwrite helper settings.'
+      }, 'Configuration'
+    , 'to learn how to overwrite helper settings.'
 
     c_Highlight {
       (nb 'pa2 lh5 ft4')...

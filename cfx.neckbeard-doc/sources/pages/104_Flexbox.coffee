@@ -99,10 +99,10 @@ export default Flexbox = =>
         ,
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Class'
+          },' Class'
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Value'
+          },' Value'
       c_tbody {}
       ,
         c_tr {
@@ -114,36 +114,18 @@ export default Flexbox = =>
           }
           ,
             c_Code {}
-            ,'.flex'
-          ,'or'
+            ,' .flex'
+          ,' or'
           ,
             c_Code {}
-            ,'.df'
+            ,' .df'
 
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'display: flex'
-
-        c_tr {
-          (nb 'brdr1--bottom bcg10')...
-        }
-        ,
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          ,
-            c_Code {}
-            ,'.iflex'
-
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          ,
-            c_Code {}
-            ,'display: inline-flex'
+            ,' display: flex'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -154,13 +136,14 @@ export default Flexbox = =>
           }
           ,
             c_Code {}
-            ,'.flex-grow'
+            ,' .iflex'
+
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'flex-grow: 1'
+            ,' display: inline-flex'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -171,13 +154,13 @@ export default Flexbox = =>
           }
           ,
             c_Code {}
-            ,'.fb100'
+            ,' .flex-grow'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'flex-basis: 100%'
+            ,' flex-grow: 1'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -188,13 +171,13 @@ export default Flexbox = =>
           }
           ,
             c_Code {}
-            ,'.fdr'
+            ,' .fb100'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'flex-direction: row'
+            ,' flex-basis: 100%'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -205,13 +188,13 @@ export default Flexbox = =>
           }
           ,
             c_Code {}
-            ,'.fdrr'
+            ,' .fdr'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'flex-direction: row-reverse'
+            ,' flex-direction: row'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -222,13 +205,13 @@ export default Flexbox = =>
           }
           ,
             c_Code {}
-            ,'.fdc'
+            ,' .fdrr'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'flex-direction: column'
+            ,' flex-direction: row-reverse'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -239,20 +222,37 @@ export default Flexbox = =>
           }
           ,
             c_Code {}
-            ,'.fdcr'
+            ,' .fdc'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'flex-direction: column-reverse'
+            ,' flex-direction: column'
+
+        c_tr {
+          (nb 'brdr1--bottom bcg10')...
+        }
+        ,
+          c_td {
+            (nb 'tcg50 fw3 pv2 ph1')...
+          }
+          ,
+            c_Code {}
+            ,' .fdcr'
+          c_td {
+            (nb 'tcg50 fw3 pv2 ph1')...
+          }
+          ,
+            c_Code {}
+            ,' flex-direction: column-reverse'
 
     c_div {
       (nb 'mb1')...
     }
     ,
       c_H3 {}
-      ,'Content Justification'
+      ,' Content Justification'
 
     c_table {
       (nb 'w100 mb2 ft4 tcg60 lh2 sans')...
@@ -266,10 +266,10 @@ export default Flexbox = =>
         ,
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Class'
+          },' Class'
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Value'
+          },' Value'
 
       c_tbody {}
       ,
@@ -282,13 +282,13 @@ export default Flexbox = =>
           }
           ,
             c_Code {}
-            ,'jcc'
+            ,' jcc'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'jjustify-content: center'
+            ,' jjustify-content: center'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -299,13 +299,13 @@ export default Flexbox = =>
           }
           ,
             c_Code {}
-            ,'.jcsb'
+            ,' .jcsb'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'justify-content: space-between'
+            ,' justify-content: space-between'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -316,13 +316,13 @@ export default Flexbox = =>
           }
           ,
             c_Code {}
-            ,'.jcsa'
+            ,' .jcsa'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'justify-content: space-around'
+            ,' justify-content: space-around'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -333,13 +333,13 @@ export default Flexbox = =>
           }
           ,
             c_Code {}
-            ,'.jcfs'
+            ,' .jcfs'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'justify-content: flex-start'
+            ,' justify-content: flex-start'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -350,20 +350,20 @@ export default Flexbox = =>
           }
           ,
             c_Code {}
-            ,'.jcfe'
+            ,' .jcfe'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'justify-content: flex-end'
+            ,' justify-content: flex-end'
 
     c_div {
       (nb 'mb1')...
     }
     ,
       c_H3 {}
-      ,'Item Alignment'
+      ,' Item Alignment'
 
     c_table {
       (nb 'w100 mb2 ft4 tcg60 lh2 sans')...
@@ -377,11 +377,11 @@ export default Flexbox = =>
         ,
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Class'
+          },' Class'
 
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Value'
+          },' Value'
 
       c_tbody {}
       ,
@@ -394,13 +394,13 @@ export default Flexbox = =>
           }
           ,
             c_Code {}
-            ,'.aic'
+            ,' .aic'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'align-items: center'
+            ,' align-items: center'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -411,13 +411,13 @@ export default Flexbox = =>
           }
           ,
             c_Code {}
-            ,'.aifs'
+            ,' .aifs'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'align-items: flex-start'
+            ,' align-items: flex-start'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -428,13 +428,13 @@ export default Flexbox = =>
           }
           ,
             c_Code {}
-            ,'.aife'
+            ,' .aife'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'align-items: flex-end'
+            ,' align-items: flex-end'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -445,13 +445,13 @@ export default Flexbox = =>
           }
           ,
             c_Code {}
-            ,'.ais'
+            ,' .ais'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'align-items: stretch'
+            ,' align-items: stretch'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -462,20 +462,20 @@ export default Flexbox = =>
           }
           ,
             c_Code {}
-            ,'.aib'
+            ,' .aib'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'align-items: baseline'
+            ,' align-items: baseline'
 
     c_div {
       (nb 'mb1')...
     }
     ,
       c_H3 {}
-      ,'Content Alignment'
+      ,' Content Alignment'
 
     c_table {
       (nb 'w100 mb2 ft4 tcg60 lh2 sans')...
@@ -489,10 +489,10 @@ export default Flexbox = =>
         ,
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Class'
+          },' Class'
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Value'
+          },' Value'
 
       c_tbody {}
       ,
@@ -505,13 +505,13 @@ export default Flexbox = =>
           }
           ,
             c_Code {}
-            ,'.acc'
+            ,' .acc'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'align-content: center'
+            ,' align-content: center'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -522,13 +522,13 @@ export default Flexbox = =>
           }
           ,
             c_Code {}
-            ,'.acfs'
+            ,' .acfs'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'align-content: flex-start'
+            ,' align-content: flex-start'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -539,13 +539,13 @@ export default Flexbox = =>
           }
           ,
             c_Code {}
-            ,'.acfe'
+            ,' .acfe'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'align-content: flex-end'
+            ,' align-content: flex-end'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -556,13 +556,13 @@ export default Flexbox = =>
           }
           ,
             c_Code {}
-            ,'.acs'
+            ,' .acs'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'align-content: stretch'
+            ,' align-content: stretch'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -573,16 +573,16 @@ export default Flexbox = =>
           }
           ,
             c_Code {}
-            ,'.acb'
+            ,' .acb'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'align-content: baseline'
+            ,' align-content: baseline'
 
     c_H2 {}
-    ,'Example'
+    ,' Example'
     c_Highlight
       className:"#{nb 'pa2 mb2 lh5 ft4'}"
       snippet
@@ -598,10 +598,10 @@ export default Flexbox = =>
       ,
         c_span {
           (nb 'ft5 tc1 tac fwthin')...
-        },'Vertical and Horizontal Centering'
+        },' Vertical and Horizontal Centering'
 
     c_H2 {}
-    ,'Default Settings'
+    ,' Default Settings'
 
     c_Copy {}
     ,

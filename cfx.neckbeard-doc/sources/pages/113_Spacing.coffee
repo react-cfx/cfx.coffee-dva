@@ -76,28 +76,28 @@ export default Spacing = =>
   c_div {}
   ,
     c_H1 {}
-    ,'Spacing'
+    , 'Spacing'
     ,
       c_span {
         (nb 'tc1 ft3 capitalize fw3 ml1')...
-      },'Responsive'
+      }, 'Responsive'
 
     c_Copy {}
-    ,'The spacing system is set up by default to have 10 increments, each representing 1rem in size. For example, to achieve a'
+    , 'The spacing system is set up by default to have 10 increments, each representing 1rem in size. For example, to achieve a'
     ,
       c_Code {}
-      ,'margin-top'
-    ,'which uses the 2nd step in the spacing scale (2rems by deafult), you would use'
+      , 'margin-top'
+    , 'which uses the 2nd step in the spacing scale (2rems by deafult), you would use'
     ,
       c_Code {}
-      ,'.mt2'
-    ,'If you wanted a <Code>padding-left</Code> with the 8th step in the scale, it‘s'
+      , '.mt2'
+    , 'If you wanted a <Code>padding-left</Code> with the 8th step in the scale, it‘s'
     ,
       c_Code {}
-      ,'.pl8'
+      , '.pl8'
 
     c_H2 {}
-    ,'Options'
+    , 'Options'
 
     c_table {
       (nb 'w100 mb2 ft4 tcg60 lh2 sans')...
@@ -111,10 +111,10 @@ export default Spacing = =>
         ,
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Name'
+          }, 'Name'
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Class'
+          }, 'Class'
       c_tbody {}
       ,
         c_tr {
@@ -123,13 +123,13 @@ export default Spacing = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Margin All'
+          }, 'Margin All'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'.ma'
+            , '.ma'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -137,13 +137,13 @@ export default Spacing = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Margin Vertical'
+          }, 'Margin Vertical'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'.mv'
+            , '.mv'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -151,13 +151,13 @@ export default Spacing = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Margin Horizontal'
+          }, 'Margin Horizontal'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'.mh'
+            , '.mh'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -165,13 +165,13 @@ export default Spacing = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Margin Top'
+          }, 'Margin Top'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'.mt'
+            , '.mt'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -179,13 +179,13 @@ export default Spacing = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Margin Right'
+          }, 'Margin Right'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'.mr'
+            , '.mr'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -193,13 +193,13 @@ export default Spacing = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Margin Bottom'
+          }, 'Margin Bottom'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'.mb'
+            , '.mb'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -207,13 +207,13 @@ export default Spacing = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Margin Left'
+          }, 'Margin Left'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'.ml'
+            , '.ml'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -221,13 +221,13 @@ export default Spacing = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Padding All'
+          }, 'Padding All'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'.pa'
+            , '.pa'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -235,13 +235,13 @@ export default Spacing = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Padding Vertical'
+          }, 'Padding Vertical'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'.pv'
+            , '.pv'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -249,13 +249,13 @@ export default Spacing = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Padding Horizontal'
+          }, 'Padding Horizontal'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'.ph'
+            , '.ph'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -263,13 +263,13 @@ export default Spacing = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Padding Top'
+          }, 'Padding Top'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'.pt'
+            , '.pt'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -277,13 +277,13 @@ export default Spacing = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Padding Right'
+          }, 'Padding Right'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'.pr'
+            , '.pr'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -291,13 +291,13 @@ export default Spacing = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Padding Bottom'
+          }, 'Padding Bottom'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'.pb'
+            , '.pb'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -305,35 +305,35 @@ export default Spacing = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Padding Left'
+          }, 'Padding Left'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'.pl'
+            , '.pl'
 
     c_H2 {}
-    ,'Example'
+    , 'Example'
     c_Highlight {
       (nb 'pa2 mb2 lh5 ft4')...
     },snippet
 
     c_div {
       (nb 'md-pa1 lg-pa3 xlg-pa5 mt2 mb2 brdr1 br5 tac')...
-    },'Different Spacing Depending on Breakpoint'
+    }, 'Different Spacing Depending on Breakpoint'
 
     c_H2 {}
-    ,'Default Settings'
+    , 'Default Settings'
 
     c_Copy {}
-    ,'See'
+    , 'See'
     ,
       c_a {
         (nb 'tc5 xtd h-tc1')...
         href:'https://www.neckbeardjs.com/usage#configuration'
-      },'Configuration'
-    ,'to learn how to overwrite helper settings.'
+      }, 'Configuration'
+    , 'to learn how to overwrite helper settings.'
 
     c_Highlight {
       (nb 'pa2 lh5 ft4')...

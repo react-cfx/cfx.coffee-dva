@@ -73,16 +73,22 @@ export default Display = =>
     c_span
   } = CFX
 
-  c_div {}
+  pd =
+    style:
+      padding:'30px 36px'
+
+  c_div {
+    pd...
+  }
   ,
     c_H1 {}
-    ,'Display'
+    ,' Display'
     , c_span {
         (nb "tc1 ft3 capitalize fw3 ml1")...
       }
-      ,'Responsive'
+      ,' Responsive'
     c_H2 {}
-    ,'Options'
+    ,' Options'
     c_table {
       (nb "w100 mb2 ft4 tcg60 lh2 sans")...
     }
@@ -96,11 +102,11 @@ export default Display = =>
           c_th {
             (nb "pa1 tal fwsemibold ph1")...
           }
-          ,'Name'
+          ,' Name'
           c_th {
             (nb "pa1 tal fwsemibold ph1")...
           }
-          ,'Class'
+          ,' Class'
       c_tbody {}
       ,
         c_tr {
@@ -110,11 +116,11 @@ export default Display = =>
           c_td {
             (nb "tcg50 fw3 pv2 ph1")...
           }
-          ,'Display Block'
+          ,' Display Block'
           c_td {
             (nb "tcg50 fw3 pv2 ph1")...
           }
-          ,'.db'
+          ,' .db'
         c_tr {
           (nb "brdr1--bottom bcg10")...
         }
@@ -122,11 +128,11 @@ export default Display = =>
           c_td {
             (nb "tcg50 fw3 pv2 ph1")...
           }
-          ,'Display Inline'
+          ,' Display Inline'
           c_td {
             (nb "tcg50 fw3 pv2 ph1")...
           }
-          ,'.di'
+          ,' .di'
 
         c_tr {
           (nb "brdr1--bottom bcg10")...
@@ -135,11 +141,11 @@ export default Display = =>
           c_td {
             (nb "tcg50 fw3 pv2 ph1")...
           }
-          ,'Display Inline-block'
+          ,' Display Inline-block'
           c_td {
             (nb "tcg50 fw3 pv2 ph1")...
           }
-          ,'.dib'
+          , '.dib'
 
         c_tr {
           (nb "brdr1--bottom bcg10")...
@@ -148,11 +154,11 @@ export default Display = =>
           c_td {
             (nb "tcg50 fw3 pv2 ph1")...
           }
-          ,'Display None'
+          , 'Display None'
           c_td {
             (nb "tcg50 fw3 pv2 ph1")...
           }
-          ,'.dn'
+          , '.dn'
 
         c_tr {
           (nb "brdr1--bottom bcg10")...
@@ -161,15 +167,15 @@ export default Display = =>
           c_td {
             (nb "tcg50 fw3 pv2 ph1")...
           }
-          ,'Full Width'
+          , 'Full Width'
           ,
             c_span {
               (nb "tc1 ft4 fw3 ml1")...
             }
-            ,'Not Responsive'
+            , 'Not Responsive'
           c_td {
             (nb "tcg50 fw3 pv2 ph1")...
-          },'.full'
+          }, '.full'
 
         c_tr {
           (nb "brdr1--bottom bcg10")...
@@ -178,17 +184,17 @@ export default Display = =>
           c_td {
             (nb "tcg50 fw3 pv2 ph1")...
           }
-          ,'w100'
+          , 'w100'
           ,
             c_span {
               (nb "tc1 ft4 fw3 ml1")...
             }
-            ,'Not Responsive'
+            , 'Not Responsive'
           c_td {
             (nb "tcg50 fw3 pv2 ph1")...
-          },'.w100'
+          }, '.w100'
     c_H2 {}
-    ,"Example"
+    , "Example"
 
     c_Highlight {
       (nb "pa2 mb2 lh5 ft4")...

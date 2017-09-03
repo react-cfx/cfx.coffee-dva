@@ -71,14 +71,14 @@ export default Misc = =>
   c_div {}
   ,
     c_H1 {}
-    ,'Misc'
+    , 'Misc'
     ,
       c_span {
         (nb 'tc1 ft3 capitalize fw3 ml1')...
-      },'Not Responsive'
+      }, 'Not Responsive'
 
     c_H2 {}
-    ,'Options'
+    , 'Options'
 
     c_table {
       (nb 'w100 mb2 ft4 tcg60 lh2 sans')...
@@ -92,10 +92,10 @@ export default Misc = =>
         ,
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Class'
+          }, 'Class'
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Purpose'
+          }, 'Purpose'
       c_tbody {}
       ,
         c_tr {
@@ -107,11 +107,11 @@ export default Misc = =>
           }
           ,
             c_Code {}
-            ,'.center'
+            , '.center'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
-          ,'Center an element using auto margin.'
+          , 'Center an element using auto margin.'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -122,11 +122,11 @@ export default Misc = =>
           }
           ,
             c_Code {}
-            ,'.default-hover'
+            , '.default-hover'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
-          ,'Lower the opacity for an element on its hover state'
+          , 'Lower the opacity for an element on its hover state'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -137,11 +137,11 @@ export default Misc = =>
           }
           ,
             c_Code {}
-            ,'.default-active'
+            , '.default-active'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
-          ,'Lower the opacity for an element on its active state'
+          , 'Lower the opacity for an element on its active state'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -152,11 +152,11 @@ export default Misc = =>
           }
           ,
             c_Code {}
-            ,'.dim'
+            , '.dim'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
-          ,'Apply a combination of .default-hover and .default-active'
+          , 'Apply a combination of .default-hover and .default-active'
 
 
         c_tr {
@@ -168,7 +168,7 @@ export default Misc = =>
           }
           ,
             c_Code {}
-            ,'.site-width'
+            , '.site-width'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
@@ -183,7 +183,7 @@ export default Misc = =>
           }
           ,
             c_Code {}
-            ,'.lowercase'
+            , '.lowercase'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
@@ -198,7 +198,7 @@ export default Misc = =>
           }
           ,
             c_Code {}
-            ,'.uppercase'
+            , '.uppercase'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
@@ -213,7 +213,7 @@ export default Misc = =>
           }
           ,
             c_Code {}
-            ,'.ell'
+            , '.ell'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
@@ -228,7 +228,7 @@ export default Misc = =>
           }
           ,
             c_Code {}
-            ,'.imax'
+            , '.imax'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
@@ -243,7 +243,7 @@ export default Misc = =>
           }
           ,
             c_Code {}
-            ,'.i100'
+            , '.i100'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
@@ -258,7 +258,7 @@ export default Misc = =>
           }
           ,
             c_Code {}
-            ,'.bgcover'
+            , '.bgcover'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
@@ -273,7 +273,7 @@ export default Misc = =>
           }
           ,
             c_Code {}
-            ,'.bgcenter'
+            , '.bgcenter'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
@@ -288,14 +288,14 @@ export default Misc = =>
           }
           ,
             c_Code {}
-            ,'.vam'
+            , '.vam'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,"Vertically align a"
           ,
             c_Code {}
-            ,'td'
+            , 'td'
           ," element's content to the middle"
 
 
@@ -308,7 +308,7 @@ export default Misc = =>
           }
           ,
             c_Code {}
-            ,'.clearfix'
+            , '.clearfix'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
@@ -323,7 +323,7 @@ export default Misc = =>
           }
           ,
             c_Code {}
-            ,'.hidetext'
+            , '.hidetext'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
@@ -338,14 +338,14 @@ export default Misc = =>
           }
           ,
             c_Code {}
-            ,'.pointer'
+            , '.pointer'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,"Set cursor to pointer on hover."
 
     c_H2 {}
-    ,'Default Settings'
+    , 'Default Settings'
 
     c_Highlight {
       (nb 'pa2 lh5 ft4')...

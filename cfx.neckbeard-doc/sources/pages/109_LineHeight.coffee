@@ -72,14 +72,14 @@ export default LineHeight = =>
   c_div {}
   ,
     c_H1 {}
-    ,'Line Height'
+    , 'Line Height'
     ,
       c_span {
         (nb 'tc1 ft3 capitalize fw3 ml1')...
-      },'Responsive'
+      }, 'Responsive'
 
     c_H2 {}
-    ,'Options'
+    , 'Options'
 
     c_table {
       (nb 'w100 mb2 ft4 tcg60 lh2 sans')...
@@ -93,10 +93,10 @@ export default LineHeight = =>
         ,
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Class'
+          }, 'Class'
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Generated Value'
+          }, 'Generated Value'
       c_tbody {}
       ,
         c_tr {
@@ -108,13 +108,13 @@ export default LineHeight = =>
           }
           ,
             c_Code {}
-            ,'.lh1'
+            , '.lh1'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'line-height: 1rem'
+            , 'line-height: 1rem'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -125,13 +125,13 @@ export default LineHeight = =>
           }
           ,
             c_Code {}
-            ,'.lh2'
+            , '.lh2'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'line-height: 1.1rem'
+            , 'line-height: 1.1rem'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -142,13 +142,13 @@ export default LineHeight = =>
           }
           ,
             c_Code {}
-            ,'.lh3'
+            , '.lh3'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'line-height: 1.3rem'
+            , 'line-height: 1.3rem'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -159,13 +159,13 @@ export default LineHeight = =>
           }
           ,
             c_Code {}
-            ,'.lh4'
+            , '.lh4'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'line-height: 1.4rem'
+            , 'line-height: 1.4rem'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -176,13 +176,13 @@ export default LineHeight = =>
           }
           ,
             c_Code {}
-            ,'.lh5'
+            , '.lh5'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'line-height: 1.5rem'
+            , 'line-height: 1.5rem'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -193,13 +193,13 @@ export default LineHeight = =>
           }
           ,
             c_Code {}
-            ,'.lh6'
+            , '.lh6'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'line-height: 1.6rem'
+            , 'line-height: 1.6rem'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -210,13 +210,13 @@ export default LineHeight = =>
           }
           ,
             c_Code {}
-            ,'.lh7'
+            , '.lh7'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'line-height: 1.7rem'
+            , 'line-height: 1.7rem'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -227,13 +227,13 @@ export default LineHeight = =>
           }
           ,
             c_Code {}
-            ,'.lh8'
+            , '.lh8'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'line-height: 1.8rem'
+            , 'line-height: 1.8rem'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -244,13 +244,13 @@ export default LineHeight = =>
           }
           ,
             c_Code {}
-            ,'.lh9'
+            , '.lh9'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'line-height: 1.9rem'
+            , 'line-height: 1.9rem'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -261,25 +261,25 @@ export default LineHeight = =>
           }
           ,
             c_Code {}
-            ,'.lh10'
+            , '.lh10'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'line-height: 2rem'
+            , 'line-height: 2rem'
 
     c_H2 {}
-    ,'Default Settings'
+    , 'Default Settings'
 
     c_Copy {}
-    ,'See'
+    , 'See'
     ,
       c_a {
         (nb 'tc5 xtd h-tc1')...
         href:'https://www.neckbeardjs.com/usage#configuration'
-      },'Configuration'
-    ,'to learn how to overwrite helper settings.'
+      }, 'Configuration'
+    , 'to learn how to overwrite helper settings.'
 
     c_Highlight {
       (nb 'pa2 lh5 ft4')...

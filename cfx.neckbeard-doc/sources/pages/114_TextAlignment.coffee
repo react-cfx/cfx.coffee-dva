@@ -70,14 +70,14 @@ export default TextAlignment = =>
   c_div {}
   ,
     c_H1 {}
-    ,'Text Alignment'
+    , 'Text Alignment'
     ,
       c_span {
         (nb 'tc1 ft3 capitalize fw3 ml1')...
-      },'Responsive'
+      }, 'Responsive'
 
     c_H2 {}
-    ,'Options'
+    , 'Options'
 
     c_table {
       (nb 'w100 mb2 ft4 tcg60 lh2 sans')...
@@ -91,10 +91,10 @@ export default TextAlignment = =>
         ,
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Name'
+          }, 'Name'
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Class'
+          }, 'Class'
       c_tbody {}
       ,
         c_tr {
@@ -106,13 +106,13 @@ export default TextAlignment = =>
           }
           ,
             c_Code {}
-            ,'Text Align Left'
+            , 'Text Align Left'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'tal'
+            , 'tal'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -123,13 +123,13 @@ export default TextAlignment = =>
           }
           ,
             c_Code {}
-            ,'Text Align Center'
+            , 'Text Align Center'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'tac'
+            , 'tac'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -140,25 +140,25 @@ export default TextAlignment = =>
           }
           ,
             c_Code {}
-            ,'Text Align Right'
+            , 'Text Align Right'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'tar'
+            , 'tar'
 
     c_H2 {}
-    ,'Default Settings'
+    , 'Default Settings'
 
     c_Copy {}
-    ,'See'
+    , 'See'
     ,
       c_a {
         (nb 'tc5 xtd h-tc1')...
         href:'https://www.neckbeardjs.com/usage#configuration'
-      },'Configuration'
-    ,'to learn how to overwrite helper settings.'
+      }, 'Configuration'
+    , 'to learn how to overwrite helper settings.'
 
     c_Highlight {
       (nb 'pa2 lh5 ft4')...

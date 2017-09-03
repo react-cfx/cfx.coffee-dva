@@ -70,14 +70,14 @@ export default ZIndex = =>
   c_div {}
   ,
     c_H1 {}
-    ,'Z Index'
+    , 'Z Index'
     ,
       c_span {
         (nb 'tc1 ft3 capitalize fw3 ml1')...
-      },'Responsive'
+      }, 'Responsive'
 
     c_H2 {}
-    ,'Options'
+    , 'Options'
 
     c_table {
       (nb 'w100 mb2 ft4 tcg60 lh2 sans')...
@@ -91,10 +91,10 @@ export default ZIndex = =>
         ,
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Name'
+          }, 'Name'
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Class'
+          }, 'Class'
       c_tbody {}
       ,
         c_tr {
@@ -106,13 +106,13 @@ export default ZIndex = =>
           }
           ,
             c_Code {}
-            ,'Level 1'
+            , 'Level 1'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'.zi1'
+            , '.zi1'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -123,13 +123,13 @@ export default ZIndex = =>
           }
           ,
             c_Code {}
-            ,'Level 2'
+            , 'Level 2'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'.zi2'
+            , '.zi2'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -140,13 +140,13 @@ export default ZIndex = =>
           }
           ,
             c_Code {}
-            ,'Level 3'
+            , 'Level 3'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'.zi3'
+            , '.zi3'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -157,13 +157,13 @@ export default ZIndex = =>
           }
           ,
             c_Code {}
-            ,'Level 4'
+            , 'Level 4'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'.zi4'
+            , '.zi4'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -174,13 +174,13 @@ export default ZIndex = =>
           }
           ,
             c_Code {}
-            ,'Level 5'
+            , 'Level 5'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'.zi5'
+            , '.zi5'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -191,13 +191,13 @@ export default ZIndex = =>
           }
           ,
             c_Code {}
-            ,'Level 6'
+            , 'Level 6'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'.zi6'
+            , '.zi6'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -208,13 +208,13 @@ export default ZIndex = =>
           }
           ,
             c_Code {}
-            ,'Level 7'
+            , 'Level 7'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'.zi7'
+            , '.zi7'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -225,13 +225,13 @@ export default ZIndex = =>
           }
           ,
             c_Code {}
-            ,'Level 8'
+            , 'Level 8'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'.zi8'
+            , '.zi8'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -242,13 +242,13 @@ export default ZIndex = =>
           }
           ,
             c_Code {}
-            ,'Level 9'
+            , 'Level 9'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'.zi9'
+            , '.zi9'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -259,25 +259,25 @@ export default ZIndex = =>
           }
           ,
             c_Code {}
-            ,'Level 10'
+            , 'Level 10'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            ,'.zi10'
+            , '.zi10'
 
     c_H2 {}
-    ,'Default Settings'
+    , 'Default Settings'
 
     c_Copy {}
-    ,'See'
+    , 'See'
     ,
       c_a {
         (nb 'tc5 xtd h-tc1')...
         href:'https://www.neckbeardjs.com/usage#configuration'
-      },'Configuration'
-    ,'to learn how to overwrite helper settings.'
+      }, 'Configuration'
+    , 'to learn how to overwrite helper settings.'
 
     c_Highlight {
       (nb 'pa2 lh5 ft4')...

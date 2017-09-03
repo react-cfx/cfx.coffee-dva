@@ -68,14 +68,14 @@ export default Overflow = =>
   c_div {}
   ,
     c_H1 {}
-    ,'Overflow'
+    , 'Overflow'
     ,
       c_span {
         (nb 'tc1 ft3 capitalize fw3 ml1')...
-      },'Not Responsive'
+      }, 'Not Responsive'
 
     c_H2 {}
-    ,'Options'
+    , 'Options'
 
     c_table {
       (nb 'w100 mb2 ft4 tcg60 lh2 sans')...
@@ -89,10 +89,10 @@ export default Overflow = =>
         ,
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Class'
+          }, 'Class'
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Value'
+          }, 'Value'
       c_tbody {}
       ,
         c_tr {
@@ -104,13 +104,13 @@ export default Overflow = =>
           }
           ,
             c_Code {}
-            ,'.ofh'
+            , '.ofh'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'overflow: hidden'
+            , 'overflow: hidden'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -121,13 +121,13 @@ export default Overflow = =>
           }
           ,
             c_Code {}
-            ,'.ofx'
+            , '.ofx'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'overflow-x: scroll'
+            , 'overflow-x: scroll'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -138,26 +138,26 @@ export default Overflow = =>
           }
           ,
             c_Code {}
-            ,'.ofy'
+            , '.ofy'
 
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,'overflow-y: scroll'
+            , 'overflow-y: scroll'
 
     c_H2 {}
-    ,'Default Settings'
+    , 'Default Settings'
 
     c_Copy {}
-    ,'See'
+    , 'See'
     ,
       c_a {
         (nb 'tc5 xtd h-tc1')...
         href:'https://www.neckbeardjs.com/usage#configuration'
-      },'Configuration'
-    ,'to learn how to overwrite helper settings.'
+      }, 'Configuration'
+    , 'to learn how to overwrite helper settings.'
 
     c_Highlight {
       (nb 'pa2 lh5 ft4')...
