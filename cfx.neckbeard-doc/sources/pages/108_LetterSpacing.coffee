@@ -81,7 +81,8 @@ export default LetterSpacing = =>
     ,
       c_span {
         (nb 'tc1 ft3 capitalize fw3 ml1')...
-      }, 'Responsive'
+      }
+      , 'Responsive'
 
     c_H2 {}
     , 'Options'
@@ -98,10 +99,12 @@ export default LetterSpacing = =>
         ,
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          }, 'Name'
+          }
+          , 'Name'
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          }, 'Class'
+          }
+          , 'Class'
       c_tbody {}
       ,
         c_tr {
@@ -279,11 +282,13 @@ export default LetterSpacing = =>
     , 'Example'
     c_Highlight {
       (nb 'pa2 mb2 lh5 ft4')...
-    },snippet
+    }
+    , snippet
 
     c_div {
       (nb 'md-ls2 lg-ls5 xlg-ls8 mt2 mb2 brdr1 br5 tac pv1')...
-    }, 'Different Letter Spacing Depending on Breakpoint'
+    }
+    , 'Different Letter Spacing Depending on Breakpoint'
 
     c_H2 {}
     , 'Default Settings'
@@ -294,10 +299,12 @@ export default LetterSpacing = =>
       c_a {
         (nb 'tc5 xtd h-tc1')...
         href:'https://www.neckbeardjs.com/usage#configuration'
-      }, 'Configuration'
+      }
+      , 'Configuration'
 
     , 'to learn how to overwrite helper settings.'
 
     c_Highlight {
       (nb 'pa2 lh5 ft4')...
-    },snippet1
+    }
+    , snippet1

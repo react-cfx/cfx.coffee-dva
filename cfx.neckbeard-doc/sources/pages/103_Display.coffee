@@ -102,11 +102,11 @@ export default Display = =>
           c_th {
             (nb "pa1 tal fwsemibold ph1")...
           }
-          ,' Name'
+          , ' Name'
           c_th {
             (nb "pa1 tal fwsemibold ph1")...
           }
-          ,' Class'
+          , 'Class'
       c_tbody {}
       ,
         c_tr {
@@ -116,11 +116,11 @@ export default Display = =>
           c_td {
             (nb "tcg50 fw3 pv2 ph1")...
           }
-          ,' Display Block'
+          , 'Display Block'
           c_td {
             (nb "tcg50 fw3 pv2 ph1")...
           }
-          ,' .db'
+          , '.db'
         c_tr {
           (nb "brdr1--bottom bcg10")...
         }
@@ -128,11 +128,11 @@ export default Display = =>
           c_td {
             (nb "tcg50 fw3 pv2 ph1")...
           }
-          ,' Display Inline'
+          , 'Display Inline'
           c_td {
             (nb "tcg50 fw3 pv2 ph1")...
           }
-          ,' .di'
+          , '.di'
 
         c_tr {
           (nb "brdr1--bottom bcg10")...
@@ -141,7 +141,7 @@ export default Display = =>
           c_td {
             (nb "tcg50 fw3 pv2 ph1")...
           }
-          ,' Display Inline-block'
+          , 'Display Inline-block'
           c_td {
             (nb "tcg50 fw3 pv2 ph1")...
           }
@@ -192,15 +192,15 @@ export default Display = =>
             , 'Not Responsive'
           c_td {
             (nb "tcg50 fw3 pv2 ph1")...
-          }, '.w100'
+          }
+          , '.w100'
     c_H2 {}
     , "Example"
 
     c_Highlight {
       (nb "pa2 mb2 lh5 ft4")...
     }
-    ,
-      snippet
+    , snippet
 
     c_div {
       (nb "md-dn mb2 brdr1 br5 tac pv1")...
@@ -211,18 +211,17 @@ export default Display = =>
     },"Show content on large breakpoint"
 
     c_H2 {}
-    ,"Default Settings"
+    , "Default Settings"
 
     c_Copy {}
+    , "See"
     ,
-      "See"
-    ,
-      c_a
+      c_a {
         href:'https://www.neckbeardjs.com/usage#configuration'
-        "Configuration"
-    ,
-      'to learn how to overwrite helper settings.'
-
-    c_Highlight
-      className: "#{nb 'pa2 lh5 ft4'}"
-      snippet2
+      }
+      , "Configuration"
+    , 'to learn how to overwrite helper settings.'
+    c_Highlight {
+      (nb 'pa2 lh5 ft4')...
+    }
+    , snippet2

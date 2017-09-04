@@ -89,7 +89,8 @@ export default Grid = =>
     ,
       c_span {
         (nb 'tc1 ft3 capitalize fw3 ml1')...
-      }, 'Responsive'
+      }
+      , 'Responsive'
 
     c_div {
       (nb 'mb1')...
@@ -104,14 +105,16 @@ export default Grid = =>
     c_BlockQuote {}
     , ' Hint: To make the grid maintain its ratios on the small breakpoint, use the'
     ,
-      c_Code
+      c_Code {
         type:'purple'
-        '.frame--stay'
+      }
+      , '.frame--stay'
     , 'modifier on your'
     ,
-      c_Code
+      c_Code {
         type:'purple'
-        '.frame'
+      }
+      , '.frame'
 
     c_div {
       (nb 'frame mb2 flex')...
@@ -124,7 +127,8 @@ export default Grid = =>
       ,
         c_div {
           (nb 'bgg05 flex pv1 ph2 jcc aic tcg30 ft3')...
-        }, '.blk.md-blk6'
+        }
+        , '.blk.md-blk6'
 
       c_div {
         (nb 'blk md-blk6 fb50')...
@@ -133,7 +137,8 @@ export default Grid = =>
       ,
         c_div {
           (nb 'bgg05 flex pv1 ph2 jcc aic tcg30 ft3')...
-        }, '.blk.md-blk6'
+        }
+        , '.blk.md-blk6'
 
     c_div {
       (nb 'frame mb2')...
@@ -146,7 +151,8 @@ export default Grid = =>
       ,
         c_div {
           (nb 'bgg05 flex pv1 ph2 jcc aic tcg30 ft3')...
-        }, 'blk.md-blk--offset3'
+        }
+        , 'blk.md-blk--offset3'
 
     c_div {
       (nb 'frame relative mb2')...
@@ -160,7 +166,8 @@ export default Grid = =>
       ,
         c_div {
           (nb 'bgg05 flex pv1 ph2 jcc aic tcg30 ft3')...
-        }, '.blk3.md-blk--push9'
+        }
+        , '.blk3.md-blk--push9'
 
     ,
       c_div {
@@ -170,7 +177,8 @@ export default Grid = =>
       ,
         c_div {
           (nb 'bgg05 flex pv1 ph2 jcc aic tcg30 ft3')...
-        }, '.blk9.md-blk--pull3'
+        }
+        , '.blk9.md-blk--pull3'
 
     c_div {
       (nb 'mb1')...
@@ -203,7 +211,8 @@ export default Grid = =>
       ,
         c_div {
           (nb 'bgg05 flex pv1 ph2 jcc aic tcg30 ft3')...
-        }, '.blk'
+        }
+        , '.blk'
 
       c_div {
         (nb 'blk xph brdr1 bcg20')...
@@ -212,7 +221,8 @@ export default Grid = =>
       ,
         c_div {
           (nb 'bgg05 flex pv1 ph2 jcc aic tcg30 ft3')...
-        }, '.blk'
+        }
+        , '.blk'
 
       c_div {
         (nb 'blk xph brdr1 bcg20')...
@@ -221,7 +231,8 @@ export default Grid = =>
       ,
         c_div {
           (nb 'bgg05 flex pv1 ph2 jcc aic tcg30 ft3')...
-        }, '.blk xph brdr1 bcg20'
+        }
+        , '.blk xph brdr1 bcg20'
 
       c_div {
         (nb 'blk xph brdr1 bcg20')...
@@ -230,7 +241,8 @@ export default Grid = =>
       ,
         c_div {
           (nb 'bgg05 flex pv1 ph2 jcc aic tcg30 ft3')...
-        }, '.blk'
+        }
+        , '.blk'
 
     c_div {
       (nb 'frame relative mb2')...
@@ -243,21 +255,24 @@ export default Grid = =>
       ,
         c_div {
           (nb 'bgg05 flex pv1 ph2 jcc aic tcg30 ft3')...
-        }, '.blk.xph'
+        }
+        , '.blk.xph'
       c_div {
         (nb 'blk xph brdr1 bcg20')...
       }
       ,
         c_div {
           (nb 'bgg05 flex pv1 ph2 jcc aic tcg30 ft3')...
-        }, '.blk.xph'
+        }
+        , '.blk.xph'
       c_div {
         (nb 'blk xph brdr1 bcg20')...
       }
       ,
         c_div {
           (nb 'bgg05 flex pv1 ph2 jcc aic tcg30 ft3')...
-        }, '.blk.xph'
+        }
+        , '.blk.xph'
 
     c_div {
       (nb 'frame relative mb2')...
@@ -270,7 +285,8 @@ export default Grid = =>
       ,
         c_div {
           (nb 'bgg05 flex pv1 ph2 jcc aic tcg30 ft3')...
-        }, '.blk.xph'
+        }
+        , '.blk.xph'
 
       c_div {
         (nb 'blk xph brdr1 bcg20')...
@@ -278,10 +294,12 @@ export default Grid = =>
       ,
         c_div {
           (nb 'bgg05 flex pv1 ph2 jcc aic tcg30 ft3')...
-        }, '.blk.xph'
+        }
+        , '.blk.xph'
 
     c_H2 {}
     , 'Example'
     c_Highlight {
       (nb 'pa2 mb2 lh5 ft4')...
-    }, snippet
+    }
+    , snippet

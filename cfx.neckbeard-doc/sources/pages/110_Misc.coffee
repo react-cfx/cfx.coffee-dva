@@ -75,7 +75,8 @@ export default Misc = =>
     ,
       c_span {
         (nb 'tc1 ft3 capitalize fw3 ml1')...
-      }, 'Not Responsive'
+      }
+      , 'Not Responsive'
 
     c_H2 {}
     , 'Options'
@@ -92,10 +93,12 @@ export default Misc = =>
         ,
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          }, 'Class'
+          }
+          , 'Class'
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          }, 'Purpose'
+          }
+          , 'Purpose'
       c_tbody {}
       ,
         c_tr {
@@ -349,4 +352,5 @@ export default Misc = =>
 
     c_Highlight {
       (nb 'pa2 lh5 ft4')...
-    },snippet
+    }
+    , snippet

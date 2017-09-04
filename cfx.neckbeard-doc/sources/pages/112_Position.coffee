@@ -74,7 +74,8 @@ export default Position = =>
     ,
       c_span {
         (nb 'tc1 ft3 capitalize fw3 ml1')...
-      }, 'Responsive'
+      }
+      , 'Responsive'
 
     c_H2 {}
     , 'Options'
@@ -91,10 +92,12 @@ export default Position = =>
         ,
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          }, 'Class'
+          }
+          , 'Class'
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          }, 'Value'
+          }
+          , 'Value'
       c_tbody {}
       ,
         c_tr {
@@ -241,9 +244,11 @@ export default Position = =>
       c_a {
         (nb 'tc5 xtd h-tc1')...
         href:'https://www.neckbeardjs.com/usage#configuration'
-      }, 'Configuration'
+      }
+      , 'Configuration'
     , 'to learn how to overwrite helper settings.'
 
     c_Highlight {
       (nb 'pa2 lh5 ft4')...
-    },snippet
+    }
+    , snippet

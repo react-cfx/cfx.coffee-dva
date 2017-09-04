@@ -85,7 +85,8 @@ export default Float = =>
     ,
       c_span {
         (nb 'tc1 ft3 capitalize fw3 ml1')...
-      }, 'Responsive'
+      }
+      , 'Responsive'
     c_H2 {}
     , 'Options'
 
@@ -101,10 +102,12 @@ export default Float = =>
         ,
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          }, 'Name'
+          }
+          , 'Name'
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          }, 'Class'
+          }
+          , 'Class'
 
       c_tbody {}
       ,
@@ -209,7 +212,7 @@ export default Float = =>
     ,
       c_div {
         (nb 'md-fl lg-fr mb2 brdr1 br5 tac pv1')...
-      }, ' Float right large breakpoint, Float left medium breakpoint.'
+      }, 'Float right large breakpoint, Float left medium breakpoint.'
     c_H2 {}
     , 'Default Settings'
     c_Copy {}
@@ -222,4 +225,5 @@ export default Float = =>
 
     c_Highlight {
       (nb 'pa2 lh5 ft4')...
-    },snippet2
+    }
+    , snippet2

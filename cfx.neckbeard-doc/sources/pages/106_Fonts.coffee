@@ -102,19 +102,19 @@ export default Fonts = =>
   c_div {}
   ,
     c_H1 {}
-    ,' Fonts'
+    , 'Fonts'
 
     c_div {
       (nb 'mb1')...
     }
     ,
       c_H3 {}
-      ,' Font Family Helpers'
+      , 'Font Family Helpers'
       ,
         c_span {
           (nb 'tc1 ft3 capitalize fw3 ml1')...
         }
-        ,' Not Responsive'
+        , 'Not Responsive'
     c_table {
       (nb 'w100 mb2 ft4 tcg60 lh2 sans')...
     }
@@ -127,13 +127,13 @@ export default Fonts = =>
         ,
           c_th {
             (nb 'pa1 tal fwsemibold')...
-          },' Style'
+          }, 'Style'
           c_th {
             (nb 'pa1 tal fwsemibold')...
-          },' Class'
+          }, 'Class'
           c_th {
             (nb 'pa1 tal fwsemibold')...
-          },' Default Stack'
+          }, 'Default Stack'
 
       c_tbody {}
       ,
@@ -143,41 +143,20 @@ export default Fonts = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },' Sans Serif'
+          }, 'Sans Serif'
 
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,' .sans'
+            , '.sans'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,' "Helvetica Neue", Helvetica, Arial, sans-serif'
-
-        c_tr {
-          (nb 'brdr1--bottom bcg10')...
-        }
-        ,
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          },' Serif'
-
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          ,
-            c_Code {}
-            ,' .serif'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          ,
-            c_Code {}
-            ,' Merriweather, Georgia, serif'
+            , '"Helvetica Neue", Helvetica, Arial, sans-serif'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -185,31 +164,52 @@ export default Fonts = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },' Code'
+          }, 'Serif'
 
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,' .code'
+            , '.serif'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,' Consolas, Monaco, "Andale Mono", monospace'
+            , 'Merriweather, Georgia, serif'
+
+        c_tr {
+          (nb 'brdr1--bottom bcg10')...
+        }
+        ,
+          c_td {
+            (nb 'tcg50 fw3 pv2 ph1')...
+          }, 'Code'
+
+          c_td {
+            (nb 'tcg50 fw3 pv2 ph1')...
+          }
+          ,
+            c_Code {}
+            , '.code'
+          c_td {
+            (nb 'tcg50 fw3 pv2 ph1')...
+          }
+          ,
+            c_Code {}
+            , 'Consolas, Monaco, "Andale Mono", monospace'
 
     c_div {
       (nb 'mb1')...
     }
     ,
       c_H3 {}
-      ,' Font Weight Helpers'
+      , 'Font Weight Helpers'
       ,
         c_span {
           (nb 'tc1 ft3 capitalize fw3 ml1')...
-        },' Not Responsive'
+        }, 'Not Responsive'
     c_table {
       (nb 'w100 mb2 ft4 tcg60 lh2 sans')...
     }
@@ -222,13 +222,13 @@ export default Fonts = =>
         ,
           c_th {
             (nb 'pa1 tal fwsemibold')...
-          },' Style'
+          }, 'Style'
           c_th {
             (nb 'pa1 tal fwsemibold')...
-          },' Class'
+          }, 'Class'
           c_th {
             (nb 'pa1 tal fwsemibold')...
-          },' Default Stack'
+          }, 'Default Stack'
 
       c_tbody {}
       ,
@@ -238,23 +238,23 @@ export default Fonts = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },' Thin'
+          }, 'Thin'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,' 100'
+            , '100'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,' .fw1'
-          ,' or'
+            , '.fw1'
+          , 'or'
           ,
             c_Code {}
-            ,' .fwthin'
+            , '.fwthin'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -262,23 +262,23 @@ export default Fonts = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },' Extra Light'
+          }, 'Extra Light'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,' 200'
+            , '200'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,' .fw2'
-          ,' or'
+            , '.fw2'
+          , 'or'
           ,
             c_Code {}
-            ,' .fwxlight'
+            , '.fwxlight'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -286,23 +286,23 @@ export default Fonts = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },' Light'
+          }, 'Light'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,' 300'
+            , '300'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,' .fw3'
-          ,' or'
+            , '.fw3'
+          , 'or'
           ,
             c_Code {}
-            ,' .fwlight'
+            , '.fwlight'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -310,23 +310,23 @@ export default Fonts = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },' Normal'
+          }, 'Normal'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,' 400'
+            , '400'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,' .fw4'
-          ,' or'
+            , '.fw4'
+          , 'or'
           ,
             c_Code {}
-            ,' .fwnormal'
+            , '.fwnormal'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -334,23 +334,23 @@ export default Fonts = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },' Medium'
+          }, 'Medium'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,' 500'
+            , '500'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,' .fw5'
-          ,' or'
+            , '.fw5'
+          , 'or'
           ,
             c_Code {}
-            ,' .fwmedium'
+            , '.fwmedium'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -358,23 +358,23 @@ export default Fonts = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },' Semibold'
+          }, 'Semibold'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,' 600'
+            , '600'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,' .fw6'
-          ,' or'
+            , '.fw6'
+          , 'or'
           ,
             c_Code {}
-            ,' .fwsemibold'
+            , '.fwsemibold'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -382,23 +382,23 @@ export default Fonts = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },' Bold'
+          }, 'Bold'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,' 700'
+            , '700'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,' .fw7'
-          ,' or'
+            , '.fw7'
+          , 'or'
           ,
             c_Code {}
-            ,' .fwbold'
+            , '.fwbold'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -406,23 +406,23 @@ export default Fonts = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },' Extra Bold'
+          }, 'Extra Bold'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,' 800'
+            , '800'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,' .fw8'
-          ,' or'
+            , '.fw8'
+          , 'or'
           ,
             c_Code {}
-            ,' .fwxbold'
+            , '.fwxbold'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -430,32 +430,32 @@ export default Fonts = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },' Black'
+          }, 'Black'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,' 900'
+            , '900'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
           ,
             c_Code {}
-            ,' .fw9'
-          ,' or'
+            , '.fw9'
+          , 'or'
           ,
             c_Code {}
-            ,' .fwblack'
+            , '.fwblack'
 
     c_div {
       (nb 'mb1')...
     }
-    ,' Font Size Helpers'
+    , 'Font Size Helpers'
     ,
       c_span {
         (nb 'tc1 ft3 capitalize fw3 ml1')...
-      },' Responsive'
+      }, 'Responsive'
 
     c_table {
       (nb 'w100 mb2 ft4 tcg60 lh2 sans')...
@@ -469,13 +469,13 @@ export default Fonts = =>
         ,
           c_th {
             (nb 'pa1 tal fwsemibold')...
-          },' Style'
+          }, 'Style'
           c_th {
             (nb 'pa1 tal fwsemibold')...
-          },' Class'
+          }, 'Class'
           c_th {
             (nb 'pv1 tal fwsemibold')...
-          },' Default Stack'
+          }, 'Default Stack'
 
       c_tbody {}
       ,
@@ -485,16 +485,16 @@ export default Fonts = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
-          },' Font Level 1'
+          }, 'Font Level 1'
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
           }
           ,
             c_Code {}
-            ,' .ft1'
+            , '.ft1'
           c_td {
             (nb 'vam pv1 ft1')...
-          },' Hi'
+          }, 'Hi'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -502,16 +502,16 @@ export default Fonts = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
-          },' Font Level 2'
+          }, 'Font Level 2'
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
           }
           ,
             c_Code {}
-            ,' .ft2'
+            , '.ft2'
           c_td {
             (nb 'vam pv1 ft2')...
-          },' Hi'
+          }, 'Hi'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -519,16 +519,16 @@ export default Fonts = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
-          },' Font Level 3'
+          }, 'Font Level 3'
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
           }
           ,
             c_Code {}
-            ,' .ft3'
+            , '.ft3'
           c_td {
             (nb 'vam pv1 ft3')...
-          },' Hi'
+          }, 'Hi'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -536,16 +536,16 @@ export default Fonts = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
-          },' Font Level 4'
+          }, 'Font Level 4'
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
           }
           ,
             c_Code {}
-            ,' .ft4'
+            , '.ft4'
           c_td {
             (nb 'vam pv1 ft4')...
-          },' Hi'
+          }, 'Hi'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -553,16 +553,16 @@ export default Fonts = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
-          },' Font Level 5'
+          }, 'Font Level 5'
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
           }
           ,
             c_Code {}
-            ,' .ft5'
+            , '.ft5'
           c_td {
             (nb 'vam pv1 ft5')...
-          },' Hi'
+          }, 'Hi'
 
 
 
@@ -572,16 +572,16 @@ export default Fonts = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
-          },' Font Level 6'
+          }, 'Font Level 6'
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
           }
           ,
             c_Code {}
-            ,' .ft6'
+            , '.ft6'
           c_td {
             (nb 'vam pv1 ft6')...
-          },' Hi'
+          }, 'Hi'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -589,16 +589,16 @@ export default Fonts = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
-          },' Font Level 7'
+          }, 'Font Level 7'
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
           }
           ,
             c_Code {}
-            ,' .ft7'
+            , '.ft7'
           c_td {
             (nb 'vam pv1 ft7')...
-          },' Hi'
+          }, 'Hi'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -606,16 +606,16 @@ export default Fonts = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
-          },' Font Level 8'
+          }, 'Font Level 8'
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
           }
           ,
             c_Code {}
-            ,' .ft8'
+            , '.ft8'
           c_td {
             (nb 'vam pv1 ft8')...
-          },' Hi'
+          }, 'Hi'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -623,16 +623,16 @@ export default Fonts = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
-          },' Font Level 9'
+          }, 'Font Level 9'
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
           }
           ,
             c_Code {}
-            ,' .ft9'
+            , '.ft9'
           c_td {
             (nb 'vam pv1 ft9')...
-          },' Hi'
+          }, 'Hi'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -640,16 +640,16 @@ export default Fonts = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
-          },' Font Level 10'
+          }, 'Font Level 10'
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
           }
           ,
             c_Code {}
-            ,' .ft10'
+            , '.ft10'
           c_td {
             (nb 'vam pv1 ft10')...
-          },' Hi'
+          }, 'Hi'
 
 
         c_tr {
@@ -658,16 +658,16 @@ export default Fonts = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
-          },' Font Level 11'
+          }, 'Font Level 11'
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
           }
           ,
             c_Code {}
-            ,' .ft11'
+            , '.ft11'
           c_td {
             (nb 'vam pv1 ft11')...
-          },' Hi'
+          }, 'Hi'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -675,16 +675,16 @@ export default Fonts = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
-          },' Font Level 12'
+          }, 'Font Level 12'
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
           }
           ,
             c_Code {}
-            ,' .ft12'
+            , '.ft12'
           c_td {
             (nb 'vam pv1 ft12')...
-          },' Hi'
+          }, 'Hi'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -692,16 +692,16 @@ export default Fonts = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
-          },' Font Level 13'
+          }, 'Font Level 13'
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
           }
           ,
             c_Code {}
-            ,' .ft13'
+            , '.ft13'
           c_td {
             (nb 'vam pv1 ft13')...
-          },' Hi'
+          }, 'Hi'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -709,16 +709,16 @@ export default Fonts = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
-          },' Font Level 14'
+          }, 'Font Level 14'
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
           }
           ,
             c_Code {}
-            ,' .ft14'
+            , '.ft14'
           c_td {
             (nb 'vam pv1 ft14')...
-          },' Hi'
+          }, 'Hi'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -726,16 +726,17 @@ export default Fonts = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
-          },' Font Level 15'
+          }, 'Font Level 15'
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
           }
           ,
             c_Code {}
-            ,' .ft15'
+            , '.ft15'
           c_td {
             (nb 'vam pv1 ft15')...
-          },' Hi'
+          }
+          , 'Hi'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -743,16 +744,18 @@ export default Fonts = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
-          },' Font Level 16'
+          }
+          , 'Font Level 16'
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
           }
           ,
             c_Code {}
-            ,' .ft16'
+            , '.ft16'
           c_td {
             (nb 'vam pv1 ft16')...
-          },' Hi'
+          }
+          , 'Hi'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
@@ -760,38 +763,44 @@ export default Fonts = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
-          },' Font Level 17'
+          }
+          , 'Font Level 17'
           c_td {
             (nb 'tcg50 fw3 pv1 ph1 vam')...
           }
           ,
             c_Code {}
-            ,' .ft17'
+            , '.ft17'
           c_td {
             (nb 'vam pv1 ft17')...
-          },' Hi'
+          }
+          , 'Hi'
 
     c_H2 {}
-    ,' Default Settings'
+    , 'Default Settings'
 
     c_Copy {}
-    ,' See'
+    , 'See'
     ,
       c_a {
         (nb 'tc5 xtd h-tc1')...
         href:'https://www.neckbeardjs.com/usage#configuration'
-      },' Configuration'
-    ,' to learn how to overwrite helper settings.'
+      }, 'Configuration'
+    , 'to learn how to overwrite helper settings.'
 
     c_Highlight {
       (nb 'pa2 lh5 ft4')...
-    },snippet1
+    }
+    , snippet1
     c_Highlight {
       (nb 'pa2 lh5 ft4')...
-    },snippet2
+    }
+    , snippet2
     c_Highlight {
       (nb 'pa2 lh5 ft4')...
-    },snippet3
+    }
+    , snippet3
     c_Highlight {
       (nb 'pa2 lh5 ft4')...
-    },snippet4
+    }
+    , snippet4
