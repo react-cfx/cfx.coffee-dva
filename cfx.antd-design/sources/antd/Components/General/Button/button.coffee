@@ -68,4 +68,23 @@ export default
         '.3s'
         animation.ease.inOut
       ].join ' '
+
+    # http://stackoverflow.com/a/21281554/3040605
+    (
+      do ->
+        subSpan =
+          position: 'relative'
+        '&:focus > span': subSpan
+        '&:active > span': subSpan
+    )...
+
+    # To ensure that a space will be placed between character and `Icon`.
+    (
+      do ->
+        iconSpan =
+          marginLeft: '0.5em'
+        "> .#{font.icon.prefix} + span": iconSpan
+        "> span + .#{font.icon.prefix}": iconSpan
+    )...
+
   }
