@@ -93,7 +93,8 @@ export default Border = =>
       ,
         c_tr {
           (nb 'brdr1--bottom bcg10')...
-        },
+        }
+        ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
           }
@@ -115,7 +116,8 @@ export default Border = =>
             , '.brdr1'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Add a border to all sides of an element'
+          }
+          , 'Add a border to all sides of an element'
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
@@ -125,10 +127,10 @@ export default Border = =>
           }
           ,
             c_Code {}
-            ,'.brdr1--top'
+            , '.brdr1--top'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Add a border to the top of an element'
+          }, 'Add a border to the top of an element'
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
@@ -138,10 +140,11 @@ export default Border = =>
           }
           ,
             c_Code {}
-            ,'.brdr1--right'
+            , '.brdr1--right'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          }, 'Add a border to the right side of an element'
+          }
+          , 'Add a border to the right side of an element'
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
@@ -151,10 +154,11 @@ export default Border = =>
           }
           ,
             c_Code {}
-            ,'.brdr1--bottom'
+            , '.brdr1--bottom'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Add a border to the bottom of an element'
+          }
+          , 'Add a border to the bottom of an element'
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
@@ -164,31 +168,35 @@ export default Border = =>
           }
           ,
             c_Code {}
-            ,'.brdr1--left'
+            , '.brdr1--left'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Add a border to the left side of an element'
+          }
+          , 'Add a border to the left side of an element'
     c_H2 {}
-    ,'Example'
+    , 'Example'
     c_Highlight {
       (nb 'pa2 mb2 lh5 ft4')...
-    },snippet
+    }
+    , snippet
     c_div {
       (nb 'brdr1 bc1 pv1 tac mt2 mb2')...
-    },'.brdr1.bc1.pv1.tac.mb2'
+    }
+    , '.brdr1.bc1.pv1.tac.mb2'
     c_H2 {}
-    ,'Default Settings'
+    , 'Default Settings'
 
     c_Copy {}
-    ,
-      'See'
+    , 'See'
     ,
       c_a {
         (nb 'tc5 xtd h-tc1')...
         href:"https://www.neckbeardjs.com/usage#configuration"
-      },'Configuration'
-    ,'to learn how to overwrite helper settings.'
+      }
+      , 'Configuration'
+    , 'to learn how to overwrite helper settings.'
 
     c_Highlight {
       (nb 'pa2 lh5 ft4')...
-    },snippet2
+    }
+    , snippet2

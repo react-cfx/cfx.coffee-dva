@@ -31,9 +31,8 @@ CFX = prefixDom {
 }
 
 ##
-  # Overview Page
-  ##
-
+ # Overview Page
+ ##
 snippet = """
 // Neckbeard.defaultSettings.helpers.borderRadius
 {
@@ -70,14 +69,14 @@ export default BorderRadius = =>
   c_div {}
   ,
     c_H1 {}
+    , 'Border Radius'
     ,
-      'Border Radius'
       c_span {
         (nb 'tc1 ft3 capitalize fw3 ml1')...
-      },'Responsive'
+      }
+      , 'Responsive'
     c_H2 {}
-    ,
-      'Options'
+    , 'Options'
     c_table {
       (nb 'w100 mb2 ft4 tcg60 lh2 sans')...
     }
@@ -90,13 +89,16 @@ export default BorderRadius = =>
         ,
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Border Direction'
+          }
+          , 'Border Direction'
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Class Prefix'
+          }
+          , 'Class Prefix'
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
-          },'Default Amounts'
+          }
+          , 'Default Amounts'
       c_tbody {}
       ,
         c_tr {
@@ -105,110 +107,133 @@ export default BorderRadius = =>
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Border Radius'
+          }
+          , 'Border Radius'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'.br'
+          }
+          , '.br'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'0-10'
+          }
+          , '0-10'
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Border Left Radius'
+          }
+          , 'Border Left Radius'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'.blr'
+          }
+          , '.blr'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'0-10'
+          }
+          , '0-10'
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Border Right Radius'
+          }
+          , 'Border Right Radius'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'.brr'
+          }
+          , '.brr'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'0-10'
+          }
+          , '0-10'
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Border Top Left Radius'
+          }
+          , 'Border Top Left Radius'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'.btlr'
+          }
+          , '.btlr'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'0-10'
+          }
+          , '0-10'
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Border Top Right Radius'
+          }
+          , 'Border Top Right Radius'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'.btrr'
+          }
+          , '.btrr'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'0-10'
+          }
+          , '0-10'
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Border Bottom Left Radius'
+          }
+          , 'Border Bottom Left Radius'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'.bblr'
+          }
+          , '.bblr'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'0-10'
+          }
+          , '0-10'
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
         ,
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Border Bottom Right Radius'
+          }
+          , 'Border Bottom Right Radius'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'.bbrr'
+          }
+          , '.bbrr'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'0-10'
+          }
+          , '0-10'
     c_H2 {}
-    ,'Example'
+    , 'Example'
     c_Highlight {
       (nb 'mb2 pa2  lh5 ft4')...
-    },snippet2
+    }
+    , snippet2
     c_div {
       (nb 'brdr1 br5 bc1 pv1 tac mt2 mb2')...
-    },'.brdr1.br5.bc1.pv1.mb2'
+    }
+    , '.brdr1.br5.bc1.pv1.mb2'
     c_H2 {}
-    ,"Default Settings"
+    , 'Default Settings'
     c_Copy {}
-    ,
-      'See'
+    , 'See'
     ,
       c_a
         href:"https://www.neckbeardjs.com/usage#configuration"
-        'Configuration'
-    ,'to learn how to overwrite helper settings.'
+      , 'Configuration'
+    , 'to learn how to overwrite helper settings.'
 
     c_Highlight {
       (nb 'pa2 lh5 ft4')...
-    },snippet
+    }
+    , snippet
