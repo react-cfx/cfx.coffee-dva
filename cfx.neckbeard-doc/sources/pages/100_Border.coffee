@@ -71,7 +71,8 @@ export default Border = =>
       'Border'
       c_span {
         (nb 'tc1 ft3 capitalize fw3 ml1')...
-      },'Responsive'
+      }
+      , 'Responsive'
     c_H2 {}
     , 'Options'
     c_table {
@@ -85,10 +86,12 @@ export default Border = =>
         ,
           c_th {
             (nb 'tcg50 fw3 pv1 ph1 tal fwsemibold ph1')...
-          },'Class'
+          }
+          , 'Class'
           c_th {
             (nb 'tcg50 fw3 pv1 ph1 tal fwsemibold ph1')...
-          },'Purpose'
+          } 
+          , 'Purpose'
       c_tbody {}
       ,
         c_tr {
@@ -100,10 +103,11 @@ export default Border = =>
           }
           ,
             c_Code {}
-            ,'.xbrdr'
+            , '.xbrdr'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          },'Remove the border from an element'
+          }
+          , 'Remove the border from an element'
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
@@ -130,7 +134,8 @@ export default Border = =>
             , '.brdr1--top'
           c_td {
             (nb 'tcg50 fw3 pv2 ph1')...
-          }, 'Add a border to the top of an element'
+          }
+          , 'Add a border to the top of an element'
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
