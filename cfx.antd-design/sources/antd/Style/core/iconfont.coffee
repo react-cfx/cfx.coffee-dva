@@ -106,8 +106,7 @@ export default iconfont =
     # antd@1.x compatibility alias: arrows-alt
     '.&-arrow-salt:before': direction.arrowsAll
 
-    '.&-reload:before':
-      content: '\e616'
+    '.&-reload:before': other.reload
 
     '.&-double-right:before': direction.doubleRight
     '.&-double-left:before': direction.doubleLeft
@@ -156,16 +155,14 @@ export default iconfont =
     # antd@1.x compatibility alias: close
     '.&-cross:before': suggestion.close
 
-    '.&-customer-service:before':
-      content: '\e634'
+    '.&-customer-service:before': other.customerService
     # antd@1.x compatibility alias: customer-service
-    '.&-customerservice:before':
-      content: '\e634'
+    '.&-customerservie:before': other.customerService
 
-    '.&-credit-card:before':
-      content: '\e635'
-    '.&-code-o:before':
-      content: '\e636'
+    '.&-credit-card:before': other.creditCard
+
+    '.&-code-o:before': other.codeO
+
     '.&-book:before': other.book
     # '.&-bar-chart:before':
     #   content: '\e638'
@@ -188,109 +185,69 @@ export default iconfont =
 
     '.&-plus-square-o:before': suggestion.plusSquareO
 
-    '.&-frown:before':
-      content: '\e646'
+    '.&-frown:before': other.frown
     # antd@1.x compatibility alias: frown
-    '.&-frown-circle:before':
-      content: '\e646'
+    '.&-frown-circle:before': other.frown
 
-    '.&-ellipsis:before':
-      content: '\e647'
-    '.&-copy:before':
-      content: '\e648'
+    '.&-ellipsis:before': other.ellipsis
+    '.&-copy:before': other.copy
 
     '.&-menu-fold:before': direction.menuFold
 
-    '.&-mail:before':
-      content: '\e659'
+    '.&-mail:before': other.mail
 
     '.&-logout:before': direction.logout
 
-    '.&-link:before':
-      content: '\e65b'
+    '.&-link:before': other.link
     '.&-area-chart:before': other.areaChart
     '.&-line-chart:before':
       content: '\e65d'
-    '.&-home:before':
-      content: '\e65e'
-    '.&-laptop:before':
-      content: '\e65f'
-    '.&-star:before':
-      content: '\e660'
-    '.&-star-o:before':
-      content: '\e661'
-    '.&-folder:before':
-      content: '\e662'
-    '.&-filter:before':
-      content: '\e663'
-    '.&-file:before':
-      content: '\e664'
-    '.&-exception:before':
-      content: '\e665'
-    '.&-meh:before':
-      content: '\e666'
+    '.&-home:before': other.home
+    '.&-laptop:before': other.65f
+    '.&-star:before': other.star
+    '.&-star-o:before': other.starO
+    '.&-folder:before': other.folder
+    '.&-filter:before': other.filter
+    '.&-file:before': other.file
+    '.&-exception:before': other.exception
+    '.&-meh:before': other.meh
 
     # antd@1.x compatibility alias: meh
-    '.&-meh-circle:before':
-      content: '\e666'
-    '.&-meh-o:before':
-      content: '\e667'
+    '.&-meh-circle:before': other.mehO
+    '.&-meh-o:before': other.mehO
 
-    '.&-shopping-cart:before':
-      content: '\e668'
-    '.&-save:before':
-      content: '\e669'
-    '.&-user:before':
-      content: '\e66a'
-    '.&-video-camera:before':
-      content: '\e66b'
-    '.&-to-top:before':
-      content: '\e66c'
-    '.&-team:before':
-      content: '\e66d'
-    '.&-tablet:before':
-      content: '\e66e'
-    '.&-solution:before':
-      content: '\e66f'
-    '.&-search:before':
-      content: '\e670'
-    '.&-share-alt:before':
-      content: '\e671'
-    '.&-setting:before':
-      content: '\e672'
-    '.&-poweroff:before':
-      content: '\e6d5'
-    '.&-picture:before':
-      content: '\e674'
-    '.&-phone:before':
-      content: '\e675'
-    '.&-paper-clip:before':
-      content: '\e676'
-    '.&-notification:before':
-      content: '\e677'
-    '.&-mobile:before':
-      content: '\e678'
+    '.&-shopping-cart:before': other.shoppingCart
+    '.&-save:before': other.save
+    '.&-user:before': other.user
+    '.&-video-camera:before': other.videoCamera
+    '.&-to-top:before': other.toTop
+    '.&-team:before': other.team
+    '.&-tablet:before': other.tablet
+    '.&-solution:before': other.solution
+    '.&-search:before': other.search
+    '.&-share-alt:before': other.shareAlt
+    '.&-setting:before': other.setting
+    '.&-poweroff:before': other.poweroff
+    '.&-picture:before': other.picture
+    '.&-phone:before': other.phone
+    '.&-paper-clip:before': other.paperClip
+    '.&-notification:before': other.notification
+    '.&-mobile:before': other.mobile
 
     '.&-menu-unfold:before':
       content: '\e679'
 
-    '.&-inbox:before':
-      content: '\e67a'
+    '.&-inbox:before': other.inbox
     '.&-lock:before': other.lock
-    '.&-qrcode:before':
-      content: '\e67c'
+    '.&-qrcode:before': other.qrcode
 
     '.&-play-circle:before': direction.playCircle
     '.&-play-circle-o:before': direction.playCircleO
 
-    '.&-tag:before':
-      content: '\e6d2'
-    '.&-tag-o:before':
-      content: '\e6d3'
-    '.&-tags:before':
-      content: '\e67d'
-    '.&-tags-o:before':
-      content: '\e67e'
+    '.&-tag:before': other.tag
+    '.&-tag-o:before': other.tagO
+    '.&-tags:before': other.tags
+    '.&-tags-o:before': other.tagsO
 
     '.&-cloud-o:before': other.cloudO
     '.&-cloud:before': other.cloud
@@ -299,20 +256,14 @@ export default iconfont =
     '.&-cloud-download-o:before': other.cloudDownloadO
     '.&-cloud-upload-o:before': other.cloudUploadO
 
-    '.&-environment:before':
-      content: '\e685'
-    '.&-environment-o:before':
-      content: '\e686'
+    '.&-environment:before': other.environment
+    '.&-environment-o:before': other.environmentO
 
-    '.&-eye:before':
-      content: '\e687'
-    '.&-eye-o:before':
-      content: '\e688'
+    '.&-eye:before': other.eye
+    '.&-eye-o:before': other.eyeO
 
-    '.&-camera:before':
-      content: '\e689'
-    '.&-camera-o:before':
-      content: '\e68a'
+    '.&-camera:before': other.camera
+    '.&-camera-o:before': other.cameraO
 
     '.&-windows:before': logo.windows
     '.&-apple:before': logo.apple
@@ -323,94 +274,65 @@ export default iconfont =
     '.&-aliwangwang:before': logo.aliwangwang
     '.&-aliwangwang-o:before': logo.aliwangwangO
 
-    '.&-export:before':
-      content: '\e691'
-    '.&-edit:before':
-      content: '\e692'
+    '.&-export:before': other.export
+    '.&-edit:before': other.edit
+
     '.&-circle-down-o:before':
       content: '\e693'
     '.&-circle-down-:before':
       content: '\e694'
-    '.&-appstore-o:before':
-      content: '\e695'
-    '.&-appstore:before':
-      content: '\e696'
-    '.&-scan:before':
-      content: '\e697'
-    '.&-file-text:before':
-      content: '\e698'
-    '.&-folder-open:before':
-      content: '\e699'
-    '.&-hdd:before':
-      content: '\e69a'
+
+    '.&-appstore-o:before': other.appstoreO
+    '.&-appstore:before': other.appstore
+
+    '.&-scan:before': other.scan
+    '.&-file-text:before': other.fileText
+    '.&-folder-open:before': other.folderOpen
+    '.&-hdd:before': other.hdd
 
     '.&-ie:before': logo.ie
 
-    '.&-file-jpg:before':
-      content: '\e69c'
-    '.&-like:before':
-      content: '\e64c'
-    '.&-like-o:before':
-      content: '\e69d'
-    '.&-dislike:before':
-      content: '\e64b'
-    '.&-dislike-o:before':
-      content: '\e69e'
-    '.&-delete:before':
-      content: '\e69f'
+    '.&-file-jpg:before': other.fileJpg
+    '.&-like:before': other.like
+    '.&-like-o:before': other.likeO
+    '.&-dislike:before': other.dislike
+    '.&-dislike-o:before': other.dislikeO
+    '.&-delete:before': other.delete
 
     '.&-enter:before': direction.enter
 
-    '.&-pushpin-o:before':
-      content: '\e6a1'
-    '.&-pushpin:before':
-      content: '\e6a2'
-    '.&-heart:before':
-      content: '\e6a3'
-    '.&-heart-o:before':
-      content: '\e6a4'
-    '.&-pay-circle:before':
-      content: '\e6a5'
-    '.&-pay-circle-o:before':
-      content: '\e6a6'
+    '.&-pushpin-o:before': other.pushpinO
+    '.&-pushpin:before': other.pushpin
+    '.&-heart:before': other.heart
+    '.&-heart-o:before': other.heartO
+    '.&-pay-circle:before': other.payCircle
+    '.&-pay-circle-o:before': other.payCircleO
 
-    '.&-smile:before':
-      content: '\e6a7'
+    '.&-smile:before': other.smile
     # antd@1.x compatibility alias: smile
-    '.&-smile-circle:before':
-      content: '\e6a7'
+    '.&-smile-circle:before': other.smile
 
-    '.&-smile-o:before':
-      content: '\e6a8'
-    '.&-frown-o:before':
-      content: '\e6a9'
+    '.&-smile-o:before': other.smileO
 
-    '.&-calculator:before':
-      content: '\e6aa'
-    '.&-message:before':
-      content: '\e6ab'
+    '.&-frown-o:before': other.frownO
+
+    '.&-calculator:before': other.calculator
+    '.&-message:before': other.message
 
     '.&-chrome:before': logo.chrome
 
     '.&-github:before': logo.github
 
-    '.&-file-unknown:before':
-      content: '\e6af'
-
-    '.&-file-excel:before':
-      content: '\e6b0'
-    '.&-file-ppt:before':
-      content: '\e6b1'
+    '.&-file-unknown:before': other.fileUnknown
+    '.&-file-excel:before': other.fileExcel
+    '.&-file-ppt:before': other.filePpt
     '.&-file-word:before':
       content: '\e6b2'
-    '.&-file-pdf:before':
-      content: '\e6b3'
-    '.&-desktop:before':
-      content: '\e6b4'
-    '.&-upload:before':
-      content: '\e6b6'
-    '.&-download:before':
-      content: '\e6b7'
+    '.&-file-pdf:before': other.filePdf
+
+    '.&-desktop:before': other.desktop
+    '.&-upload:before': other.upload
+    '.&-download:before': other.download
     '.&-pie-chart:before': other.pieChart
 
     '.&-unlock:before': other.unlock
@@ -420,11 +342,10 @@ export default iconfont =
 
     '.&-dot-chart:before': other.dotChart
     '.&-bar-chart:before': other.barChart
-    '.&-code:before':
-      content: '\e6bf'
 
-    '.&-api:before':
-      content: '\e951'
+    '.&-code:before': other.code
+
+    '.&-api:before': other.api
 
     '.&-plus-square:before': suggestion.plusSquare
 
@@ -449,117 +370,75 @@ export default iconfont =
     '.&-down-square-o:before': direction.downSquareO
     '.&-up-square-o:before': direction.upSquareO
 
-    '.&-loading:before':
-      content: '\e64d'
-    '.&-loading-3-quarters:before':
-      content: '\e6ae'
+    '.&-loading:before': other.loading
+    '.&-loading-3-quarters:before': other.loading3Quarters
 
-    '.&-bulb:before':
-      content: '\e649'
+    '.&-bulb:before': other.bulb
 
-    '.&-select:before':
-      content: '\e64a'
+    '.&-select:before': other.select
     '.&-addfile:before':
       content: '\e910'
-    '.&-file-add:before':
-      content: '\e910'
+    '.&-file-add:before': other.fileAdd
 
-    '.&-addfolder:before':
-      content: '\e914'
-    '.&-folder-add:before':
-      content: '\e914'
+    '.&-addfolder:before': other.folderAdd
+    '.&-folder-add:before': other.folderAdd
 
-    '.&-switcher:before':
-      content: '\e913'
-    '.&-rocket:before':
-      content: '\e90f'
+    '.&-switcher:before': other.switcher
+    '.&-rocket:before': other.rocket
 
     '.&-dingding:before': logo.dingding
     '.&-dingding-o:before': logo.dingdingO
 
-    '.&-bell:before':
-      content: '\e64e'
-    '.&-disconnect:before':
-      content: '\e64f'
-    '.&-database:before':
-      content: '\e650'
-    '.&-compass:before':
-      content: '\e6db'
-    '.&-barcode:before':
-      content: '\e652'
-    '.&-hourglass:before':
-      content: '\e653'
-    '.&-key:before':
-      content: '\e654'
-    '.&-flag:before':
-      content: '\e655'
-    '.&-layout:before':
-      content: '\e656'
+    '.&-bell:before': other.bell
+    '.&-disconnect:before': other.disconnect
+    '.&-database:before': other.database
+    '.&-compass:before': other.compass
+    '.&-barcode:before': other.barcode
+    '.&-hourglass:before': other.hourglass
+    '.&-key:before': other.key
+    '.&-flag:before': other.flag
+    '.&-layout:before': other.layout
 
     '.&-login:before': direction.login
 
-    '.&-printer:before':
-      content: '\e673'
-    '.&-sound:before':
-      content: '\e6e9'
-    '.&-usb:before':
-      content: '\e6d7'
-    '.&-skin:before':
-      content: '\e6d8'
-    '.&-tool:before':
-      content: '\e6d9'
-    '.&-sync:before':
-      content: '\e6da'
-    '.&-wifi:before':
-      content: '\e6d6'
-    '.&-car:before':
-      content: '\e6dc'
-    '.&-copyright:before':
-      content: '\e6de'
-    '.&-schedule:before':
-      content: '\e6df'
-    '.&-user-add:before':
-      content: '\e6ed'
-    '.&-user-delete:before':
-      content: '\e6e0'
-    '.&-usergroup-add:before':
-      content: '\e6dd'
-    '.&-usergroup-delete:before':
-      content: '\e6e1'
-    '.&-man:before':
-      content: '\e6e2'
-    '.&-woman:before':
-      content: '\e6ec'
-    '.&-shop:before':
-      content: '\e6e3'
-    '.&-gift:before':
-      content: '\e6e4'
-    '.&-idcard:before':
-      content: '\e6e5'
-    '.&-medicine-box:before':
-      content: '\e6e6'
-    '.&-red-envelope:before':
-      content: '\e6e7'
-    '.&-coffee:before':
-      content: '\e6e8'
-    '.&-trademark:before':
-      content: '\e651'
-    '.&-safety:before':
-      content: '\e6ea'
-    '.&-wallet:before':
-      content: '\e6eb'
-    '.&-bank:before':
-      content: '\e6ee'
-    '.&-trophy:before':
-      content: '\e6ef'
-    '.&-contacts:before':
-      content: '\e6f0'
-    '.&-global:before':
-      content: '\e6f1'
-    '.&-shake:before':
-      content: '\e94f'
-    '.&-fork:before':
-      content: '\e6f2'
+    '.&-printer:before': other.printer
+    '.&-sound:before': other.sound
+    '.&-usb:before': other.usb
+    '.&-skin:before': other.skin
+    '.&-tool:before': other.tool
+    '.&-sync:before': other.sync
+    '.&-wifi:before': other.wifi
+    '.&-car:before': other.car
+
+    '.&-copyright:before': other.copyright
+
+    '.&-schedule:before': other.schedule
+
+    '.&-user-add:before': other.userAdd
+    '.&-user-delete:before': other.userDelete
+    '.&-usergroup-add:before':  other.usergroupAdd
+    '.&-usergroup-delete:before': other.usergroupDelete
+
+    '.&-man:before': other.man
+    '.&-woman:before': other.woman
+    '.&-shop:before': other.shop
+    '.&-gift:before': other.gift
+    '.&-idcard:before': other.idcard
+    '.&-medicine-box:before': other.medicineBox
+    '.&-red-envelope:before': other.redEnvelope
+    '.&-coffee:before': other.coffee
+
+    '.&-trademark:before': other.trademark
+    '.&-safety:before': other.safety
+    '.&-wallet:before': other.wallet
+    '.&-bank:before': other.bank
+    '.&-trophy:before': other.trophy
+    '.&-contacts:before': other.contacts
+    '.&-global:before': other.global
+    '.&-shake:before': other.shake
+
+    '.&-fork:before': other.fork
+
     '.&-spin:before':
       display: 'inline-block'
       animation: 'loadingCircle 1s infinite linear'
