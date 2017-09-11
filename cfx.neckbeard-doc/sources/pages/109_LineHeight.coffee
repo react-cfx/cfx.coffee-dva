@@ -1,5 +1,7 @@
 import React from "react"
+
 import Highlight from "react-highlight"
+
 import { prefixDom } from 'cfx.dom'
 import nb from '../nb'
 
@@ -9,17 +11,20 @@ import H3 from '../components/H3'
 import Code from '../components/Code'
 import Copy from '../components/Copy'
 
+
+
+
 CFX = prefixDom {
-  default: {
+  default :{
+    'div'
     'table'
     'thead'
-    'tr'
-    'th'
     'tbody'
+    'th'
+    'tr'
     'td'
-    'div'
-    'a'
     'span'
+    'a'
   }
   H1
   H2
@@ -29,25 +34,23 @@ CFX = prefixDom {
   Highlight
 }
 
-##
- # Overview Page
- ##
 
-snippet ="""
-<div className={ nb("lg-dn") }>.lg-dn</div>
-"""
-snippet2 ="""
-// Neckbeard.defaultSettings.breakpoints
+##
+  # LineHeight Page
+  ##
+
+snippet = """
+// Neckbeard.defaultSettings.helpers.lineHeight
 {
-    "sm": 300,
-    "md": 600,
-    "lg": 900,
-    "xlg": 1440
+    "limit": 10,
+    "incrementBy": 0.1,
+    "responsive": true
 }
 """
 
-export default BreakPoints = =>
 
+
+export default LineHeight = =>
   {
     c_table
     c_thead
@@ -69,11 +72,16 @@ export default BreakPoints = =>
   c_div {}
   ,
     c_H1 {}
-    , 'Breakpoints'
-    c_Copy {}
-    , ' Because Neckbeard ships with a standard set of breakpoints, many of the helpers are responsive. These helpers are generated from the breakpoints in your configuration. These are the default breakpoints:'
+    , 'Line Height'
+    ,
+      c_span {
+        (nb 'tc1 ft3 capitalize fw3 ml1')...
+      }
+      , 'Responsive'
+
     c_H2 {}
     , 'Options'
+
     c_table {
       (nb 'w100 mb2 ft4 tcg60 lh2 sans')...
     }
@@ -87,15 +95,11 @@ export default BreakPoints = =>
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
           }
-          , 'Name'
+          , 'Class'
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
           }
-          , 'Prefix'
-          c_th {
-            (nb 'pa1 tal fwsemibold ph1')...
-          }
-          , 'Target'
+          , 'Generated Value'
       c_tbody {}
       ,
         c_tr {
@@ -103,177 +107,170 @@ export default BreakPoints = =>
         }
         ,
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          , 'Small'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '.sm'
+            , '.lh1'
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '(min-width: 300px)'
+            , 'line-height: 1rem'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
         ,
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          , 'Medium'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '.md-'
+            , '.lh2'
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '(min-width: 600px)'
+            , 'line-height: 1.1rem'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
         ,
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          , 'Large'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '.lg-'
+            , '.lh3'
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '(min-width: 900px)'
+            , 'line-height: 1.3rem'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
         ,
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          , 'Extra Large'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '.xlg-'
+            , '.lh4'
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '(min-width: 1440px)'
+            , 'line-height: 1.4rem'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
         ,
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          , 'Only Small'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '.only-sm-'
+            , '.lh5'
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '(max-width: 599px)'
+            , 'line-height: 1.5rem'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
         ,
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          , 'Only Medium'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '.only-md-'
+            , '.lh6'
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '(min-width: 600px) and (max-width: 899px)'
+            , 'line-height: 1.6rem'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
         ,
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          , 'Only Large'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '.only-lg-'
+            , '.lh7'
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '(min-width: 900px) and (max-width: 1439px)'
+            , 'line-height: 1.7rem'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
         ,
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          , 'Only Extra Large'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '.only-xlg-'
+            , '.lh8'
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '(min-width: 1440px)'
+            , 'line-height: 1.8rem'
 
-    c_H2 {}
-    , 'Example'
-    c_Copy {}
-    , 'You can use responsive prefixes to specify when an element should be shown on a page. The following would hide the element on the "lg" breakpoint.'
-    c_Highlight {
-      (nb 'pa2 mb2 lh5 ft4')...
-    }
-    , snippet
+        c_tr {
+          (nb 'brdr1--bottom bcg10')...
+        }
+        ,
+          c_td {
+            (nb 'tcg50 fw3 pv2 ph1"')...
+          }
+          ,
+            c_Code {}
+            , '.lh9'
+          c_td {
+            (nb 'tcg50 fw3 pv2 ph1"')...
+          }
+          ,
+            c_Code {}
+            , 'line-height: 1.9rem'
+
+        c_tr {
+          (nb 'brdr1--bottom bcg10')...
+        }
+        ,
+          c_td {
+            (nb 'tcg50 fw3 pv2 ph1"')...
+          }
+          ,
+            c_Code {}
+            , '.lh10'
+          c_td {
+            (nb 'tcg50 fw3 pv2 ph1"')...
+          }
+          ,
+            c_Code {}
+            , 'line-height: 2rem'
 
     c_H2 {}
     , 'Default Settings'
@@ -283,10 +280,12 @@ export default BreakPoints = =>
     ,
       c_a {
         (nb 'tc5 xtd h-tc1')...
-        href: 'https://www.neckbeardjs.com/usage#configuration'
+        href:'https://www.neckbeardjs.com/usage#configuration'
       }
       , 'Configuration'
     , 'to learn how to overwrite helper settings.'
 
-    c_Highlight {}
-    , snippet2
+    c_Highlight {
+      (nb 'pa2 lh5 ft4')...
+    }
+    , snippet
