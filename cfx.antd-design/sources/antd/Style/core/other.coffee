@@ -1,4 +1,4 @@
-export default other = 
+export default other =
   lock: '67b'
   unlock: '6ba'
 
@@ -180,4 +180,3 @@ export default other =
 
   api: '951'
   fork: '6f2'
- 

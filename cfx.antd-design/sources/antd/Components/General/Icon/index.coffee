@@ -1,1 +1,0 @@
-<Icon type="step-backward" />

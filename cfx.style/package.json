@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "coffee-require": "^0.0.3",
-    "coffeescript": "next"
+    "coffeescript": "next",
+    "ddeyes": "^0.0.4"
   }
 }

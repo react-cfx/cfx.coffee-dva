@@ -21,6 +21,7 @@
   "dependencies": {
     "antd": "^2.12.8",
     "cfx.dom": "file:../cfx.dom",
+    "cfx.style": "file:../cfx.style",
     "cfx.neckbeard": "file:../cfx.neckbeard",
     "lodash.merge": "^4.6.0",
     "normalize.css": "^7.0.0",
