@@ -1,5 +1,7 @@
 import React from "react"
+
 import Highlight from "react-highlight"
+
 import { prefixDom } from 'cfx.dom'
 import nb from '../nb'
 
@@ -9,17 +11,20 @@ import H3 from '../components/H3'
 import Code from '../components/Code'
 import Copy from '../components/Copy'
 
+
+
+
 CFX = prefixDom {
-  default: {
+  default :{
+    'div'
     'table'
     'thead'
-    'tr'
-    'th'
     'tbody'
+    'th'
+    'tr'
     'td'
-    'div'
-    'a'
     'span'
+    'a'
   }
   H1
   H2
@@ -29,25 +34,21 @@ CFX = prefixDom {
   Highlight
 }
 
+
 ##
- # Overview Page
- ##
+  # ZIndex Page
+  ##
+
 
 snippet ="""
-<div className={ nb("lg-dn") }>.lg-dn</div>
-"""
-snippet2 ="""
-// Neckbeard.defaultSettings.breakpoints
+// Neckbeard.defaultSettings.helpers.textDecoration
 {
-    "sm": 300,
-    "md": 600,
-    "lg": 900,
-    "xlg": 1440
+    "responsive": false
 }
 """
 
-export default BreakPoints = =>
 
+export default ZIndex = =>
   {
     c_table
     c_thead
@@ -69,11 +70,16 @@ export default BreakPoints = =>
   c_div {}
   ,
     c_H1 {}
-    , 'Breakpoints'
-    c_Copy {}
-    , ' Because Neckbeard ships with a standard set of breakpoints, many of the helpers are responsive. These helpers are generated from the breakpoints in your configuration. These are the default breakpoints:'
+    , 'Z Index'
+    ,
+      c_span {
+        (nb 'tc1 ft3 capitalize fw3 ml1')...
+      }
+      , 'Responsive'
+
     c_H2 {}
     , 'Options'
+
     c_table {
       (nb 'w100 mb2 ft4 tcg60 lh2 sans')...
     }
@@ -91,11 +97,7 @@ export default BreakPoints = =>
           c_th {
             (nb 'pa1 tal fwsemibold ph1')...
           }
-          , 'Prefix'
-          c_th {
-            (nb 'pa1 tal fwsemibold ph1')...
-          }
-          , 'Target'
+          , 'Class'
       c_tbody {}
       ,
         c_tr {
@@ -103,177 +105,170 @@ export default BreakPoints = =>
         }
         ,
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          , 'Small'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '.sm'
+            , 'Level 1'
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '(min-width: 300px)'
+            , '.zi1'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
         ,
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          , 'Medium'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '.md-'
+            , 'Level 2'
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '(min-width: 600px)'
+            , '.zi2'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
         ,
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          , 'Large'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '.lg-'
+            , 'Level 3'
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '(min-width: 900px)'
+            , '.zi3'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
         ,
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          , 'Extra Large'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '.xlg-'
+            , 'Level 4'
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '(min-width: 1440px)'
+            , '.zi4'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
         ,
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          , 'Only Small'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '.only-sm-'
+            , 'Level 5'
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '(max-width: 599px)'
+            , '.zi5'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
         ,
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          , 'Only Medium'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '.only-md-'
+            , 'Level 6'
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '(min-width: 600px) and (max-width: 899px)'
+            , '.zi6'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
         ,
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          , 'Only Large'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '.only-lg-'
+            , 'Level 7'
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '(min-width: 900px) and (max-width: 1439px)'
+            , '.zi7'
 
         c_tr {
           (nb 'brdr1--bottom bcg10')...
         }
         ,
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
-          }
-          , 'Only Extra Large'
-          c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '.only-xlg-'
+            , 'Level 8'
           c_td {
-            (nb 'tcg50 fw3 pv2 ph1')...
+            (nb 'tcg50 fw3 pv2 ph1"')...
           }
           ,
             c_Code {}
-            , '(min-width: 1440px)'
+            , '.zi8'
 
-    c_H2 {}
-    , 'Example'
-    c_Copy {}
-    , 'You can use responsive prefixes to specify when an element should be shown on a page. The following would hide the element on the "lg" breakpoint.'
-    c_Highlight {
-      (nb 'pa2 mb2 lh5 ft4')...
-    }
-    , snippet
+        c_tr {
+          (nb 'brdr1--bottom bcg10')...
+        }
+        ,
+          c_td {
+            (nb 'tcg50 fw3 pv2 ph1"')...
+          }
+          ,
+            c_Code {}
+            , 'Level 9'
+          c_td {
+            (nb 'tcg50 fw3 pv2 ph1"')...
+          }
+          ,
+            c_Code {}
+            , '.zi9'
+
+        c_tr {
+          (nb 'brdr1--bottom bcg10')...
+        }
+        ,
+          c_td {
+            (nb 'tcg50 fw3 pv2 ph1"')...
+          }
+          ,
+            c_Code {}
+            , 'Level 10'
+          c_td {
+            (nb 'tcg50 fw3 pv2 ph1"')...
+          }
+          ,
+            c_Code {}
+            , '.zi10'
 
     c_H2 {}
     , 'Default Settings'
@@ -283,10 +278,12 @@ export default BreakPoints = =>
     ,
       c_a {
         (nb 'tc5 xtd h-tc1')...
-        href: 'https://www.neckbeardjs.com/usage#configuration'
+        href:'https://www.neckbeardjs.com/usage#configuration'
       }
       , 'Configuration'
     , 'to learn how to overwrite helper settings.'
 
-    c_Highlight {}
-    , snippet2
+    c_Highlight {
+      (nb 'pa2 lh5 ft4')...
+    }
+    , snippet

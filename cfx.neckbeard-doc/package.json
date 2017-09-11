@@ -20,6 +20,7 @@
   "dependencies": {
     "cfx.dom": "file:../cfx.dom",
     "cfx.neckbeard": "file:../cfx.neckbeard",
+    "color": "^2.0.0",
     "normalize.css": "^7.0.0",
     "react-highlight": "^0.10.0",
     "reset-css": "^2.2.1"
