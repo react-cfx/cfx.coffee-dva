@@ -13,8 +13,8 @@ export default logo =
 
   github: '6ad'
 
-  aliwangwang: '68e'
-  aliwangwangO: '68f'
-
-  dingding: '923'
-  dingdingO: '925'
+  # aliwangwang: '68e'
+  # aliwangwangO: '68f'
+  #
+  # dingding: '923'
+  # dingdingO: '925'

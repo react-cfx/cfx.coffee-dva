@@ -6,7 +6,8 @@ iconfontMixin =
   textTransform: 'none'
   lineHeight: 1
   textRendering: 'optimizeLegibility'
-  fontSmoothing: 'antialiased'
+  WebkitFontSmoothing: 'antialiased'
+  MozOsxFontSmoothing: 'grayscale'
   '&:before':
     display: 'block'
     fontFamily: 'anticon !important'
@@ -14,7 +15,8 @@ iconfontMixin =
 iconfontFont = (content) ->
   fontFamily: 'anticon'
   textRendering: 'optimizeLegibility'
-  fontSmoothing: 'antialiased'
+  WebkitFontSmoothing: 'antialiased'
+  MozOsxFontSmoothing: 'grayscale'
   content: content
 
 export {

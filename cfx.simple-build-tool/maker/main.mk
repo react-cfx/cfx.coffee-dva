@@ -39,16 +39,16 @@ extHandler = extHandler() { \
 	source_path=$$2; \
 	output_dir=$$3; \
 	case "$$file_ext" in \
-		'.pug' ) \
+		'\.pug' ) \
 			pug -P -o $$output_dir $$source_path; \
 			;; \
-		'.styl' ) \
+		'\.styl' ) \
 			stylus --out $$output_dir $$source_path; \
 			;; \
-		'.coffee' ) \
+		'\.coffee' ) \
 			coffee -c -b -o $$output_dir $$source_path; \
 			;; \
-		'.js' ) \
+		'\.js' ) \
 			cp $$source_path $$output_dir; \
 			;; \
 		* ) \
@@ -59,19 +59,19 @@ extHandler = extHandler() { \
 
 .pug:
 	@$(findPath); $(extHandler); \
-	findPath '.pug' extHandler
+	findPath '\.pug' extHandler
 
 .styl:
 	@$(findPath); $(extHandler); \
-	findPath '.styl' extHandler
+	findPath '\.styl' extHandler
 
 .coffee:
 	@$(findPath); $(extHandler); \
-	findPath '.coffee' extHandler
+	findPath '\.coffee' extHandler
 
 .js:
 	@$(findPath); $(extHandler); \
-	findPath '.js' extHandler
+	findPath '\.js' extHandler
 
 .public:
 	if [ -d './src/public' ]; then \
