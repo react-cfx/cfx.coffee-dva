@@ -23,12 +23,12 @@ export default style =
     overflow: 'hidden'
     padding: '10px 0 0'
 
-    '.anticon':
+    '> .anticon':
       fontSize: '24px'
       margin: '12px 0 16px'
       transition: 'all .3s'
 
-    '.anticon-class':
+    '> .anticon-class':
       display: 'block'
       textAlign: 'center'
       transform: 'scale(0.83)'
@@ -38,18 +38,5 @@ export default style =
     '&:hover':
       backgroundColor: color.primary
       color: color.fff
-      '.anticon':
+      '> .anticon':
         transform: 'scale(1.4)'
-
-    '&:after':
-      position: 'absolute'
-      top: 0
-      left: 0
-      height: '100%'
-      width: '100%'
-      content: 'Copied!'
-      textAlign: 'center'
-      lineHeight: '110px'
-      color: color.fff
-      transition: 'all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28)'
-      opacity: 0

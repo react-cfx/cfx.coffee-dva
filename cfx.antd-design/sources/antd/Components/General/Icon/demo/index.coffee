@@ -47,11 +47,6 @@ export default class IconSet extends React.Component
       catigory
     } = @props
 
-    listClassName = classNames
-      'anticons-list': true
-      clearfix: true
-      "#{className}": !!className
-
     {
       c_ul
       c_li
@@ -59,7 +54,10 @@ export default class IconSet extends React.Component
       c_span
     } = CFX
 
-    console.log ".#{font.icon.prefix}": iconfont[".#{font.icon.prefix}"]
+    listClassName = classNames
+      'anticons-list': true
+      clearfix: true
+      "#{className}": !!className
 
     c_ul.apply @
     ,
