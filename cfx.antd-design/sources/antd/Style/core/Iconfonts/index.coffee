@@ -466,13 +466,13 @@ export default iconfonts =
         (
           Object.keys iconData
         ).reduce (r, c) ->
-          _c = c
-          .replace /([A-Z])/g, "-$1"
-          .toLowerCase() 
+          # _c = c
+          # .replace /([A-Z])/g, "-$1"
+          # .toLowerCase() 
 
           {
             r...
-            "&-#{_c}:before": getContent iconData["#{c}"]
+            "&-#{c}:before": getContent iconData["#{c}"]
           }
         , {}
 

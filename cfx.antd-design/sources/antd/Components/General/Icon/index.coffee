@@ -1,3 +1,4 @@
+import React from 'react'
 
 import { Icon } from 'antd'
 import { prefixDom } from 'cfx.dom'
@@ -8,29 +9,32 @@ import { iconfontMixin } from '../../../Style/mixins/iconfont'
 
 CFX = prefixDom { Icon }
 
-export default CFX_Icon = ->
-  { type } = @props
+export default class CFX_Icon extends React.Component
 
-  _type = type
-  .replace /([A-Z])/g, "-$1"
-  .toLowerCase()
+  render: ->
 
-  { c_Icon } = CFX
+    { type } = @props
 
-  klass =
-    prefix: ".#{font.icon.prefix}"
-    type: "&-#{_type}:before"
+    # _type = type
+    # .replace /([A-Z])/g, "-$1"
+    # .toLowerCase()
 
-  styleObj = 
-    "#{klass.prefix}": {
-      iconfontMixin...
-      "#{klass.type}":
-        iconfonts["#{klass.prefix}"]["#{klass.type}"]
+    { c_Icon } = CFX
+
+    klass =
+      prefix: ".#{font.icon.prefix}"
+      type: "&-#{type}:before"
+
+    styleObj = 
+      "#{klass.prefix}": {
+        iconfontMixin...
+        "#{klass.type}":
+          iconfonts["#{klass.prefix}"]["#{klass.type}"]
+      }
+
+    c_Icon {
+      type
+      (
+        nb styleObj
+      )...
     }
-
-  c_Icon {
-    type
-    (
-      nb styleObj
-    )...
-  }

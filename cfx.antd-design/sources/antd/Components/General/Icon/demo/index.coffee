@@ -1,11 +1,13 @@
 import React from 'react'
 import classNames from 'classnames'
+
 import { prefixDom } from 'cfx.dom'
-import { Icon } from 'antd'
+
+import Icon from '..'
+
 import nb from '../../../../../nb'
 import style from './style'
 import iconfonts from '../../../../Style/core/Iconfonts'
-import { font } from '../../../../Style/themes'
 
 CFX = prefixDom {
   default: {
@@ -78,7 +80,6 @@ export default class IconSet extends React.Component
             ,
               c_Icon {
                 type
-                (nb ".#{font.icon.prefix}": iconfonts[".#{font.icon.prefix}"])...
               }
               c_span
                 className: 'anticon-class'
