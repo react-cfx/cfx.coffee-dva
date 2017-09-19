@@ -20,32 +20,32 @@ export default ->
     c_FontSet
       catigory: 'direction'
 
-  # .add 'suggestion'
-  # , =>
-  #
-  #   {
-  #     c_FontSet
-  #   } = CFX
-  #
-  #   c_FontSet
-  #     catigory: 'suggestion'
-  #
-  # .add 'logo'
-  # , =>
-  #
-  #   {
-  #     c_FontSet
-  #   } = CFX
-  #
-  #   c_FontSet
-  #     catigory: 'logo'
-  #
-  # .add 'other'
-  # , =>
-  #
-  #   {
-  #     c_FontSet
-  #   } = CFX
-  #
-  #   c_FontSet
-  #     catigory: 'other'
+  .add 'suggestion'
+  , =>
+  
+    {
+      c_FontSet
+    } = CFX
+  
+    c_FontSet
+      catigory: 'suggestion'
+  
+  .add 'logo'
+  , =>
+  
+    {
+      c_FontSet
+    } = CFX
+  
+    c_FontSet
+      catigory: 'logo'
+  
+  .add 'other'
+  , =>
+  
+    {
+      c_FontSet
+    } = CFX
+  
+    c_FontSet
+      catigory: 'other'

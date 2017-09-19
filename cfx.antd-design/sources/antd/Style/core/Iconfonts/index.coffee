@@ -1,6 +1,6 @@
 import { glamor } from 'cfx.style'
-import { font } from '../themes'
-import { iconfontMixin } from '../mixins/iconfont'
+import { font } from '../../themes'
+import { iconfontMixin } from '../../mixins/iconfont'
 
 import direction from './direction'
 import suggestion from './suggestion'
@@ -21,7 +21,7 @@ getContent = (value) ->
   else
     content: "\\e#{value}"
 
-export default iconfont =
+export default iconfonts =
 
   # font-face
   # @icon-url： 字体源文件的地址
@@ -50,7 +50,12 @@ export default iconfont =
 
     (
       do ->
-        iconData =
+        iconData = {
+          direction...
+          suggestion...
+          logo...
+          other...
+        }
           # 'step-forward': direction.stepForward
           # 'step-backward': direction.stepBackward
           # 'forward': direction.forward
@@ -130,10 +135,10 @@ export default iconfont =
           # 'arrow-right': direction.arrowRight
           # 'arrow-left': direction.arrowLeft
 
-          'down': direction.down
-          'up': direction.up
-          'right': direction.right
-          'left': direction.left
+          # 'down': direction.down
+          # 'up': direction.up
+          # 'right': direction.right
+          # 'left': direction.left
 
           # 'minus-square-o': suggestion.minusSquareO
           #
@@ -164,8 +169,8 @@ export default iconfont =
           # 'check-circle': suggestion.checkCircle
           # 'check-circle-o': suggestion.checkCircleO
 
-          'check': suggestion.check
-          'close': suggestion.close
+          # 'check': suggestion.check
+          # 'close': suggestion.close
 
           # # antd@1.x compatibility alias: close
           # 'cross': suggestion.close
@@ -253,7 +258,7 @@ export default iconfont =
           #   content: '\e679'
           #
           # 'inbox': other.inbox
-          'lock': other.lock
+          # 'lock': other.lock
           # 'qrcode': other.qrcode
           #
           # 'play-circle': direction.playCircle
@@ -280,11 +285,11 @@ export default iconfont =
           # 'camera': other.camera
           # 'camera-o': other.cameraO
 
-          'windows': logo.windows
-          'apple': logo.apple
-          'apple-o': logo.appleO
-          'android': logo.android
-          'android-o': logo.androidO
+          # 'windows': logo.windows
+          # 'apple': logo.apple
+          # 'apple-o': logo.appleO
+          # 'android': logo.android
+          # 'android-o': logo.androidO
 
           # 'aliwangwang': logo.aliwangwang
           # 'aliwangwang-o': logo.aliwangwangO
@@ -305,7 +310,7 @@ export default iconfont =
           # 'folder-open': other.folderOpen
           # 'hdd': other.hdd
 
-          'ie': logo.ie
+          # 'ie': logo.ie
 
           # 'file-jpg': other.fileJpg
           # 'like': other.like
@@ -334,9 +339,9 @@ export default iconfont =
           # 'calculator': other.calculator
           # 'message': other.message
 
-          'chrome': logo.chrome
+          # 'chrome': logo.chrome
 
-          'github': logo.github
+          # 'github': logo.github
 
           # 'file-unknown': other.fileUnknown
           # 'file-excel': other.fileExcel
@@ -350,11 +355,11 @@ export default iconfont =
           # 'download': other.download
           # 'pie-chart': other.pieChart
 
-          'unlock': other.unlock
+          # 'unlock': other.unlock
           # 'calendar': other.calendar
-          #
+          
           # 'windows-o': logo.windowsO
-          #
+          
           # 'dot-chart': other.dotChart
           # 'bar-chart': other.barChart
           #
@@ -461,9 +466,13 @@ export default iconfont =
         (
           Object.keys iconData
         ).reduce (r, c) ->
+          _c = c
+          .replace /([A-Z])/g, "-$1"
+          .toLowerCase() 
+
           {
             r...
-            "&-#{c}:before": getContent iconData["#{c}"]
+            "&-#{_c}:before": getContent iconData["#{c}"]
           }
         , {}
 

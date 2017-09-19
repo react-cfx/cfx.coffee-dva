@@ -4,7 +4,7 @@ export default direction =
   # stepForward: '600'
   # fastBackward: '6c6'
   # fastForward: '6c7'
-  #
+  
   # shrink: '614'
   # arrowsAlt: '615'
 

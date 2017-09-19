@@ -4,7 +4,7 @@ import { prefixDom } from 'cfx.dom'
 import { Icon } from 'antd'
 import nb from '../../../../../nb'
 import style from './style'
-import iconfont from '../../../../Style/core/iconfont'
+import iconfonts from '../../../../Style/core/Iconfonts'
 import { font } from '../../../../Style/themes'
 
 CFX = prefixDom {
@@ -30,9 +30,9 @@ export default class IconSet extends React.Component
       'check'
     ]
     logo: [
-      'android', 'android-o'
-      'apple', 'apple-o'
-      'windows', 'windows-o'
+      'android', 'androidO'
+      'apple', 'appleO'
+      'windows', 'windowsO'
       'ie', 'chrome'
       'github'
     ]
@@ -65,7 +65,7 @@ export default class IconSet extends React.Component
         {
           className: listClassName
           (nb style.ul)...
-          (nb fontFamily: iconfont.fontFamily)...
+          (nb fontFamily: iconfonts.fontFamily)...
         }
       ].concat(
         @icons[catigory]
@@ -78,7 +78,7 @@ export default class IconSet extends React.Component
             ,
               c_Icon {
                 type
-                (nb ".#{font.icon.prefix}": iconfont[".#{font.icon.prefix}"])...
+                (nb ".#{font.icon.prefix}": iconfonts[".#{font.icon.prefix}"])...
               }
               c_span
                 className: 'anticon-class'
