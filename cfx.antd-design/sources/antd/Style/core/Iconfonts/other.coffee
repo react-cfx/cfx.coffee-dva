@@ -65,7 +65,9 @@ export default other =
   # picture: '674'
   # poweroff: '6d5'
   # reload: '616'
-  # search: '670'
+
+  search: '670'
+
   # setting: '672'
   # shareAlt: '671'
   # shoppingCart: '668'

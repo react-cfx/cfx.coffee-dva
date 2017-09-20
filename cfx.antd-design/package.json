@@ -26,8 +26,10 @@
     "classnames": "^2.2.5",
     "lodash.merge": "^4.6.0",
     "normalize.css": "^7.0.0",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "omit.js": "^1.0.0",
+    "prop-types": "^15.5.10",
+    "react": "next",
+    "react-dom": "next",
     "reset-css": "^2.2.1",
     "tinycolor2": "^1.4.1"
   }
