@@ -6,11 +6,11 @@
     "postinstall": "make rebuild"
   },
   "dependencies": {
-    "react": "^15.6.1"
+    "react": "^16.0.0"
   },
   "devDependencies": {
     "coffee-require": "^0.0.3",
-    "coffeescript": "next",
+    "coffeescript": "^2.0.1",
     "ddeyes": "^0.0.4"
   }
 }
