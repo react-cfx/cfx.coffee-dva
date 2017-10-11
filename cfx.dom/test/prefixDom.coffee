@@ -1,5 +1,5 @@
 import dd from 'ddeyes'
-import { prefixDom } from '../index.coffee'
+import { prefixDom } from '../dist/bundle'
 
 dd Object.keys prefixDom
   default: [

@@ -1,6 +1,6 @@
 import { cfxify } from './common/Cfxify'
 import {
-  components
+  Components as components
   prefixDom
 } from './rw/Components'
 
@@ -8,4 +8,4 @@ export {
   cfxify
   components
   prefixDom
-}
+} 
