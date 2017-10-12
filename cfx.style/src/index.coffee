@@ -2,12 +2,7 @@ import * as aphrodite from 'glamor/aphrodite'
 import * as glamor from 'glamor'
 import assign from 'assign-deep'
 
-export {
-  glamor
-  aphrodite
-}
-
-export default (
+styl = (
   allSelectors
   {
     useGlamor = true
@@ -86,3 +81,11 @@ export default (
     self[k] = allSelectors[k]
 
   self
+
+export {
+  glamor
+  aphrodite
+  styl
+}
+
+export default styl

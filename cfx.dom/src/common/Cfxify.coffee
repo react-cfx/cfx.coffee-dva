@@ -1,7 +1,7 @@
 import {
   # createClass
   createElement
-  createFactory
+  # createFactory
   # PropTypes
 } from 'react'
 

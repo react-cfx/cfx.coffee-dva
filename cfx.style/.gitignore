@@ -20,5 +20,3 @@ tmp
 yarn.lock
 yarn*log
 .yarn*
-
-/index.js

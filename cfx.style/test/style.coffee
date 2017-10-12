@@ -1,5 +1,5 @@
 import dd  from 'ddeyes'
-import { glamor } from '../index.coffee'
+import { glamor } from '../src'
 
 fontIconUrl = "https://at.alicdn.com/t/font_zck90zmlh7hf47vi"
 
