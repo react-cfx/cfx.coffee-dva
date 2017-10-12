@@ -8,7 +8,7 @@
 export default fontFamily = ({
   fonts
 }) ->
-      
+
   ##
    # Font Family Helpers
    ##

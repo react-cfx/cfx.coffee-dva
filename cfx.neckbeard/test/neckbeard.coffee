@@ -68,7 +68,7 @@ import * as helpers from '../src/helper'
 } = helpers
 
 import Neckbeard from '../src'
-import cfxStyle from 'cfx.style/index.coffee'
+import cfxStyle from 'cfx.style'
 { create } = Neckbeard cfxStyle
 
 target.flex = ->
