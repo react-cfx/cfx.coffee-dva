@@ -24,3 +24,5 @@ yarn*log
 src
 public
 .storybook
+
+package-lock.json
