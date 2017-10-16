@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "storybook": "start-storybook -p 8000 -c .storybook"
+  },
+  "devDependencies": {
+    "@storybook/addon-info": "^3.2.12",
+    "@storybook/addon-options": "^3.2.12",
+    "@storybook/react": "^3.2.12",
+    "cfx.simple-build-tool": "^0.0.1",
+    "coffeescript": "^2.0.1"
+  },
+  "dependencies": {
+    "antd": "^2.13.6",
+    "cfx.dom": "^0.0.2",
+    "normalize.css": "^7.0.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "reset-css": "^2.2.1"
+  }
+}
