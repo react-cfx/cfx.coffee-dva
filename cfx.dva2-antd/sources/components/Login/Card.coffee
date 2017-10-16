@@ -1,20 +1,20 @@
 import React from 'react'
 import { Card } from 'antd'
-import Login from './index'
+import Form from './Form'
 import { prefixDom } from 'cfx.dom'
 
 CFX = prefixDom {
   Card
-  Login
+  Form
 }
 
-class NormalLoginFormCard extends React.Component
+class LoginCard extends React.Component
 
   render: ->
 
     {
       c_Card
-      c_Login
+      c_Form
     } = CFX
 
     c_Card
@@ -25,6 +25,6 @@ class NormalLoginFormCard extends React.Component
         ,
           width: 300
     ,
-      c_Login {}
+      c_Form {}
 
-export default NormalLoginFormCard
+export default LoginCard
