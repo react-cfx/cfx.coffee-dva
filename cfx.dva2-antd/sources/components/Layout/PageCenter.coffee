@@ -1,6 +1,5 @@
 import React from 'react'
 import { prefixDom } from 'cfx.dom'
-dd = console.log
 
 CFX = prefixDom
   default: {
