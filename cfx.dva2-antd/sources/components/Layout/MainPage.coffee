@@ -45,11 +45,22 @@ class MainPage extends React.Component
         collapsed: @state.collapsed
         onCollapse: @onCollapse
       }
-      , 
+      ,
         c_SiderBar {}
 
       c_Layout {}
       ,
-        c_MainContent {}
+
+        c_Sider {
+          @collapsible
+          collapsed: @state.collapsed
+          onCollapse: @onCollapse
+        }
+        ,
+          c_SiderBar {}
+
+        c_Layout {}
+        ,
+          c_MainContent {}
 
 export default MainPage
