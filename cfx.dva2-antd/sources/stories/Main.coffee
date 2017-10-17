@@ -1,18 +1,32 @@
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
 
-import SiderMain from '../components/Layout/SiderMain'
+import SiderBar from '../components/Main/SiderBar'
+import MainContent from '../components/Main/MainContent'
+import MainPage from '../components/Layout/MainPage'
 
 CFX = prefixDom {
-   SiderMain
+  SiderBar
+  MainContent
+  MainPage
 }
 
 export default ->
 
   storiesOf 'Main', module
 
-  .add 'SiderMain'
+  .add 'SiderBar'
+  , =>
+    { c_SiderBar } = CFX
+    c_SiderBar {}
+
+  .add 'MainContent'
+  , =>
+    { c_MainContent } = CFX
+    c_MainContent {}
+
+  .add 'MainPage'
   , =>
 
-    { c_SiderMain } = CFX
-    c_SiderMain {}
+    { c_MainPage } = CFX
+    c_MainPage {}
