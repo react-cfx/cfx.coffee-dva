@@ -1,13 +1,13 @@
 import React from 'react'
 import {
-  cfxify
+  # cfxify
   prefixDom
 } from 'cfx.dom'
 import { Layout } from 'antd'
 
-import SiderBar from '../Main/SiderBar'
-import MainContent from '../Main/MainContent'
-import HocSiderContent from './SiderContent'
+import SiderBar from './SiderBar'
+import MainContent from './MainContent'
+import HocSiderContent from '../Layout/SiderContent'
 
 CFX = prefixDom {
   SiderBar

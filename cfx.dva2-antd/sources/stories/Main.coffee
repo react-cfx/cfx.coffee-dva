@@ -3,7 +3,7 @@ import { prefixDom } from 'cfx.dom'
 
 import SiderBar from '../components/Main/SiderBar'
 import MainContent from '../components/Main/MainContent'
-import MainPage from '../components/Layout/MainPage'
+import MainPage from '../components/Main/MainPage'
 
 CFX = prefixDom {
   SiderBar
