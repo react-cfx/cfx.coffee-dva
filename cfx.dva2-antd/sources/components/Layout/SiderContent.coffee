@@ -39,6 +39,13 @@ HocSiderContent = (
           collapsible: @collapsible
           collapsed: @state.collapsed
           onCollapse: @onCollapse
+          style: {
+            (
+              if @props?.style?.sider?
+              then @props.style.sider
+              else {}
+            )...
+          }
         }
         ,
           Sider

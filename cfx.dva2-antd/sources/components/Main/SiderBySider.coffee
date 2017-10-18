@@ -33,7 +33,10 @@ CFX = {
 
 MainPage = HocSiderContent(
   CFX.c_SiderBar {}
-  CFX.c_MainPage {}
+  CFX.c_MainPage
+    style:
+      sider:
+        backgroundColor: 'white'
 )
 
 CFX = {

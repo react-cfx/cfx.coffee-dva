@@ -33,8 +33,8 @@ class SiderContent extends React.Component
 
     c_Menu
       onClick: @handleClick
-      style:
-        width: 240
+      # style:
+      #   width: 240
       defaultSelectedKeys: [ '1' ]
       defaultOpenKeys: [ 'sub1' ]
       mode: 'inline'
