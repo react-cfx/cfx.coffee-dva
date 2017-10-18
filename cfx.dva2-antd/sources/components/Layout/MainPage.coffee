@@ -1,66 +1,43 @@
 import React from 'react'
-import { prefixDom } from 'cfx.dom'
+import {
+  cfxify
+  prefixDom
+} from 'cfx.dom'
 import { Layout } from 'antd'
-{ Sider } = Layout
 
 import SiderBar from '../Main/SiderBar'
 import MainContent from '../Main/MainContent'
+import HocSiderContent from './SiderContent'
 
 CFX = prefixDom {
-  Layout
-  Sider
-
   SiderBar
   MainContent
 }
 
+MainPage = HocSiderContent(
+  CFX.c_SiderBar {}
+  CFX.c_MainContent {}
+)
+
+CFX = prefixDom {
+  Layout
+  MainPage
+}
+
 class MainPage extends React.Component
-
-  state:
-    collapsed: false
-
-  onCollapse: (collapsed) =>
-    console.log collapsed
-    @setState {
-      collapsed
-    }
 
   render: ->
 
     {
       c_Layout
-      c_Sider
-
-      c_SiderBar
-      c_MainContent
+      c_MainPage
     } = CFX
 
-    c_Layout
+    c_Layout 
+      className: 'ant-layout-has-sider'
       style:
         minHeight: '100vh'
     ,
-
-      c_Sider {
-        @collapsible
-        collapsed: @state.collapsed
-        onCollapse: @onCollapse
-      }
-      ,
-        c_SiderBar {}
-
-      c_Layout {}
-      ,
-
-        c_Sider {
-          @collapsible
-          collapsed: @state.collapsed
-          onCollapse: @onCollapse
-        }
-        ,
-          c_SiderBar {}
-
-        c_Layout {}
-        ,
-          c_MainContent {}
+      c_MainPage {}
 
 export default MainPage
