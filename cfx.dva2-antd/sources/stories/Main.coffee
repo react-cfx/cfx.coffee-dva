@@ -6,11 +6,14 @@ import MainContent from '../components/Main/MainContent'
 import MainPage from '../components/Main/MainPage'
 import SiderBySider from '../components/Main/SiderBySider'
 
+import SiderContent from '../components/Main/SiderContent'
+
 CFX = prefixDom {
   SiderBar
   MainContent
   MainPage
   SiderBySider
+  SiderContent
 }
 
 export default ->
@@ -21,6 +24,11 @@ export default ->
   , =>
     { c_SiderBar } = CFX
     c_SiderBar {}
+
+  .add 'SiderContent'
+  , =>
+    { c_SiderContent } = CFX
+    c_SiderContent {}
 
   .add 'MainContent'
   , =>
