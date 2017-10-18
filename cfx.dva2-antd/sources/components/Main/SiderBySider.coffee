@@ -29,7 +29,21 @@ CFX = {
   )...
 }
 
-class MainPage extends React.Component
+MainPage = HocSiderContent(
+  CFX.c_SiderBar {}
+  CFX.c_MainPage {}
+)
+
+CFX = {
+  CFX...
+  (
+    prefixDom {
+      MainPage
+    }
+  )...
+}
+
+class SiderBySider extends React.Component
 
   render: ->
 
@@ -43,6 +57,8 @@ class MainPage extends React.Component
       style:
         minHeight: '100vh'
     ,
-      c_MainPage {}
+      c_MainPage
+        className:
+          layout: 'ant-layout-has-sider'
 
-export default MainPage
+export default SiderBySider

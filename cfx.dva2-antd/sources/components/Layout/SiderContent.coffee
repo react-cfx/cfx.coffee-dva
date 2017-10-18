@@ -31,6 +31,8 @@ HocSiderContent = (
         c_Sider
       } = CFX
 
+      console.log @props
+
       [
         c_Sider {
           key: 'Sider'
@@ -40,8 +42,14 @@ HocSiderContent = (
         }
         ,
           Sider
-        c_Layout
+        c_Layout {
+          (
+            if @props?.className?.layout?
+            then className: @props.className.layout
+            else {}
+          )...
           key: 'Layout'
+        }
         ,
           Content
       ]
