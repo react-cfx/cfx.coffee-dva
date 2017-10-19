@@ -18,6 +18,7 @@ CFX = prefixDom {
 MainPage = HocSiderContent(
   CFX.c_SiderBar {}
   CFX.c_MainContent {}
+  collapsed: true
 )
 
 CFX = {
@@ -44,6 +45,7 @@ class MainPage extends React.Component
         minHeight: '100vh'
     ,
       c_MainPage
+        collapsible: true
         style:
           sider:
             overflow: 'auto'

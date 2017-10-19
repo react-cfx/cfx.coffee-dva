@@ -41,6 +41,7 @@ MainPage = HocSiderContent(
         height: '100vh'
         # position: 'fixed'
         # left: 0
+  collapsed: true
 )
 
 CFX = {
@@ -67,6 +68,7 @@ class SiderBySider extends React.Component
         minHeight: '100vh'
     ,
       c_MainPage
+        collapsible: true
         className:
           layout: 'ant-layout-has-sider'
 

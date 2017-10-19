@@ -11,12 +11,16 @@ CFX = prefixDom {
 HocSiderContent = (
   Sider
   Content
+  options
 ) ->
 
   class SiderContent extends React.Component
 
     state:
-      collapsed: false
+      collapsed:
+        if options?.collapsed?
+        then options.collapsed
+        else false
 
     onCollapse: (collapsed) =>
       console.log collapsed
@@ -31,12 +35,10 @@ HocSiderContent = (
         c_Sider
       } = CFX
 
-      console.log @props
-
       [
         c_Sider {
           key: 'Sider'
-          collapsible: @collapsible
+          collapsible: @props.collapsible if @props?.collapsible?
           collapsed: @state.collapsed
           onCollapse: @onCollapse
           style: {

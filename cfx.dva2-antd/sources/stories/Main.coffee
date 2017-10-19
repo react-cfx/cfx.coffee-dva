@@ -40,17 +40,17 @@ export default ->
     { c_MainContent } = CFX
     c_MainContent {}
 
-  .add 'SiderBySider'
-  , =>
-
-    { c_SiderBySider } = CFX
-    c_SiderBySider {}
-
   .add 'SiderWithSider'
   , =>
 
     { c_SiderWithSider } = CFX
     c_SiderWithSider {}
+
+  .add 'SiderBySider'
+  , =>
+
+    { c_SiderBySider } = CFX
+    c_SiderBySider {}
 
   .add 'MainPage'
   , =>
