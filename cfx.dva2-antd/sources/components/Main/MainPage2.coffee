@@ -6,18 +6,18 @@ import {
 import { Layout } from 'antd'
 
 import SiderBar from './SiderBar'
-import MainContent from './MainContent'
+import SiderWithContent from './SiderWithContent'
 import HocSiderContent from '../Layout/SiderContent'
 
 CFX = prefixDom {
   SiderBar
   Layout
-  MainContent
+  SiderWithContent
 }
 
 MainPage = HocSiderContent(
   CFX.c_SiderBar {}
-  CFX.c_MainContent {}
+  CFX.c_SiderWithContent {}
 )
 
 CFX = {

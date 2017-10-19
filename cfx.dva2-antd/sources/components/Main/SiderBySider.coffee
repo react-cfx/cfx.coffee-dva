@@ -37,6 +37,10 @@ MainPage = HocSiderContent(
     style:
       sider:
         backgroundColor: 'white'
+        overflow: 'auto'
+        height: '100vh'
+        # position: 'fixed'
+        # left: 0
 )
 
 CFX = {

@@ -3,17 +3,22 @@ import { prefixDom } from 'cfx.dom'
 
 import SiderBar from '../components/Main/SiderBar'
 import MainContent from '../components/Main/MainContent'
-import MainPage from '../components/Main/MainPage'
 import SiderBySider from '../components/Main/SiderBySider'
+import SiderWithSider from '../components/Main/SiderWithContent'
 
 import SiderContent from '../components/Main/SiderContent'
+
+import MainPage from '../components/Main/MainPage'
+import MainPage2 from '../components/Main/MainPage2'
 
 CFX = prefixDom {
   SiderBar
   MainContent
-  MainPage
   SiderBySider
+  SiderWithSider
   SiderContent
+  MainPage
+  MainPage2
 }
 
 export default ->
@@ -35,14 +40,26 @@ export default ->
     { c_MainContent } = CFX
     c_MainContent {}
 
+  .add 'SiderBySider'
+  , =>
+
+    { c_SiderBySider } = CFX
+    c_SiderBySider {}
+
+  .add 'SiderWithSider'
+  , =>
+
+    { c_SiderWithSider } = CFX
+    c_SiderWithSider {}
+
   .add 'MainPage'
   , =>
 
     { c_MainPage } = CFX
     c_MainPage {}
 
-  .add 'SiderBySider'
+  .add 'MainPage2'
   , =>
 
-    { c_SiderBySider } = CFX
-    c_SiderBySider {}
+    { c_MainPage2 } = CFX
+    c_MainPage2 {}
