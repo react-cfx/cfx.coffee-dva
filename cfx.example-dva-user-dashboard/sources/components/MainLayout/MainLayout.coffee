@@ -1,6 +1,7 @@
 import React from 'react'
-import styles from './MainLayout.css'
 import Header from './Header'
+
+import './MainLayout.css'
 
 import { prefixDom } from 'cfx.dom'
 
@@ -21,14 +22,14 @@ MainLayout = ({
   } = CFX
 
   c_div
-    className: styles.normal
+    className: 'normal'
   ,
     c_Header {}
     c_div
-      className: styles.content
+      className: 'content'
     ,
       c_div
-        className: styles.main
+        className: 'main'
       , children
 
 export default MainLayout
