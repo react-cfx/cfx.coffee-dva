@@ -1,18 +1,16 @@
 import dva from 'dva'
-import { browserHistory } from 'dva/router'
+import createHistory from 'history/createBrowserHistory'
 import createLoading from 'dva-loading'
 import { message } from 'antd'
 
 # import './index.html'
 import './index.css'
 
-import { default as AppRouter } from './router'
-
 ERROR_MSG_DURATION = 3
 
 # 1. Initialize
 app = dva
-  history: browserHistory,
+  history: createHistory()
   onError: (e) ->
     message.error e.message
     , ERROR_MSG_DURATION
@@ -24,7 +22,7 @@ app.use createLoading()
 # Moved to router.js
 
 # 4. Router
-app.router AppRouter
+app.router require './router'
 
 # 5. Start
 app.start '#root'

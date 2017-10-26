@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Modal, Form, Input } from 'antd'
-FormItem = Form.Item
+import UserForm from './UserForm'
+import { Modal } from 'antd'
 import { prefixDom } from 'cfx.dom'
 
 CFX = prefixDom {
@@ -8,9 +8,7 @@ CFX = prefixDom {
     'span'
   }
   Modal
-  Form
-  FormItem
-  Input
+  UserForm
 }
 
 class UserEditModal extends Component
@@ -21,107 +19,46 @@ class UserEditModal extends Component
       visible: false
     @
 
-  showModelHandler: (e) =>
+  showModelHandler: (e) ->
     e.stopPropagation() if e
     @setState
       visible: true
     return
 
-  hideModelHandler: =>
+  hideModelHandler: ->
     @setState
       visible: false
     return
 
-  okHandler: =>
+  okHandler: ->
     { onOk } = @props
-    @props.form.validateFields (
-      err
-      values
-    ) =>
+    @props.form.validateFields (err, values) ->
       unless err
         onOk values
         @hideModelHandler()
-      return
     return
 
   render: ->
+    { children } = @props
     {
-      c_Modal
-      c_Form
-      c_FormItem
-      c_Input
       c_span
+      c_Modal
+      c_UserForm
     } = CFX
 
-    { children } = @props
-    { getFieldDecorator } = @props.form
-    {
-      name
-      email
-      website
-    } = @props.record
-    formItemLayout =
-      labelCol:
-        span: 6
-      wrapperCol:
-        span: 14
-
     c_span {}
-
     ,
       c_span
-        onClick: @showModelHandler
+        onClick: @showModelHandler.bind @
       , children
 
-    ,
       c_Modal
         title: 'Edit User'
         visible: @state.visible
-        onOk: @okHandler
-        onCancel: @hideModelHandler
+        onOk: @okHandler.bind @
+        onCancel: @hideModelHandler.bind @
       ,
-        c_Form
-          layout: 'horizontal'
-          onSubmit: @okHandler
+        c_UserForm
+          record: @props.record
 
-        ,
-          c_FormItem(
-
-            Object.assign {}
-            , formItemLayout
-            , label: 'name'
-
-            (
-              getFieldDecorator 'name'
-              , initialValue: name
-            ) c_Input {}
-
-          )
-
-          c_FormItem(
-
-            Object.assign {}
-            , formItemLayout
-            , label: 'Email'
-
-            (
-              getFieldDecorator 'email'
-              , initialValue: email
-            ) c_Input {}
-
-          )
-
-          c_FormItem(
-
-            Object.assign {}
-            , formItemLayout
-            , label: 'Website'
-
-            (
-              getFieldDecorator 'website'
-              , initialValue: website
-            ) c_Input {}
-
-          )
-
-export default Form.create() UserEditModal
+export default UserEditModal
