@@ -20,12 +20,15 @@
     "babel-plugin-import": "^1.4.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "cfx.simple-build-tool": "cfx.simple-build-tool",
-    "coffeescript": "next",
+    "coffee-require": "^0.0.3",
+    "coffeescript": "^2.0.2",
+    "ddeyes": "^0.0.4",
     "expect": "^21.2.1",
     "husky": "^0.14.3",
     "pug-cli": "^1.0.0-alpha6",
     "redbox-react": "^1.5.0",
     "roadhog": "^1.2.2",
+    "shelljs": "^0.7.8",
     "stylus": "^0.54.5"
   }
 }
