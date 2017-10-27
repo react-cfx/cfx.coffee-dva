@@ -50,6 +50,7 @@ export default ->
     { c_UsersTable } = CFX
     c_UsersTable
       list: [
+        id: 1
         name: 'mooxe'
         email: 'mooxe@gmail.com'
         website: 'www.mooxe.org'

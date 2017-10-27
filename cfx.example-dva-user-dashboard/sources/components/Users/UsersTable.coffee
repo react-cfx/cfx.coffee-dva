@@ -45,6 +45,7 @@ class UsersTable extends Component
         title: 'Operation'
         key: 'operation'
         render: (text, record) =>
+
           c_span
             className: 'operation'
           ,
