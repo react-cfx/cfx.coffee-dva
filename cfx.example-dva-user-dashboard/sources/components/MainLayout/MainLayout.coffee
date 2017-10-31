@@ -22,7 +22,10 @@ MainLayout = ({
   } = CFX
 
   c_div
-    className: 'normal'
+    className: [
+      'MainLayout'
+      'normal'
+    ].join ' '
   ,
     c_Header {}
     c_div

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Table, Popconfirm } from 'antd'
 import UserModal from './UserModal'
-import './Users.css'
 import { prefixDom } from 'cfx.dom'
 
 CFX = prefixDom {

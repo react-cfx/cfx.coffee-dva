@@ -18,6 +18,12 @@ RouterConfig = ({
     component: => require './routes/IndexPage'
   }
 
+  Users = dynamic {
+    app
+    models: => require './models/users'
+    component: => require './routes/Users'
+  }
+
   {
     c_Router
     c_Switch
@@ -34,5 +40,9 @@ RouterConfig = ({
         exact: true
         path: '/'
         component: IndexPage
+      c_Route
+        exact: true
+        path: '/users'
+        component: Users
 
 export default RouterConfig
