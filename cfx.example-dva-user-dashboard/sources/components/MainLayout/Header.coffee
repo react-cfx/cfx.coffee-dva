@@ -1,6 +1,6 @@
 import { Menu, Icon } from 'antd'
 MenuItem = Menu.Item
-
+import { Link } from 'dva/router'
 import { prefixDom } from 'cfx.dom'
 
 CFX = prefixDom {
@@ -10,37 +10,72 @@ CFX = prefixDom {
   Menu
   MenuItem
   Icon
+  Link
 }
 
-export default ->
+export default ({
+  location
+}) ->
+
   {
     c_Menu
     c_MenuItem
     c_Icon
     c_a
+    c_Link
   } = CFX
 
-  c_Menu
+  t_Link =
+    unless location
+    then (attr, args...) ->
+      c_a.apply @, [
+        attr.a
+        args...
+      ]
+    else (attr, args...) ->
+      c_Link.apply @, [
+        attr.link
+        args...
+      ]
+
+  c_Menu {
+    selectedKeys:
+      unless location
+      then null
+      else [location.pathname]
     mode: 'horizontal'
     theme: 'dark'
+  }
   ,
-    c_MenuItem {}
+    c_MenuItem
+      key: '/users'
     ,
-      c_a {}
+      t_Link
+        a: {}
+        link:
+          to: '/users'
       ,
         c_Icon type: 'bars'
       , 'Users'
 
-    c_MenuItem {}
+    c_MenuItem
+      key: '/'
     ,
-      c_a {}
+      t_Link
+        a: {}
+        link:
+          to: '/'
       ,
         c_Icon type: 'home'
       , 'Home'
 
-    c_MenuItem {}
+    c_MenuItem
+      key: '404'
     ,
-      c_a {}
+      t_Link
+        a: {}
+        link:
+          to: '/page-you-dont-konw'
       ,
         c_Icon type: 'frown-circle'
       , '404'

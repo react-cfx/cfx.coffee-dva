@@ -14,7 +14,9 @@ CFX = prefixDom {
   MainLayout
 }
 
-IndexPage = ->
+IndexPage = ({
+  location
+}) ->
   {
     c_MainLayout
     c_div

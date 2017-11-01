@@ -14,6 +14,7 @@ CFX = prefixDom {
 
 MainLayout = ({
   children
+  location
 }) ->
 
   {
@@ -25,7 +26,9 @@ MainLayout = ({
     ( nb 'normal' )...
   }
   ,
-    c_Header {}
+    c_Header {
+      location
+    }
     c_div {
       ( nb 'content' )...
     }

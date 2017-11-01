@@ -12,14 +12,18 @@ CFX = prefixDom {
   UsersComp
 }
 
-Users = ->
+Users = ({
+  location
+}) ->
   {
     c_MainLayout
     c_UsersComp
     c_div
   } = CFX
 
-  c_MainLayout {}
+  c_MainLayout {
+    location
+  }
   ,
     c_div {
       ( nb 'normal' )...
