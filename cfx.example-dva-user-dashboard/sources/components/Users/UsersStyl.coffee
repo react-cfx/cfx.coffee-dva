@@ -8,7 +8,7 @@ style =
     marginBottom: '1.5em'
 
   operation:
-    a:
+    '& a':
       margin: '0 .5em'
 
 export default styl style
