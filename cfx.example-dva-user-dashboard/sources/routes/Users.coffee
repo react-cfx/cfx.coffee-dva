@@ -1,6 +1,6 @@
 import UsersComp from '../components/Users/Users';
 import MainLayout from '../components/MainLayout/MainLayout';
-import './Users.css'
+import nb from './UsersStyl'
 
 import { prefixDom } from 'cfx.dom'
 
@@ -21,11 +21,9 @@ Users = ->
 
   c_MainLayout {}
   ,
-    c_div
-      className: [
-        'Users'
-        'normal'
-      ].join ' '
+    c_div {
+      ( nb 'normal' )...
+    }
     ,
       c_UsersComp
         list: [

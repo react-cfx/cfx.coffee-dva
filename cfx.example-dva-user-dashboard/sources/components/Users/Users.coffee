@@ -5,7 +5,7 @@ import UserModal from './UserModal'
 import { prefixDom } from 'cfx.dom'
 import { PAGE_SIZE } from '../../constants'
 
-import './Users.css'
+import nb from './UsersStyl'
 
 CFX = prefixDom {
   default: {
@@ -29,16 +29,15 @@ class Users extends Component
       c_UsersTable
     } =  CFX
 
-    c_div
-      className: [
-        'normal'
-        'Users'
-      ].join ' '
+    c_div {
+      ( nb 'normal' )...
+    }
     ,
       c_div {}
       ,
-        c_div
-          className: 'create'
+        c_div {
+          ( nb 'create' )...
+        }
         ,
           c_UserModal
             record: {}

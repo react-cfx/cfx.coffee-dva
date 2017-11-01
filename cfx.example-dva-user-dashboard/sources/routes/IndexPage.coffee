@@ -1,6 +1,5 @@
 import MainLayout from '../components/MainLayout/MainLayout'
-import './IndexPage.css'
-
+import nb from './IndexPageStyl'
 import { prefixDom } from 'cfx.dom'
 
 CFX = prefixDom {
@@ -30,21 +29,22 @@ IndexPage = ->
     location
   }
   ,
-    c_div
-      className: [
-        'IndexPage'
-        'normal'
-      ].join ' '
+    c_div {
+      ( nb 'normal' )...
+    }
     ,
-      c_h1
-        className: 'title'
+      c_h1 {
+        ( nb 'title' )...
+      }
       , 'Yay! Welcome to dva!'
 
-      c_div
-        className: 'welcome'
+      c_div {
+        ( nb 'welcome' )...
+      }
 
-      c_ul
-        className: 'list'
+      c_ul {
+        ( nb 'list' )...
+      }
       ,
         c_li {}
         , 'To get started, edit'

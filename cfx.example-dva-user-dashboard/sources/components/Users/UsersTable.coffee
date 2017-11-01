@@ -3,6 +3,8 @@ import { Table, Popconfirm } from 'antd'
 import UserModal from './UserModal'
 import { prefixDom } from 'cfx.dom'
 
+import nb from './UsersStyl'
+
 CFX = prefixDom {
   default: {
     'a'
@@ -45,8 +47,9 @@ class UsersTable extends Component
         key: 'operation'
         render: (text, record) =>
 
-          c_span
-            className: 'operation'
+          c_span {
+            ( nb 'operation' )...
+          }
           ,
             c_UserModal {
               record
