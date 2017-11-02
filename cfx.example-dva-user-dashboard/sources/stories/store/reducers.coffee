@@ -1,7 +1,7 @@
 import { reduxActions } from 'cfx.redux-actions'
 { handleActions } = reduxActions
 import { mergeReduce } from 'cfx.redux'
-import usersReducers from '../../../sources/models/users/reducers'
+import usersReducers from '../../models/users/reducers'
 import dd from 'ddeyes'
 
 initialState =

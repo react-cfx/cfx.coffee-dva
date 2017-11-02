@@ -1,15 +1,12 @@
 import dd from 'ddeyes'
 import 'shelljs/make'
-
-import constants from './users/constants'
-import actions from './users/actions'
-import reducers from './users/reducers'
-import sagas from './users/sagas'
-
-import { createStore } from 'cfx.redux'
-import { SagaMiddleware } from 'cfx.redux-saga'
-
-import onStateChange from 'redux-on-state-change'
+import {
+  constants
+  actions
+  reducers
+  sagas
+  getStore
+} from '../../sources/stories/store'
 
 target.all = ->
 
@@ -24,11 +21,12 @@ target.static = ->
 
 target.reducers = ->
 
-  store = createStore
-    userApp: reducers
-
-  unsubscribe = store.subscribe ->
-    dd store.getState()
+  store = getStore {
+    reducers
+    subscriber:
+      sync: ->
+        dd store.getState()
+  }
 
   store.dispatch actions.userSave
     data: [
@@ -38,7 +36,7 @@ target.reducers = ->
     total: 10
     page: 1
 
-  unsubscribe()
+  store.onsubscribe()
 
 target.sagas = ->
 
@@ -50,16 +48,15 @@ target.sagas = ->
   ) ->
     dd @getState()
 
-  SagaMW = new SagaMiddleware()
+  store = getStore {
+    reducers
+    sagas
+    subscriber:
+      async: subscriber
+  }
 
-  store = createStore
-    userApp: reducers
-  , [
-    SagaMW.getMidleware()
-    onStateChange (args...) ->
-      subscriber.apply store, args
-  ] 
-
-  SagaMW.runSagas sagas
-
-  store.dispatch actions.userFetch()
+  # dd actions.userFetch
+  #   page: 1
+  
+  store.dispatch actions.userFetch
+    page: 1

@@ -4,7 +4,6 @@ export default ({
   type 
   service
 }) ->
-  userServ = 
 
   fetch: (
     {

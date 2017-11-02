@@ -1,8 +1,8 @@
 import { sagaEffects } from 'cfx.redux-saga'
-import getUsersSagas from '../../../sources/models/users/effects'
-import constants from './constants'
 import dd from 'ddeyes'
-import getUsersServ from '../../../sources/services/users'
+import constants from './constants'
+import getUsersSagas from '../../models/users/effects'
+import getUsersServ from '../../services/users'
 
 default_host = 'http://jsonplaceholder.typicode.com'
 usersSagas = getUsersSagas
@@ -33,6 +33,7 @@ usersSagas = getUsersSagas
 users =
 
   fetch: (action) ->
+
     action.payload = {} unless action.payload?
     usersSagas.fetch action
     , {
