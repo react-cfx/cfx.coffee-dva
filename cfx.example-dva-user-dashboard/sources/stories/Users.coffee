@@ -6,7 +6,7 @@ import UserForm from '../components/Users/UserForm'
 import UserModal from '../components/Users/UserModal'
 import UsersTable from '../components/Users/UsersTable'
 
-import Users from '../components/Users'
+import Users from '../components/Users/storybook'
 
 import { Provider } from 'cfx.react-redux'
 import store from './store'

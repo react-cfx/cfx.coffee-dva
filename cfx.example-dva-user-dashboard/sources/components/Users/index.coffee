@@ -1,69 +1,57 @@
 import React, { Component } from 'react'
+import { Pagination, Button } from 'antd'
+import UsersTable from './UsersTable'
+import UserModal from './UserModal'
 import { prefixDom } from 'cfx.dom'
-import Users from './Users'
-import actions from '../../stories/store/actions'
+import { PAGE_SIZE } from '../../constants'
 
-import { connect } from 'cfx.react-redux'
-
-import {
-  render
-  getState
-} from './service'
+import nb from './UsersStyl'
 
 CFX = prefixDom {
-  Users
+  default: {
+    'div'
+  }
+  Pagination
+  Button
+  UserModal
+  UsersTable 
 }
 
-class CompUsers extends Component
-
-  constructor: (props) ->
-    super props
-    @state =
-      list: []
-      total: 0
-      page: 0
-    @
-
-  componentWillMount: ->
-    @props.actions.fetch()
-    @
-
-  componentWillReceiveProps: (nextProps) ->
-    {
-      list
-      total 
-      page
-    } = nextProps.state
-    @setState {
-      list
-      total
-      page
-    }
-    @
+class Users extends Component
 
   render: ->
 
     {
-      list
-      total
-      current
-    } = @state
+      c_div
+      c_Pagination
+      c_Button
+      c_UserModal
+      c_UsersTable
+    } =  CFX
 
-    render CFX
-    , {
-      list
-      total
-      current
+    c_div {
+      ( nb 'normal' )...
     }
+    ,
+      c_div {}
+      ,
+        c_div {
+          ( nb 'create' )...
+        }
+        ,
+          c_UserModal
+            record: {}
+          ,
+            c_Button
+              type: 'primary'
+            , 'Create User'
+        c_UsersTable
+          list: @props.list
+        c_Pagination {
+          className: 'ant-table-pagination'
+          total: @props.total
+          current: @props.current
+          pageSize: PAGE_SIZE
+        }
 
-mapStateToProps = (state) ->
-  getState state.userApp.users
-
-mapActionToProps =
-  fetch: actions.userFetch
-
-export default connect(
-  mapStateToProps
-  mapActionToProps
-  CompUsers 
-)
+export default Users

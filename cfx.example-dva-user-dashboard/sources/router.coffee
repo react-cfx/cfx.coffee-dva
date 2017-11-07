@@ -3,6 +3,9 @@ import { Router, Switch, Route } from 'dva/router'
 import dynamic from 'dva/dynamic'
 import { prefixDom } from 'cfx.dom'
 
+import RouteUsers from './routes/Users'
+import ViewUsers from './components/Users/dva'
+
 CFX = prefixDom {
   Router
   Switch
@@ -13,6 +16,7 @@ RouterConfig = ({
   history
   app
 }) ->
+
   IndexPage = dynamic {
     app
     component: => require './routes/IndexPage'
@@ -23,7 +27,7 @@ RouterConfig = ({
     models: => [
       require './models/users'
     ]
-    component: => require './routes/Users'
+    component: => RouteUsers ViewUsers
   }
 
   {

@@ -2,29 +2,20 @@ import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
 
 import IndexPage from '../routes/IndexPage'
-import Users from '../routes/Users'
 
-import { Provider } from 'cfx.react-redux'
-import store from './store'
+import RouteUsers from '../routes/Users'
+import ViewUsers from '../components/Users'
+
+Users = RouteUsers ViewUsers
 
 CFX = prefixDom {
   IndexPage
   Users
-
-  Provider
 }
 
 export default ->
 
   storiesOf 'Route', module
-
-  .addDecorator (story) ->
-
-    { c_Provider } = CFX
-    c_Provider {
-      store
-    }
-    , story()
 
   .add 'IndexPage'
   , =>

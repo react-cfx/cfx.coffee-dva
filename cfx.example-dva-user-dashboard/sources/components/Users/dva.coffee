@@ -1,10 +1,10 @@
-import Users from './Users'
 import { prefixDom } from 'cfx.dom'
 import { connect } from 'dva'
+import Users from './'
 import {
   render
   getState
-} from './service'
+} from './common'
 
 CFX = prefixDom {
   Users
