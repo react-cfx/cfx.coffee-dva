@@ -12,7 +12,7 @@ effects = getEffects
     'create'
     'reload'
   }
-  service: getUsersServ()
+  service: getUsersServ 'api'
 
 export default {
   namespace: 'users'

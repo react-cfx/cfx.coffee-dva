@@ -1,23 +1,24 @@
 import { storiesOf } from '@storybook/react'
-import { Button } from 'antd'
 import { prefixDom } from 'cfx.dom'
-
-import { Provider } from 'react-redux'
+import { Button } from 'antd'
 
 import UserForm from '../components/Users/UserForm'
 import UserModal from '../components/Users/UserModal'
 import UsersTable from '../components/Users/UsersTable'
 
-import ConnUsers from '../components/Users/ConnUsers'
+import Users from '../components/Users'
 
+import { Provider } from 'cfx.react-redux'
 import store from './store'
 
 CFX = prefixDom {
   Button
+
   UserForm
   UserModal
   UsersTable
-  ConnUsers
+  Users
+
   Provider
 }
 
@@ -32,7 +33,6 @@ export default ->
       store
     }
     , story()
-
 
   .add 'UserForm'
   , =>
@@ -76,6 +76,6 @@ export default ->
   .add 'Users'
   , =>
 
-    { c_ConnUsers } = CFX
+    { c_Users } = CFX
 
-    c_ConnUsers {}
+    c_Users {}

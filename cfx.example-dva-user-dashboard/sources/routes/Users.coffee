@@ -1,23 +1,22 @@
-import UsersComp from '../components/Users/Users';
-import MainLayout from '../components/MainLayout/MainLayout';
-import nb from './UsersStyl'
-
 import { prefixDom } from 'cfx.dom'
+import MainLayout from '../components/MainLayout/MainLayout';
+import Users from '../components/Users/dva'
+import nb from './UsersStyl'
 
 CFX = prefixDom {
   default: {
     'div'
   }
   MainLayout
-  UsersComp
+  Users
 }
 
-Users = ({
+export default ({
   location
 }) ->
   {
     c_MainLayout
-    c_UsersComp
+    c_Users
     c_div
   } = CFX
 
@@ -29,14 +28,4 @@ Users = ({
       ( nb 'normal' )...
     }
     ,
-      c_UsersComp
-        list: [
-          id: 1
-          name: 'mooxe'
-          email: 'mooxe@gmail.com'
-          website: 'www.mooxe.org'
-        ]
-        total: 10
-        current: 1
-
-export default Users
+      c_Users {}

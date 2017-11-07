@@ -1,16 +1,22 @@
 import React, { Component } from 'react'
-import Users from './Users'
 import { prefixDom } from 'cfx.dom'
+import Users from './Users'
+import actions from '../../stories/store/actions'
 
-import { connect } from 'react-redux'
+import { connect } from 'cfx.react-redux'
+
+import {
+  render
+  getState
+} from './service'
 
 CFX = prefixDom {
   Users
 }
 
-class ConnUsers extends Component
+class CompUsers extends Component
 
-  constructor: (props)->
+  constructor: (props) ->
     super props
     @state =
       list: []
@@ -19,7 +25,7 @@ class ConnUsers extends Component
     @
 
   componentWillMount: ->
-    @props.fetch()
+    @props.actions.fetch()
     @
 
   componentWillReceiveProps: (nextProps) ->
@@ -27,7 +33,7 @@ class ConnUsers extends Component
       list
       total 
       page
-    } = nextProps
+    } = nextProps.state
     @setState {
       list
       total
@@ -43,35 +49,21 @@ class ConnUsers extends Component
       current
     } = @state
 
-    { c_Users } = CFX
-    c_Users {
+    render CFX
+    , {
       list
       total
       current
     }
 
 mapStateToProps = (state) ->
-  {
-    list
-    total
-    page
-  } = state.userApp.users
-  {
-    list
-    total
-    page
-  }
+  getState state.userApp.users
 
-mapDispatchToProps = (
-  dispatch
-) ->
-  fetch: =>
-    dispatch
-      type: 'USER_FETCH'
-      payload:
-        page: 1
+mapActionToProps =
+  fetch: actions.userFetch
 
-export default (
-  connect mapStateToProps
-  , mapDispatchToProps
-) ConnUsers
+export default connect(
+  mapStateToProps
+  mapActionToProps
+  CompUsers 
+)

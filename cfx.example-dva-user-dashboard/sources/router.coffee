@@ -20,7 +20,9 @@ RouterConfig = ({
 
   Users = dynamic {
     app
-    # models: => require './models/users'
+    models: => [
+      require './models/users'
+    ]
     component: => require './routes/Users'
   }
 

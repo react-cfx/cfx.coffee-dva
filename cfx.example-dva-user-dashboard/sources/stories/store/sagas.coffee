@@ -4,7 +4,11 @@ import constants from './constants'
 import getUsersSagas from '../../models/users/effects'
 import getUsersServ from '../../services/users'
 
-default_host = 'http://jsonplaceholder.typicode.com'
+default_host = [
+  'https://cors-anywhere.herokuapp.com/'
+  'http://jsonplaceholder.typicode.com'
+].join ''
+
 usersSagas = getUsersSagas
   type:
     save: 'USER_SAVE'
