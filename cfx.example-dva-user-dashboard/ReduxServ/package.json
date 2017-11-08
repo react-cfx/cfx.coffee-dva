@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "coffee-require": "^0.0.3",
+    "ddeyes": "^0.0.4",
+    "shelljs": "^0.7.8"
+  },
+  "dependencies": {
+    "cfx.redux": "^0.0.2",
+    "cfx.redux-actions": "^0.0.0",
+    "cfx.redux-saga": "^0.0.0",
+    "cfx.redux-types": "^0.0.1",
+    "dva": "^2.0.4"
+  }
+}
