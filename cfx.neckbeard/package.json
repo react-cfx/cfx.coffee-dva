@@ -1,6 +1,6 @@
 {
   "name": "cfx.neckbeard",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/bundle.js",
   "scripts": {
     "clean": "rm -rf ./dist",
@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "assign-deep": "^0.4.6",
-    "cfx.rollup-plugin-coffee2": "^0.0.5",
+    "cfx.rollup-plugin-coffee2": "^0.1.0",
     "cfx.style": "^0.0.3",
     "color": "^2.0.0",
     "rgb-hex": "^2.1.0",

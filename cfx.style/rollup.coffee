@@ -1,5 +1,8 @@
 import alias from 'rollup-plugin-alias'
-import coffee2 from 'cfx.rollup-plugin-coffee2'
+import {
+  coffee2
+  coffeepath
+} from 'cfx.rollup-plugin-coffee2'
 import cleanup from 'rollup-plugin-cleanup'
 # import resolve from 'rollup-plugin-node-resolve';
 
@@ -19,5 +22,6 @@ export default
       bare: true
       sourceMap: true
     # resolve()
+    coffeepath()
     cleanup()
   ]
