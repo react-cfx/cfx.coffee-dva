@@ -1,6 +1,7 @@
 import dd from 'ddeyes'
 import 'shelljs/make'
-import getUsersServ from '../../src/services/users'
+# import { services as getUsersServ } from '../../src'
+import { services as getUsersServ } from '../../dist/bundle'
 default_host = 'http://jsonplaceholder.typicode.com'
 usersServ = getUsersServ default_host
 

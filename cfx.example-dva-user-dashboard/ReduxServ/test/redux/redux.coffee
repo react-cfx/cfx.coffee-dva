@@ -1,6 +1,7 @@
 import dd from 'ddeyes'
 import 'shelljs/make'
-import { store } from '../../src'
+# import { store } from '../../src'
+import { store } from '../../dist/bundle'
 
 {
   constants

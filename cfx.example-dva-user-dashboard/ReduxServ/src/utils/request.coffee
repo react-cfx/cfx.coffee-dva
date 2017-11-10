@@ -19,8 +19,10 @@ checkStatus = (response) ->
  # @return {object}           An object containing either "data" or "err"
  ##
 export default request = (url, options) ->
+  # response = yield fetch url, options
   response = await fetch url, options
   checkStatus response
+  # data = yield response.json()
   data = await response.json()
 
   ret = {
