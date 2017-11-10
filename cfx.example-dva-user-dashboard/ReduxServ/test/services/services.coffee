@@ -9,6 +9,10 @@ target.all = ->
 
   dd Object.keys usersServ
 
+  target.userFetch()
+  target.userRemove()
+  target.userCreate()
+
 target.userFetch = ->
 
   users = await usersServ.fetch

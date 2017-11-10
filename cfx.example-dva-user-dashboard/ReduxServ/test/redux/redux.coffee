@@ -15,6 +15,10 @@ target.all = ->
 
   dd 'Hello World!!!'
 
+  target.static()
+  target.reducers()
+  target.sagas()
+
 target.static = ->
 
   dd {
