@@ -2,10 +2,11 @@ import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
 import { Button } from 'antd'
 
-import UserForm from '../components/Users/UserForm'
-import UserModal from '../components/Users/UserModal'
-import UsersTable from '../components/Users/UsersTable'
-import Users from '../components/Users'
+import Users, {
+  UserForm 
+  UserModal 
+  UsersTable 
+} from '../components/Users'
 
 CFX = prefixDom {
   Button

@@ -1,9 +1,10 @@
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
 
-import IndexPage from '../routes/IndexPage'
-
-import RouteUsers from '../routes/Users'
+import {
+  IndexPage
+  Users as RouteUsers
+} from '../routes'
 import ViewUsers from '../components/Users'
 
 Users = RouteUsers ViewUsers

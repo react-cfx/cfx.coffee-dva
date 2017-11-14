@@ -1,8 +1,7 @@
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
 
-import Header from '../components/MainLayout/Header'
-import MainLayout from '../components/MainLayout/MainLayout'
+import MainLayout, { Header } from '../components/MainLayout'
 
 CFX = prefixDom {
   default: {

@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 import { Pagination, Button } from 'antd'
+
+import UserForm from './UserForm'
 import UsersTable from './UsersTable'
 import UserModal from './UserModal'
+
 import { prefixDom } from 'cfx.dom'
 import { constants } from 'ReduxServ'
 { PAGE_SIZE } = constants
@@ -15,7 +18,7 @@ CFX = prefixDom {
   Pagination
   Button
   UserModal
-  UsersTable 
+  UsersTable
 }
 
 class Users extends Component
@@ -56,3 +59,9 @@ class Users extends Component
         }
 
 export default Users
+
+export {
+  UserForm
+  UsersTable
+  UserModal
+}

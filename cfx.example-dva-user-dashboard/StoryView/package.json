@@ -1,4 +1,13 @@
 {
+  "name": "cfx.example-dva-user-dashboard.StroyView",
+  "version": "0.0.0",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "build": "rollup -c",
+    "rebuild": "npm run clean; npm run build",
+    "postinstall": "npm run build"
+  },
   "devDependencies": {
     "@storybook/addon-info": "^3.2.14",
     "@storybook/addon-options": "^3.2.14",
@@ -10,11 +19,16 @@
     "ReduxServ": "file:../ReduxServ",
     "antd": "^2.13.9",
     "cfx.dom": "^0.0.2",
+    "cfx.rollup-plugin-coffee2": "^0.1.0",
     "cfx.style": "^0.0.3",
     "dva": "^2.0.4",
     "normalize.css": "^7.0.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "reset-css": "^2.2.1"
+    "reset-css": "^2.2.1",
+    "rollup": "^0.51.5",
+    "rollup-plugin-alias": "^1.4.0",
+    "rollup-plugin-cleanup": "^2.0.0",
+    "rollup-plugin-image": "^1.0.2"
   }
 }
