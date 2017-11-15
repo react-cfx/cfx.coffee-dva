@@ -6,7 +6,7 @@ import reducers from './reducers'
 import sagas from './sagas'
 
 store = getStore {
-  nameApp: 'userApp'
+  appName: 'userApp'
   reducers
   sagas
 }
@@ -17,5 +17,5 @@ export {
   reducers
   sagas
   getStore
-  store 
+  store
 }

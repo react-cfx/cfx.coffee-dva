@@ -6,7 +6,7 @@ import {
 import image from 'rollup-plugin-image'
 import cleanup from 'rollup-plugin-cleanup'
 
-import dd from 'ddeyes'
+# import dd from 'ddeyes'
 
 export default
   input: './index.js'

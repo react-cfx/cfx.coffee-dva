@@ -5,7 +5,7 @@
   "scripts": {
     "clean": "rm -rf ./dist",
     "build": "rollup -c",
-    "rebuild": "npm run clean; npm run build",
+    "rebuild": "npm run clean; make rebuild; npm run build",
     "postinstall": "npm run build"
   },
   "devDependencies": {
