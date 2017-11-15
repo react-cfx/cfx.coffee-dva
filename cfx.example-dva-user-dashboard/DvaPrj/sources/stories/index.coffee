@@ -5,6 +5,8 @@ import 'antd/dist/antd.min.css'
 
 import Welcome from './Welcome'
 import Users from './Users'
+import Route from './Route'
 
 Welcome()
 Users()
+Route()
