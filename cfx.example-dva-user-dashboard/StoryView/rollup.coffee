@@ -6,6 +6,8 @@ import {
 import image from 'rollup-plugin-image'
 import cleanup from 'rollup-plugin-cleanup'
 
+import replace from 'rollup-plugin-re'
+
 # import dd from 'ddeyes'
 
 export default
@@ -15,6 +17,15 @@ export default
     format: 'cjs'
 
   plugins: [
+
+    replace
+      patterns: [
+        transform: (code, id) ->
+          pattern = /\.\.\/\.\.\/public\/assets\/yay\.jpg/
+          if pattern.test code
+            code = code.replace pattern, '../assets/yay.jpg'
+          code
+      ]
 
     alias
       resolve: [
