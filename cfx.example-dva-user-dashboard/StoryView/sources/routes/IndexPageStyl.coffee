@@ -1,6 +1,11 @@
 import styl from 'cfx.style'
 import yay from '../../public/assets/yay.jpg'
 
+yayUrl =
+  if yay.src?
+  then yay.src
+  else yay
+
 style =
 
   normal:
@@ -15,7 +20,7 @@ style =
 
   welcome:
     height: '328px'
-    background: "url(#{yay}) no-repeat center 0"
+    background: "url(#{yayUrl}) no-repeat center 0"
     backgroundSize: '388px 328px'
 
   list:
