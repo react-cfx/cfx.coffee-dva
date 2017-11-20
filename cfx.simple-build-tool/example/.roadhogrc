@@ -1,5 +1,9 @@
 {
-  "extraBabelPlugins": [
-    "transform-runtime"
-  ]
+  "env": {
+    "development": {
+      "extraBabelPlugins": [
+        "dva-hmr"
+      ]
+    }
+  }
 }

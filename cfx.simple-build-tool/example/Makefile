@@ -1,4 +1,4 @@
 export PATH := ./node_modules/.bin:$(PATH)
 
-include ../maker/main.mk
-include ../maker/roadhog.mk
+include ./node_modules/cfx.simple-build-tool/maker/main.mk
+include ./node_modules/cfx.simple-build-tool/maker/roadhog.mk

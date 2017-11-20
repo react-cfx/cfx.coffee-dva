@@ -1,4 +1,8 @@
 {
   "name": "cfx.simple-build-tool",
-  "version": "0.0.2"
+  "version": "0.0.3",
+  "dependencies": {
+    "pug-cli": "^1.0.0-alpha6",
+    "stylus": "^0.54.5"
+  }
 }

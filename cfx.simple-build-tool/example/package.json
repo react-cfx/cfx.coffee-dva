@@ -1,15 +1,16 @@
 {
   "dependencies": {
-    "cfx.dom": "file:../../cfx.dom",
-    "dva": "^1.2.1",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "cfx.dom": "0.0.3",
+    "dva": "^2.1.0",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1"
   },
   "devDependencies": {
+    "babel-plugin-dva-hmr": "^0.4.0",
+    "babel-plugin-import": "^1.6.2",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-runtime": "^6.26.0",
-    "coffeescript": "next",
-    "pug-cli": "^1.0.0-alpha6",
-    "roadhog": "^1.1.2"
+    "cfx.simple-build-tool": "file:..",
+    "roadhog": "^2.0.0-beta.1"
   }
 }

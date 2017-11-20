@@ -1,6 +1,7 @@
+### eslint-disable import/first ###
+import { prefixDom } from 'cfx.dom'
 import dva, { connect } from 'dva'
 import { Router, Route } from 'dva/router'
-import { prefixDom } from 'cfx.dom'
 
 # 1. Initializ
 app = dva()

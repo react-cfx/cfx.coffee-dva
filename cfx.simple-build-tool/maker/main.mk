@@ -23,7 +23,7 @@ findPath = findPath() { \
 	file_ext=$$1; \
 	file_handler=$$2; \
 	for filepath in `find ./sources -print | grep "$$file_ext"`; do \
-		if [ $$file_ext = '.pug' ]; then \
+		if [ $$file_ext = '\.pug' ]; then \
 			output_kw='public'; \
 		else \
 			output_kw='src'; \
