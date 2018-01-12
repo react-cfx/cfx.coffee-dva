@@ -7,15 +7,15 @@
     "@storybook/addon-options": "^3.2.12",
     "@storybook/react": "^3.2.12",
     "cfx.simple-build-tool": "^0.0.1",
-    "coffeescript": "^2.0.1"
+    "stylus": "^0.54.5"
   },
   "dependencies": {
-    "antd": "^2.13.6",
-    "cfx.dom": "^0.0.2",
-    "dva": "^2.0.4",
+    "antd": "^3.0.3",
+    "cfx.dom": "^0.0.3",
+    "dva": "^2.1.0",
     "normalize.css": "^7.0.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "reset-css": "^2.2.1"
   }
 }
