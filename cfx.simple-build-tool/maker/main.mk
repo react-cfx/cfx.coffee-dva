@@ -17,6 +17,9 @@ build:
 	make .coffee
 	make .js
 
+	make .jpg
+	make .png
+
 	make .public
 
 findPath = findPath() { \
@@ -38,6 +41,7 @@ extHandler = extHandler() { \
 	file_ext=$$1; \
 	source_path=$$2; \
 	output_dir=$$3; \
+	file_name=`echo $$source_path | rev | cut -d'/' -f 1 | rev`; \
 	case "$$file_ext" in \
 		'\.pug' ) \
 			pug -P -o $$output_dir $$source_path; \
@@ -50,6 +54,12 @@ extHandler = extHandler() { \
 			;; \
 		'\.js' ) \
 			cp $$source_path $$output_dir; \
+			;; \
+		'\.jpg' ) \
+			echo "export default Image = \"`cat $$source_path | base64`\"" > $$output_dir/$$file_name.coffee; \
+			;; \
+		'\.png' ) \
+			echo "export default Image = \"`cat $$source_path | base64`\"" > $$output_dir/$$file_name.coffee; \
 			;; \
 		* ) \
 			exit 1; \
@@ -72,6 +82,14 @@ extHandler = extHandler() { \
 .js:
 	@$(findPath); $(extHandler); \
 	findPath '\.js' extHandler
+
+.jpg:
+	@$(findPath); $(extHandler); \
+	findPath '\.jpg' extHandler
+
+.png:
+	@$(findPath); $(extHandler); \
+	findPath '\.png' extHandler
 
 .public:
 	if [ -d './src/public' ]; then \
