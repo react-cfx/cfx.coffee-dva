@@ -56,10 +56,12 @@ extHandler = extHandler() { \
 			cp $$source_path $$output_dir; \
 			;; \
 		'\.jpg' ) \
-			echo "export default Image = \"`cat $$source_path | base64`\"" > $$output_dir/$$file_name.coffee; \
+			code="export default Image = \"data:image/jpeg;base64,`cat $$source_path | base64 -w 0`\";"; \
+			echo -n $$code | tr -s '\r\n' ‘’ > $$output_dir/$$file_name.js; \
 			;; \
 		'\.png' ) \
-			echo "export default Image = \"`cat $$source_path | base64`\"" > $$output_dir/$$file_name.coffee; \
+			code="export default Image = \"data:image/png;base64,`cat $$source_path | base64 -w 0`\";"; \
+			echo -n $$code | tr -s '\r\n' ‘’ > $$output_dir/$$file_name.js; \
 			;; \
 		* ) \
 			exit 1; \
