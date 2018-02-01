@@ -2,7 +2,10 @@ import { prefixDom } from 'cfx.dom'
 import MainLayout from '../components/MainLayout/MainLayout';
 import nb from './UsersStyl'
 
-export default (Users) ->
+export default ({
+  Users
+  HeaderLink
+}) ->
 
   CFX = prefixDom {
     default: {
@@ -23,6 +26,7 @@ export default (Users) ->
 
     c_MainLayout {
       location
+      HeaderLink
     }
     ,
       c_div {

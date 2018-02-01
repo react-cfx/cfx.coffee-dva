@@ -16,19 +16,16 @@
     "ddeyes": "^0.0.6"
   },
   "dependencies": {
-    "antd": "^2.13.9",
+    "antd": "^3.1.6",
     "cfx.dom": "^0.0.3",
     "cfx.rollup-plugin-coffee2": "^0.1.4",
     "cfx.style": "^0.0.4",
-    "dva": "^2.0.4",
+    "dva": "^2.1.0",
     "normalize.css": "^7.0.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "reset-css": "^2.2.1",
     "rollup": "^0.51.5",
-    "rollup-plugin-alias": "^1.4.0",
-    "rollup-plugin-cleanup": "^2.0.0",
-    "rollup-plugin-image": "^1.0.2",
-    "rollup-plugin-re": "^1.0.6"
+    "rollup-plugin-cleanup": "^2.0.0"
   }
 }

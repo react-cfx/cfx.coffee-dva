@@ -6,15 +6,14 @@ import nb from './MainLayoutStyl'
 import { prefixDom } from 'cfx.dom'
 
 CFX = prefixDom {
-  default: {
-    'div'
-  }
+  'div'
   Header
 }
 
 MainLayout = ({
-  children
   location
+  HeaderLink
+  children
 }) ->
 
   {
@@ -28,6 +27,7 @@ MainLayout = ({
   ,
     c_Header {
       location
+      Link: HeaderLink
     }
     c_div {
       ( nb 'content' )...

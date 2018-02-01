@@ -16,6 +16,7 @@ CFX = prefixDom {
 
 IndexPage = ({
   location
+  HeaderLink
 }) ->
   {
     c_MainLayout
@@ -29,6 +30,7 @@ IndexPage = ({
 
   c_MainLayout {
     location
+    HeaderLink
   }
   ,
     c_div {

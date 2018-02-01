@@ -1,48 +1,66 @@
+import { ddbs as dd } from 'ddeyes'
+import { prefixDom } from 'cfx.dom'
 import { Menu, Icon } from 'antd'
 MenuItem = Menu.Item
-import { Link } from 'dva/router'
-import { prefixDom } from 'cfx.dom'
 
 CFX = prefixDom {
-  default: {
-    'a'
-  }
+  'a'
   Menu
   MenuItem
   Icon
-  Link
 }
 
 export default ({
   location
+  Link
 }) ->
+
+  { c_a } = CFX
+  HocA = (link) => ({
+    children
+  }) =>
+    c_a
+      href: link
+    , children
+
+  LinkUsers =
+    if Link?.Users?
+    then Link.Users
+    else HocA '/users'
+  LinkIndex =
+    if Link?.Index?
+    then Link.Index
+    else HocA '/'
+  LinkFof =
+    if Link?.Fof?
+    then Link.Fof
+    else HocA '/404'
+
+  CFX = {
+    CFX...
+    (
+      prefixDom {
+        LinkUsers
+        LinkIndex
+        LinkFof
+      }
+    )...
+  }
 
   {
     c_Menu
     c_MenuItem
     c_Icon
-    c_a
-    c_Link
+    c_LinkUsers
+    c_LinkIndex
+    c_LinkFof
   } = CFX
-
-  t_Link =
-    unless location
-    then (attr, args...) ->
-      c_a.apply @, [
-        attr.a
-        args...
-      ]
-    else (attr, args...) ->
-      c_Link.apply @, [
-        attr.link
-        args...
-      ]
 
   c_Menu {
     selectedKeys:
       unless location
       then null
-      else [location.pathname]
+      else [ location.pathname ]
     mode: 'horizontal'
     theme: 'dark'
   }
@@ -50,34 +68,25 @@ export default ({
     c_MenuItem
       key: '/users'
     ,
-      t_Link
-        a: {}
-        link:
-          to: '/users'
-      ,
-        c_Icon type: 'bars'
+      c_LinkUsers {}
+      # ,
+      #   c_Icon type: 'bars'
       , 'Users'
 
     c_MenuItem
       key: '/'
     ,
-      t_Link
-        a: {}
-        link:
-          to: '/'
-      ,
-        c_Icon type: 'home'
+      c_LinkIndex {}
+      # ,
+      #   c_Icon type: 'home'
       , 'Home'
 
     c_MenuItem
       key: '404'
     ,
-      t_Link
-        a: {}
-        link:
-          to: '/page-you-dont-konw'
-      ,
-        c_Icon type: 'frown-circle'
+      c_LinkFof {}
+      # ,
+      #   c_Icon type: 'frown-circle'
       , '404'
 
     c_MenuItem {}

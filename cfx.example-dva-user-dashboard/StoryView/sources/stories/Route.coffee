@@ -7,23 +7,30 @@ import {
 } from '../routes'
 import ViewUsers from '../components/Users'
 
+import {
+  Users as LinkUsers
+  Index as LinkIndex
+  Fof as LinkFof
+} from './HeaderLink'
+
 CFX = prefixDom {
   IndexPage
   ViewUsers
 }
 
-Users = RouteUsers ->
-  { c_ViewUsers } = CFX
-  c_ViewUsers
-    list: [
-      id: 1
-      name: 'mooxe'
-      email: 'mooxe@gmail.com'
-      website: 'www.mooxe.org'
-    ]
-    total: 10
-    current: 1
-    pageSize: 3
+Users = RouteUsers
+  Users: =>
+    { c_ViewUsers } = CFX
+    c_ViewUsers
+      list: [
+        id: 1
+        name: 'mooxe'
+        email: 'mooxe@gmail.com'
+        website: 'www.mooxe.org'
+      ]
+      total: 10
+      current: 1
+      pageSize: 3
 
 CFX = {
   CFX...
@@ -42,7 +49,11 @@ export default ->
   , =>
 
     { c_IndexPage } = CFX
-    c_IndexPage {}
+    c_IndexPage
+      HeaderLink:
+        Users: LinkUsers
+        Index: LinkIndex
+        Fof: LinkFof
 
   .add 'Users'
   , =>
