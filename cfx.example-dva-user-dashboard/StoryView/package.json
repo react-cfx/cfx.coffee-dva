@@ -5,22 +5,21 @@
   "scripts": {
     "clean": "rm -rf ./dist",
     "build": "rollup -c",
-    "rebuild": "npm run clean; npm run build",
-    "postinstall": "npm run build"
+    "rebuild": "npm run clean; npm run build"
   },
   "devDependencies": {
-    "@storybook/addon-info": "^3.2.14",
-    "@storybook/addon-options": "^3.2.14",
-    "@storybook/react": "^3.2.14",
-    "cfx.simple-build-tool": "^0.0.2",
-    "ddeyes": "^0.0.4"
+    "@storybook/addon-info": "^3.3.11",
+    "@storybook/addon-links": "^3.3.11",
+    "@storybook/addon-options": "^3.3.11",
+    "@storybook/react": "^3.3.11",
+    "cfx.simple-build-tool": "^0.0.6",
+    "ddeyes": "^0.0.6"
   },
   "dependencies": {
-    "ReduxServ": "file:../ReduxServ",
     "antd": "^2.13.9",
-    "cfx.dom": "^0.0.2",
-    "cfx.rollup-plugin-coffee2": "^0.1.0",
-    "cfx.style": "^0.0.3",
+    "cfx.dom": "^0.0.3",
+    "cfx.rollup-plugin-coffee2": "^0.1.4",
+    "cfx.style": "^0.0.4",
     "dva": "^2.0.4",
     "normalize.css": "^7.0.0",
     "react": "^16.0.0",

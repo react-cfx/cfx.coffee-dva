@@ -7,11 +7,31 @@ import {
 } from '../routes'
 import ViewUsers from '../components/Users'
 
-Users = RouteUsers ViewUsers
-
 CFX = prefixDom {
   IndexPage
-  Users
+  ViewUsers
+}
+
+Users = RouteUsers ->
+  { c_ViewUsers } = CFX
+  c_ViewUsers
+    list: [
+      id: 1
+      name: 'mooxe'
+      email: 'mooxe@gmail.com'
+      website: 'www.mooxe.org'
+    ]
+    total: 10
+    current: 1
+    pageSize: 3
+
+CFX = {
+  CFX...
+  (
+    prefixDom {
+      Users
+    }
+  )...
 }
 
 export default ->

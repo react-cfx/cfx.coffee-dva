@@ -5,7 +5,7 @@ import { Button } from 'antd'
 import Users, {
   UserForm 
   UserModal 
-  UsersTable 
+  UsersTable
 } from '../components/Users'
 
 CFX = prefixDom {
@@ -73,3 +73,4 @@ export default ->
       ]
       total: 10
       current: 1
+      pageSize: 3

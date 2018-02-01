@@ -1,5 +1,5 @@
 import styl from 'cfx.style'
-import yay from '../../public/assets/yay.jpg'
+import yay from './yay.jpg'
 
 yayUrl =
   if yay.src?

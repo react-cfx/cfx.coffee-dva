@@ -6,8 +6,6 @@ import UsersTable from './UsersTable'
 import UserModal from './UserModal'
 
 import { prefixDom } from 'cfx.dom'
-import { constants } from 'ReduxServ'
-{ PAGE_SIZE } = constants
 
 import nb from './UsersStyl'
 
@@ -55,7 +53,7 @@ class Users extends Component
           className: 'ant-table-pagination'
           total: @props.total
           current: @props.current
-          pageSize: PAGE_SIZE
+          pageSize: @props.pageSize
         }
 
 export default Users
