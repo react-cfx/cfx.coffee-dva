@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "cfx.simple-build-tool": "^0.0.6",
+    "ddeyes": "^0.0.6"
+  },
+  "dependencies": {
+    "cfx.dom": "^0.0.3",
+    "cfx.style": "^0.0.4",
+    "cowsay-browser": "^1.1.8",
+    "next": "^4.2.3",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}

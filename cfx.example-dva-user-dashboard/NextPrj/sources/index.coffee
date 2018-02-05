@@ -1,21 +1,19 @@
+import { ddbs as dd } from 'ddeyes'
 import { prefixDom } from 'cfx.dom'
-import dva from 'dva'
-
-# 1. Initialize
-`const app = dva()`
-
-# 4. Router
-app.router require './router'
-
-# 5. Start
-Page = app.start()
+import cowsay from 'cowsay-browser'
 
 CFX = prefixDom {
-  Page
+  'pre'
 }
 
 export default =>
+  { c_pre } = CFX
 
-  { c_Page } = CFX
+  _cowsay = cowsay.say
+    text: 'hi there!'
 
-  c_Page {}
+  dd _cowsay
+
+  c_pre {}
+  ,
+    _cowsay
