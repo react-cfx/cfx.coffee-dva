@@ -16,21 +16,30 @@ import {
 CFX = prefixDom {
   IndexPage
   ViewUsers
+  RouteUsers
 }
 
-Users = RouteUsers
-  Users: =>
-    { c_ViewUsers } = CFX
-    c_ViewUsers
-      list: [
-        id: 1
-        name: 'mooxe'
-        email: 'mooxe@gmail.com'
-        website: 'www.mooxe.org'
-      ]
-      total: 10
-      current: 1
-      pageSize: 3
+Users = ({
+  HeaderLink
+}) =>
+
+  { c_RouteUsers } = CFX
+
+  c_RouteUsers {
+    Users: =>
+      { c_ViewUsers } = CFX
+      c_ViewUsers
+        list: [
+          id: 1
+          name: 'mooxe'
+          email: 'mooxe@gmail.com'
+          website: 'www.mooxe.org'
+        ]
+        total: 10
+        current: 1
+        pageSize: 3
+    HeaderLink
+  }
 
 CFX = {
   CFX...
@@ -59,4 +68,8 @@ export default ->
   , =>
 
     { c_Users } = CFX
-    c_Users {}
+    c_Users
+      HeaderLink:
+        Users: LinkUsers
+        Index: LinkIndex
+        Fof: LinkFof

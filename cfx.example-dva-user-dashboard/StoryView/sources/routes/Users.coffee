@@ -3,34 +3,30 @@ import MainLayout from '../components/MainLayout/MainLayout';
 import nb from './UsersStyl'
 
 export default ({
+  location
   Users
   HeaderLink
 }) ->
 
   CFX = prefixDom {
-    default: {
-      'div'
-    }
+    'div'
     MainLayout
     Users
   }
 
-  ({
-    location
-  }) ->
-    {
-      c_MainLayout
-      c_Users
-      c_div
-    } = CFX
+  {
+    c_MainLayout
+    c_Users
+    c_div
+  } = CFX
 
-    c_MainLayout {
-      location
-      HeaderLink
+  c_MainLayout {
+    location
+    HeaderLink
+  }
+  ,
+    c_div {
+      ( nb 'normal' )...
     }
     ,
-      c_div {
-        ( nb 'normal' )...
-      }
-      ,
-        c_Users {}
+      c_Users {}
