@@ -1,9 +1,12 @@
 ### eslint-disable import/first ###
-import { Router, Switch, Route } from 'dva/router'
-import dynamic from 'dva/dynamic'
-# dva/link
-
 import { prefixDom } from 'cfx.dom'
+import {
+  Router
+  Switch
+  Route
+  Link
+} from 'dva/router'
+import dynamic from 'dva/dynamic'
 
 import { routes as Routes } from 'StoryView'
 import ViewUsers from './components/Users'
@@ -14,6 +17,7 @@ CFX = prefixDom {
   Router
   Switch
   Route
+  Link
 
   IndexPage
   RouteUsers
@@ -37,6 +41,24 @@ CFX = {
   )...
 }
 
+LinkUsers = ({
+  children
+}) =>
+  { c_Link } = CFX
+  c_Link
+    to: '/users'
+  , children
+
+LinkIndex = ({
+  children
+}) =>
+  { c_Link } = CFX
+  c_Link
+    to: '/'
+  , children
+
+LinkFof = LinkIndex
+
 RouterConfig = ({
   history
   app
@@ -46,11 +68,11 @@ RouterConfig = ({
     app
     component: => =>
       { c_IndexPage } = CFX
-      c_IndexPage {}
-      # HeaderLink:
-      #   Users: LinkUsers
-      #   Index: LinkIndex
-      #   Fof: LinkFof 
+      c_IndexPage
+        HeaderLink:
+          Users: LinkUsers
+          Index: LinkIndex
+          Fof: LinkFof 
   }
 
   Users = dynamic {
@@ -60,11 +82,11 @@ RouterConfig = ({
     ]
     component: => =>
       { c_Users } = CFX
-      c_Users {}
-        # HeaderLink:
-        #   Users: LinkUsers
-        #   Index: LinkIndex
-        #   Fof: LinkFof
+      c_Users
+        HeaderLink:
+          Users: LinkUsers
+          Index: LinkIndex
+          Fof: LinkFof
   }
 
   {
