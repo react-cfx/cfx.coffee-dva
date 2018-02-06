@@ -1,4 +1,4 @@
 export {
   components,
   routes
-} from 'sources/index.coffee';
+} from './sources/index.coffee';

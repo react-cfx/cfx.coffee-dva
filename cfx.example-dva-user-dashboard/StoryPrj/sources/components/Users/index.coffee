@@ -3,20 +3,18 @@ import { prefixDom } from 'cfx.dom'
 
 import { store } from 'ReduxServ'
 { actions } = store
+import { connect } from 'cfx.react-redux'
 
 import { components } from 'StoryView'
 Users = components.Users.Index
 
-import { connect } from 'cfx.react-redux'
-
-import {
-  render
-  getState
-} from './common'
-
 CFX = prefixDom {
   Users
 }
+
+import {
+  getState
+} from './common'
 
 class StoryUsers extends Component
 
@@ -53,8 +51,8 @@ class StoryUsers extends Component
       current
     } = @state
 
-    render CFX
-    , {
+    { c_Users } = CFX
+    c_Users {
       list
       total
       current

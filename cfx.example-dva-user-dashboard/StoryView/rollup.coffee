@@ -3,6 +3,7 @@ import {
   coffee2
   coffeepath
 } from 'cfx.rollup-plugin-coffee2'
+import image from 'rollup-plugin-image'
 import cleanup from 'rollup-plugin-cleanup'
 
 export default
@@ -15,6 +16,7 @@ export default
     coffee2
       bare: true
       sourceMap: true
+    image()
     coffeepath()
     cleanup()
   ]

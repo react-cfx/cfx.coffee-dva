@@ -5,7 +5,8 @@
   "scripts": {
     "clean": "rm -rf ./dist",
     "build": "rollup -c",
-    "rebuild": "npm run clean; npm run build"
+    "rebuild": "npm run clean; npm run build",
+    "postinstall": "npm run build"
   },
   "devDependencies": {
     "@storybook/addon-info": "^3.3.11",
@@ -26,6 +27,7 @@
     "react-dom": "^16.2.0",
     "reset-css": "^2.2.1",
     "rollup": "^0.51.5",
-    "rollup-plugin-cleanup": "^2.0.0"
+    "rollup-plugin-cleanup": "^2.0.0",
+    "rollup-plugin-image": "^1.0.2"
   }
 }

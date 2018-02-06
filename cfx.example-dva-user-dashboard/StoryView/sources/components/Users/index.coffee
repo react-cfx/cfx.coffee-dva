@@ -19,44 +19,46 @@ CFX = prefixDom {
   UsersTable
 }
 
-class Users extends Component
+export default ({
+  list
+  total
+  current
+  pageSize = 3
+}) =>
 
-  render: ->
+  {
+    c_div
+    c_Pagination
+    c_Button
+    c_UserModal
+    c_UsersTable
+  } =  CFX
 
-    {
-      c_div
-      c_Pagination
-      c_Button
-      c_UserModal
-      c_UsersTable
-    } =  CFX
-
-    c_div {
-      ( nb 'normal' )...
-    }
+  c_div {
+    ( nb 'normal' )...
+  }
+  ,
+    c_div {}
     ,
-      c_div {}
+      c_div {
+        ( nb 'create' )...
+      }
       ,
-        c_div {
-          ( nb 'create' )...
-        }
+        c_UserModal
+          record: {}
         ,
-          c_UserModal
-            record: {}
-          ,
-            c_Button
-              type: 'primary'
-            , 'Create User'
-        c_UsersTable
-          list: @props.list
-        c_Pagination {
-          className: 'ant-table-pagination'
-          total: @props.total
-          current: @props.current
-          pageSize: @props.pageSize
-        }
-
-export default Users
+          c_Button
+            type: 'primary'
+          , 'Create User'
+      c_UsersTable {
+        list 
+      }
+      c_Pagination {
+        className: 'ant-table-pagination'
+        total
+        current
+        pageSize
+      }
 
 export {
   UserForm
