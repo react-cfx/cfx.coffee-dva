@@ -39,4 +39,3 @@ CFX = prefixDom {
   MenuItem
   FormItem
 }
-

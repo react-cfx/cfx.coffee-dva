@@ -1,19 +1,3 @@
-
-render = (
-  CFX
-  {
-    list
-    total
-    current
-  }
-) ->
-  { c_Users } = CFX
-  c_Users {
-    list
-    total
-    current
-  }
-
 getState = (state) ->
   {
     list
@@ -27,6 +11,5 @@ getState = (state) ->
   }
 
 export {
-  render
   getState
 }

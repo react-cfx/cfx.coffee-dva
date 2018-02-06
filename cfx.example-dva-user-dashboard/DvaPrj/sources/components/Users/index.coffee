@@ -6,7 +6,6 @@ import { components } from 'StoryView'
 Users = components.Users.Index
 
 import {
-  render
   getState
 } from './common'
 
@@ -15,15 +14,14 @@ CFX = prefixDom {
 }
 
 DvaUsers = ({
-  dispatch
   list
   # loading
   total
   page: current
 }) ->
 
-  render CFX
-  , {
+  { c_Users } = CFX
+  c_Users {
     list
     total
     current

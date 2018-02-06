@@ -1,15 +1,40 @@
 ### eslint-disable import/first ###
 import { Router, Switch, Route } from 'dva/router'
 import dynamic from 'dva/dynamic'
+# dva/link
+
 import { prefixDom } from 'cfx.dom'
 
 import { routes as Routes } from 'StoryView'
 import ViewUsers from './components/Users'
+{ IndexPage } = Routes
+RouteUsers = Routes.Users
 
 CFX = prefixDom {
   Router
   Switch
   Route
+
+  IndexPage
+  RouteUsers
+}
+
+Users = ({
+  HeaderLink
+}) =>
+  { c_RouteUsers } = CFX
+  c_RouteUsers {
+    Users: ViewUsers
+    HeaderLink
+  }
+
+CFX = {
+  CFX...
+  (
+    prefixDom {
+      Users
+    }
+  )...
 }
 
 RouterConfig = ({
@@ -19,7 +44,13 @@ RouterConfig = ({
 
   IndexPage = dynamic {
     app
-    component: => Routes.IndexPage
+    component: => =>
+      { c_IndexPage } = CFX
+      c_IndexPage {}
+      # HeaderLink:
+      #   Users: LinkUsers
+      #   Index: LinkIndex
+      #   Fof: LinkFof 
   }
 
   Users = dynamic {
@@ -27,7 +58,13 @@ RouterConfig = ({
     models: => [
       require './models/users'
     ]
-    component: => Routes.Users ViewUsers
+    component: => =>
+      { c_Users } = CFX
+      c_Users {}
+        # HeaderLink:
+        #   Users: LinkUsers
+        #   Index: LinkIndex
+        #   Fof: LinkFof
   }
 
   {
