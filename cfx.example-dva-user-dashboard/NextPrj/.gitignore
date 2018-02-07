@@ -21,9 +21,10 @@ yarn.lock
 yarn*log
 .yarn*
 
-.storybook
-public
-src
+/.storybook
+/public
+/src
 
-.next
-pages
+/.next
+/pages
+/pagelibs
