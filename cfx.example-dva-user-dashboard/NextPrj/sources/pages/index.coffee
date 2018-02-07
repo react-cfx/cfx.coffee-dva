@@ -13,7 +13,7 @@ CFX = prefixDom {
 
 export default =>
 
-  app.router =>
+  app =>
 
     {
       c_div
@@ -29,17 +29,3 @@ export default =>
         #   Users: LinkUsers
         #   Index: LinkIndex
         #   Fof: LinkFof 
-
-  Index = app.start()
-
-  CFX = {
-    CFX...
-    (
-      prefixDom {
-        Index
-      }
-    )...
-  }
-
-  { c_Index } = CFX
-  c_Index {}
