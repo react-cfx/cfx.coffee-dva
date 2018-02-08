@@ -1,3 +1,4 @@
+# import { ddbs as dd } from 'ddeyes'
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
 
@@ -12,10 +13,12 @@ import { store } from 'ReduxServ'
 userStore = store.store
 
 import {
-  Users as LinkUsers
-  Index as LinkIndex
-  Fof as LinkFof
-} from './HeaderLink'
+  stories
+} from 'StoryView/dist/stories'
+
+LinkUsers = stories.HeaderLink.Users
+LinkIndex = stories.HeaderLink.Index
+LinkFof = stories.HeaderLink.Fof
 
 CFX = prefixDom {
   IndexPage

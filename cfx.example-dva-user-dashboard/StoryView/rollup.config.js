@@ -1,2 +1,2 @@
 require('coffee-require/register');
-module.exports = require('./rollup.coffee').default;
+module.exports = require('./rollup/rollup.coffee').default;

@@ -1,15 +1,15 @@
-import MainLayout, { Header } from './components/MainLayout'
+import MainLayout, { Header } from '../../sources/components/MainLayout'
 
 import Users, {
   UserForm
   UsersTable
   UserModal
-} from './components/Users'
+} from '../../sources/components/Users'
 
 import {
   IndexPage
   Users as RouteUsers
-} from './routes'
+} from '../../sources/routes'
 
 export components =
   MainLayout: {

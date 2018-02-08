@@ -1,7 +1,7 @@
 {
   "name": "cfx.example-dva-user-dashboard.StroyView",
   "version": "0.0.0",
-  "main": "dist/bundle.js",
+  "main": "dist/index.js",
   "scripts": {
     "clean": "rm -rf ./dist",
     "build": "rollup -c",

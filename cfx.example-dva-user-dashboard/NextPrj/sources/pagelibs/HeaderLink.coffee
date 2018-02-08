@@ -21,9 +21,7 @@ HocLinkTo = (linkWhere) =>
       , children
 
 Users = HocLinkTo '/users'
-
 Index = HocLinkTo '/'
-
 Fof = HocLinkTo '/404'
 
 export {
