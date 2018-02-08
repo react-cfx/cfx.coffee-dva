@@ -69,24 +69,24 @@ export default ({
       key: '/users'
     ,
       c_LinkUsers {}
-      # ,
-      #   c_Icon type: 'bars'
+      ,
+        c_Icon type: 'bars'
       , 'Users'
 
     c_MenuItem
       key: '/'
     ,
       c_LinkIndex {}
-      # ,
-      #   c_Icon type: 'home'
+      ,
+        c_Icon type: 'home'
       , 'Home'
 
     c_MenuItem
       key: '404'
     ,
       c_LinkFof {}
-      # ,
-      #   c_Icon type: 'frown-circle'
+      ,
+        c_Icon type: 'frown-circle'
       , '404'
 
     c_MenuItem {}

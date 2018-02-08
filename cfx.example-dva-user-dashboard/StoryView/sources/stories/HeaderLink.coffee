@@ -1,29 +1,24 @@
 import { prefixDom } from 'cfx.dom'
-import LinkTo from '@storybook/addon-links/react'
+import { linkTo } from '@storybook/addon-links'
+# import LinkTo from '@storybook/addon-links/react'
 
 CFX = prefixDom {
-  LinkTo
+  'a'
 }
 
-HocLinkTo = (linkProps) =>
+HocLinkTo = (linkWhere...) =>
   ({
     children
   }) =>
-    { c_LinkTo } = CFX
-    c_LinkTo linkProps
+    { c_a } = CFX
+    c_a
+      href: "javascript: void(0);"
+      onClick: linkTo.apply null, linkWhere
     , children
 
-Users = HocLinkTo
-  kind: 'Route'
-  story: 'Users'
-
-Index = HocLinkTo
-  kind: 'Route'
-  story: 'IndexPage'
-
-Fof = HocLinkTo
-  kind: 'Route'
-  story: 'IndexPage'
+Users = HocLinkTo 'Route', 'Users'
+Index = HocLinkTo 'Route', 'IndexPage'
+Fof = HocLinkTo 'Route', 'IndexPage'
 
 export {
   Users
