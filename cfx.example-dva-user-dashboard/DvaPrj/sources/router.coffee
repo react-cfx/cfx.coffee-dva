@@ -4,7 +4,6 @@ import {
   Router
   Switch
   Route
-  Link
 } from 'dva/router'
 import dynamic from 'dva/dynamic'
 
@@ -13,11 +12,16 @@ import ViewUsers from './components/Users'
 { IndexPage } = Routes
 RouteUsers = Routes.Users
 
+import {
+  Users as LinkUsers
+  Index as LinkIndex
+  Fof as LinkFof
+} from './HeaderLink'
+
 CFX = prefixDom {
   Router
   Switch
   Route
-  Link
 
   IndexPage
   RouteUsers
@@ -40,24 +44,6 @@ CFX = {
     }
   )...
 }
-
-LinkUsers = ({
-  children
-}) =>
-  { c_Link } = CFX
-  c_Link
-    to: '/users'
-  , children
-
-LinkIndex = ({
-  children
-}) =>
-  { c_Link } = CFX
-  c_Link
-    to: '/'
-  , children
-
-LinkFof = LinkIndex
 
 RouterConfig = ({
   history
