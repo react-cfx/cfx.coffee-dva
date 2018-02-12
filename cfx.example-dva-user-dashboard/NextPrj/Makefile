@@ -4,8 +4,7 @@ include ./node_modules/cfx.simple-build-tool/maker/main.mk
 
 nextbuild: build
 	cp -R src/pages pages
-	mkdir -p pagelibs
-	cp -R src/pagelibs/* pagelibs
+	cp -R src/pagelibs pagelibs
 	next build
 
 nextrebuild:
