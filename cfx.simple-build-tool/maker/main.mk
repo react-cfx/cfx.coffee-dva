@@ -20,6 +20,8 @@ build:
 	make .jpg
 	make .png
 
+	make .md
+
 	make .public
 
 findPath = findPath() { \
@@ -63,6 +65,10 @@ extHandler = extHandler() { \
 			code="export default Image = \"data:image/png;base64,`cat $$source_path | base64 -w 0`\";"; \
 			echo -n $$code | tr -s '\r\n' ‘’ > $$output_dir/$$file_name.js; \
 			;; \
+		'\.md' ) \
+			code="export default Markdown = \"`cat $$source_path | md2html `\";"; \
+			echo -n $$code | tr -s '\r\n' ‘’ > $$output_dir/$$file_name.js; \
+			;; \
 		* ) \
 			exit 1; \
 			;; \
@@ -92,6 +98,10 @@ extHandler = extHandler() { \
 .png:
 	@$(findPath); $(extHandler); \
 	findPath '\.png' extHandler
+
+.md:
+	@$(findPath); $(extHandler); \
+	findPath '\.md' extHandler
 
 .public:
 	if [ -d './src/public' ]; then \
