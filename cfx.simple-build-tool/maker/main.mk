@@ -66,7 +66,7 @@ extHandler = extHandler() { \
 			echo -n $$code | tr -s '\r\n' ‘’ > $$output_dir/$$file_name.js; \
 			;; \
 		'\.md' ) \
-			code="export default Markdown = \"`cat $$source_path | md2html `\";"; \
+			code="export default \"`cat $$source_path | md2html `\";"; \
 			echo -n $$code | tr -s '\r\n' ‘’ > $$output_dir/$$file_name.js; \
 			;; \
 		* ) \
