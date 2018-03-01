@@ -16,7 +16,7 @@
     "shelljs": "^0.7.8"
   },
   "dependencies": {
-    "cfx.redux": "^0.0.6",
+    "cfx.redux": "^0.1.1",
     "cfx.redux-actions": "^0.0.1",
     "cfx.redux-saga": "^0.0.1",
     "cfx.redux-types": "^0.0.4",

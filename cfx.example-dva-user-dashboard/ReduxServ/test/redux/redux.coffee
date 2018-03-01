@@ -1,50 +1,35 @@
 import dd from 'ddeyes'
 import 'shelljs/make'
-# import { store } from '../../src'
-import { store } from '../../dist/bundle'
 
-{
-  constants
-  actions
-  reducers
-  sagas
-  getStore
-} = store
+import { createApp } from 'cfx.redux'
+import app from '../../src'
+# import app from '../../dist/bundle'
 
 target.all = ->
 
   dd 'Hello World!!!'
 
-  target.static()
-  target.reducers()
-  target.sagas()
-
 target.static = ->
 
-  dd {
-    constants
-    actions
-  }
+  dd { app }
 
 target.reducers = ->
 
-  myStore = getStore {
-    appName: 'userApp'
-    reducers
+  myApp = createApp
+    redux:
+      reducers: app._._.reducers
+      sagas: app._._.sagas
     subscriber:
-      sync: ->
-        dd myStore.getState()
-  }
+      sync: (store) =>
+        dd store.getState()
 
-  myStore.dispatch actions.userSave
+  dd await myApp.dispatch.userSave
     data: [
       name: 'hello'
       age: 18
     ]
     total: 10
     page: 1
-
-  myStore.onsubscribe()
 
 target.sagas = ->
 
@@ -56,16 +41,16 @@ target.sagas = ->
   ) ->
     dd @getState()
 
-  myStore = getStore {
-    appName: 'userApp'
-    reducers
-    sagas
+  myApp = createApp
+    redux:
+      reducers: app._._.reducers
+      sagas: app._._.sagas
     subscriber:
+      sync: (store) =>
+        dd store.getState()
       async: subscriber
-  }
 
-  # dd actions.userFetch
-  #   page: 1
-  
-  myStore.dispatch actions.userFetch
+  dd await myApp.dispatch.userFetch
     page: 1
+
+  # dd myApp.store.getState()

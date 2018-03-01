@@ -12,3 +12,9 @@ docker:
 		-v $$(pwd):/root/${pjName} \
 		mooxe/node \
 		/bin/bash
+
+in:
+	docker exec \
+		-ti \
+		${pjName} \
+		/bin/bash
