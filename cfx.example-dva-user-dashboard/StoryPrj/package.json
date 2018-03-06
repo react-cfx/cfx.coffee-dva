@@ -3,17 +3,18 @@
     "@storybook/addon-info": "^3.2.16",
     "@storybook/addon-options": "^3.2.16",
     "@storybook/react": "^3.2.16",
-    "cfx.simple-build-tool": "^0.0.2",
-    "ddeyes": "^0.0.4"
+    "cfx.simple-build-tool": "^0.0.12",
+    "ddeyes": "^0.0.6"
   },
   "dependencies": {
     "ReduxServ": "file:../ReduxServ",
     "StoryView": "file:../StoryView",
     "antd": "^2.13.10",
-    "cfx.react-redux": "^0.0.2",
     "normalize.css": "^7.0.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2",
     "reset-css": "^2.2.1"
   }
 }

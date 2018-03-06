@@ -1,13 +1,14 @@
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
+import {
+  Provider
+  app
+} from '../store'
+{ store } = app
 
 import Users from '../components/Users'
 import { components } from 'StoryView'
 ViewUsers = components.Users.Index
-
-import { Provider } from 'cfx.react-redux'
-import { store } from 'ReduxServ'
-userStore = store.store
 
 CFX = prefixDom {
   ViewUsers
@@ -22,8 +23,9 @@ export default ->
   .addDecorator (story) ->
 
     { c_Provider } = CFX
-    c_Provider
-      store: userStore
+    c_Provider {
+      store
+    }
     , story()
 
   .add 'ViewUsers'

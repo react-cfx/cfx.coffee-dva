@@ -1,9 +1,7 @@
-import * as models from './models/users'
-import services from './services/users'
+import services from './services'
 import app from './app'
 
 export {
-  models
   services
 }
 

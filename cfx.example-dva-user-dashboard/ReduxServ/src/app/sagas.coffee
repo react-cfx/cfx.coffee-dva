@@ -2,84 +2,108 @@ import dd from 'ddeyes'
 
 import { toSaga } from 'cfx.redux'
 import { sagaEffects } from 'cfx.redux-saga'
+{ select } = sagaEffects
 
-import getUsersSagas from '../models/users/effects'
-import getUsersServ from '../services/users'
-
-default_host = [
-  # 'https://cors-anywhere.herokuapp.com/'
-  'http://jsonplaceholder.typicode.com'
-].join ''
-
-usersSagas = getUsersSagas
-  type:
-    save: 'USER_SAVE'
-    fetch: 'USER_FETCH'
-    remove: 'USER_REMOVE'
-    patch: 'USER_PATCH'
-    create: 'USER_CREATE'
-    reload: 'USER_RELOAD'
-  service: getUsersServ default_host
-
-{
-  call
-  put
-  select
-  takeLatest
-} = sagaEffects
+import services from '../services'
 
 export default
 
   users: toSaga
 
-    USER_FETCH: ({ types }) => (action) ->
+    USER_FETCH: ({ types }) => (
+      {
+        type
+        payload = {}
+      }
+      { dispatch }
+    ) ->
     
-      action.payload = {} unless action.payload?
+      payload.page or= 1
 
-      yield from usersSagas.fetch action
-      , {
-        call
-        put
+      users = yield services.users.fetch
+        page: payload.page
+
+      yield dispatch.userSave {
+        data: users
+        # total: parseInt headers['x-total-count']
+        # , 10
+        total: 10
+        page: parseInt payload.page
+        , 10
       }
 
-      success: true
+      users
 
-    USER_REMOVE: ({ types }) => (action) ->
+    USER_REMOVE: ({ types }) => (
+      {
+        type
+        payload = {}
+      }
+      { dispatch }
+    ) ->
 
-      yield from usersSagas.remove action
-      , {
-        call
-        put
+      { id } = payload
+
+      user = yield services.users.remove
+        id: payload.id
+
+      yield dispatch.userReload()
+
+      user
+
+    USER_PATCH: ({ types }) => (
+      {
+        type
+        payload = {}
+      }
+      { dispatch }
+    ) ->
+
+      {
+        id
+        values
+      } = payload
+
+      user = yield services.users.patch {
+        id
+        values
       }
 
-      success: true
+      yield dispatch.userReload()
 
-    USER_PATCH: ({ types }) => (action) ->
+      user
 
-      yield from usersSagas.patch action
-      , {
-        call
-        put
+
+    USER_CREATE: ({ types }) => (
+      {
+        type
+        payload
+      }
+      { dispatch }
+    ) ->
+
+      { values } = payload
+
+      user = yield services.users.create
+        data: values
+
+      yield dispatch.userReload()
+
+      user
+
+    USER_RELOAD: ({ types }) => (
+      {
+        type 
+        payload
+      }
+      { dispatch }
+    ) ->
+
+      page = yield select (state) =>
+        state.users.page
+
+      users = yield dispatch.userFetch {
+        page
       }
 
-      success: true
-
-    USER_CREATE: ({ types }) => (action) ->
-
-      yield from usersSagas.create action
-      , {
-        call
-        put
-      }
-
-      success: true
-
-    USER_RELOAD: ({ types }) => (action) ->
-
-      yield from usersSagas.reload action
-      , {
-        put
-        select
-      }
-
-      success: true
+      users

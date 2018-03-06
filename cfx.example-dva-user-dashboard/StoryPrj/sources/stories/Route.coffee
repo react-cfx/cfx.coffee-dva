@@ -1,16 +1,14 @@
 # import { ddbs as dd } from 'ddeyes'
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
+import { Provider } from './reactRedux'
+import userStore from './store'
 
 import { routes as Routes } from 'StoryView'
 { IndexPage } = Routes
 RouteUsers = Routes.Users
 
 import ViewUsers from '../components/Users'
-
-import { Provider } from 'cfx.react-redux'
-import { store } from 'ReduxServ'
-userStore = store.store
 
 import {
   stories
