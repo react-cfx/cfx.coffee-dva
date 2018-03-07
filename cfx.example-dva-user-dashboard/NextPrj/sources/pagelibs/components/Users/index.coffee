@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import { prefixDom } from 'cfx.dom'
 
-import { store } from 'ReduxServ'
-{ actions } = store
-import { connect } from 'cfx.react-redux'
+import {
+  app
+  connect
+} from '../../store/store'
+{ actions } = app._
 
 import { components } from 'StoryView'
 Users = components.Users.Index
@@ -59,7 +61,7 @@ class StoryUsers extends Component
     }
 
 mapStateToProps = (state) ->
-  getState state.userApp.users
+  getState state.users
 
 mapActionToProps =
   fetch: actions.userFetch

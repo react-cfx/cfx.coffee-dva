@@ -1,10 +1,11 @@
-import { ddbs as dd } from 'ddeyes'
+# import { ddbs as dd } from 'ddeyes'
+
 import withRedux from 'next-redux-wrapper'
 import nextReduxSaga from 'next-redux-saga'
-import { store } from 'ReduxServ'
-userStore = store.store
 
-configureStore = => userStore
+import { app } from './store'
+
+configureStore = => app.store
 
 withReduxSaga = (BaseComponent) =>
   (

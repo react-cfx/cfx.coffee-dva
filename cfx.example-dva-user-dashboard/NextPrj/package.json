@@ -7,7 +7,7 @@
     "ReduxServ": "file:../ReduxServ",
     "StoryView": "file:../StoryView",
     "cfx.dom": "^0.0.3",
-    "cfx.react-redux": "^0.0.2",
+    "cfx.react-redux": "^0.0.4",
     "cfx.style": "^0.0.4",
     "cowsay-browser": "^1.1.8",
     "dva-no-router": "^1.0.3",
