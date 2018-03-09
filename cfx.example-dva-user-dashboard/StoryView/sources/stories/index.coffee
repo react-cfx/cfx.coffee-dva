@@ -6,9 +6,9 @@ import 'antd/dist/antd.min.css'
 import Welcome from './Welcome'
 import MainLayout from './MainLayout'
 import Users from './Users'
-import Route from './Route'
+import Pages from './Pages'
 
 Welcome()
 MainLayout()
 Users()
-Route()
+Pages()

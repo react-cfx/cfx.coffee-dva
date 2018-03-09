@@ -1,9 +1,8 @@
 import Header from './Header'
+import Layout from './Layout'
 
-import MainLayout from './MainLayout'
+export default Layout
 
 export {
   Header
 }
-
-export default MainLayout

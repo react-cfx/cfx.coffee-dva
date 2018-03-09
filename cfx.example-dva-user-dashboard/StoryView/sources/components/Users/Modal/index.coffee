@@ -1,17 +1,16 @@
 import React, { Component } from 'react'
-import UserForm from './UserForm'
 import { Modal } from 'antd'
 import { prefixDom } from 'cfx.dom'
+import Form from './Form'
 
 CFX = prefixDom {
-  default: {
-    'span'
-  }
+  'span'
+
   Modal
-  UserForm
+  Form
 }
 
-class UserEditModal extends Component
+class UserModal extends Component
 
   constructor: (props) ->
     super props
@@ -40,10 +39,11 @@ class UserEditModal extends Component
 
   render: ->
     { children } = @props
+
     {
       c_span
       c_Modal
-      c_UserForm
+      c_Form
     } = CFX
 
     c_span {}
@@ -58,7 +58,9 @@ class UserEditModal extends Component
         onOk: @okHandler.bind @
         onCancel: @hideModelHandler.bind @
       ,
-        c_UserForm
+        c_Form
           record: @props.record
 
-export default UserEditModal
+export default UserModal
+
+export UserForm = Form

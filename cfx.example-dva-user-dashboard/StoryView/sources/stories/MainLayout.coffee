@@ -4,9 +4,8 @@ import { prefixDom } from 'cfx.dom'
 import MainLayout, { Header } from '../components/MainLayout'
 
 CFX = prefixDom {
-  default: {
-    'h1'
-  }
+  'h1'
+
   Header
   MainLayout
 }

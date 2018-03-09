@@ -13,7 +13,7 @@
     "@storybook/addon-links": "^3.3.11",
     "@storybook/addon-options": "^3.3.11",
     "@storybook/react": "^3.3.11",
-    "cfx.simple-build-tool": "^0.0.6",
+    "cfx.simple-build-tool": "^0.0.12",
     "ddeyes": "^0.0.6"
   },
   "dependencies": {

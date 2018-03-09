@@ -1,7 +1,5 @@
-import React from 'react'
-import Header from './Header'
-import styl from 'cfx.style'
-import nb from './MainLayoutStyl'
+import Header from '../Header'
+import nb from './style'
 
 import { prefixDom } from 'cfx.dom'
 
@@ -12,8 +10,8 @@ CFX = prefixDom {
 
 MainLayout = ({
   location
-  HeaderLink
   children
+  HeaderLink
 }) ->
 
   {

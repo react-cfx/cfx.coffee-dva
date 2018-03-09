@@ -1,6 +1,6 @@
 import { prefixDom } from 'cfx.dom'
-import MainLayout from '../components/MainLayout/MainLayout';
-import nb from './UsersStyl'
+import MainLayout from '../../components/MainLayout';
+import nb from './style'
 
 export default ({
   location

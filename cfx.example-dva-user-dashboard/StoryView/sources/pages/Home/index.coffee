@@ -1,20 +1,19 @@
-import MainLayout from '../components/MainLayout/MainLayout'
-import nb from './IndexPageStyl'
+import MainLayout from '../../components/MainLayout'
+import nb from './style'
 import { prefixDom } from 'cfx.dom'
 
 CFX = prefixDom {
-  default: {
-    'div'
-    'h1'
-    'ul'
-    'li'
-    'code'
-    'a'
-  }
+  'div'
+  'h1'
+  'ul'
+  'li'
+  'code'
+  'a'
+
   MainLayout
 }
 
-IndexPage = ({
+export default ({
   location
   HeaderLink
 }) ->
@@ -60,7 +59,5 @@ IndexPage = ({
         c_li {}
         ,
           c_a
-            href: 'https://github.com/dvajs/dva-docs/blob/master/v1/en-us/getting-started.md'
+            href: 'https://github.com/dvajs/dva'
           , 'Getting Started'
-
-export default IndexPage

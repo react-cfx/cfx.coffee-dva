@@ -1,18 +1,17 @@
-import React, { Component } from 'react'
 import { Pagination, Button } from 'antd'
 
-import UserForm from './UserForm'
-import UsersTable from './UsersTable'
-import UserModal from './UserModal'
+import UsersTable from './Table'
+import UserModal, {
+  UserForm
+} from './Modal'
 
 import { prefixDom } from 'cfx.dom'
 
-import nb from './UsersStyl'
+import nb from './style'
 
 CFX = prefixDom {
-  default: {
-    'div'
-  }
+  'div'
+
   Pagination
   Button
   UserModal

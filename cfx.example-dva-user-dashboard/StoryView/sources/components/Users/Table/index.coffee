@@ -1,18 +1,19 @@
 import React, { Component } from 'react'
-import { Table, Popconfirm } from 'antd'
-import UserModal from './UserModal'
 import { prefixDom } from 'cfx.dom'
 
-import nb from './UsersStyl'
+import { Table, Popconfirm } from 'antd'
+
+import UserModal from '../Modal'
+
+import nb from './style'
 
 CFX = prefixDom {
-  default: {
-    'a'
-    'span'
-  }
-  UserModal
+  'a'
+  'span'
+
   Table
   Popconfirm
+  UserModal
 }
 
 class UsersTable extends Component

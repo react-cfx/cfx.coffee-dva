@@ -16,9 +16,9 @@ HocLinkTo = (linkWhere...) =>
       onClick: linkTo.apply null, linkWhere
     , children
 
-Users = HocLinkTo 'Route', 'Users'
-Index = HocLinkTo 'Route', 'IndexPage'
-Fof = HocLinkTo 'Route', 'IndexPage'
+Index = HocLinkTo 'Pages', 'Home'
+Users = HocLinkTo 'Pages', 'Users'
+Fof = HocLinkTo 'Pages', 'Home'
 
 export {
   Users

@@ -69,4 +69,4 @@ class UserEditForm extends Component
         decorator: 'website' 
         initialValue: website
 
-export default (Form.create {}) UserEditForm
+export default Form.create() UserEditForm
