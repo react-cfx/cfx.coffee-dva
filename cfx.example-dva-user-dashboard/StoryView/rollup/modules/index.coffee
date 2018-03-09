@@ -1,29 +1,38 @@
-import MainLayout, { Header } from '../../sources/components/MainLayout'
+import {
+  MainLayout
 
-import Users, {
+  Header
+
+  Users as UsersComp
+
   UserForm
   UsersTable
   UserModal
-} from '../../sources/components/Users'
+} from '../../sources/components'
 
 import {
-  IndexPage
-  Users as RouteUsers
-} from '../../sources/routes'
+  Home
+  Users
+} from '../../sources/pages'
 
-export components =
-  MainLayout: {
-    Index: MainLayout
-    Header
-  }
-  Users: {
-    Index: Users
-    UserForm
-    UsersTable
-    UserModal
-  }
+Comps = {
+  MainLayout
 
-export routes = {
-  IndexPage
-  Users: RouteUsers
+  Header
+
+  Users: UsersComp
+
+  UserForm
+  UsersTable
+  UserModal
+} 
+
+Pages = {
+  Home
+  Users
+}
+
+export {
+  Comps
+  Pages
 }

@@ -1,4 +1,4 @@
 export {
-  components,
-  routes
+  Comps,
+  Pages
 } from './index.coffee';
