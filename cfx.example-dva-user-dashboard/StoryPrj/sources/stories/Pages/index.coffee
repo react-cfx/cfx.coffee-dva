@@ -1,14 +1,16 @@
 # import { ddbs as dd } from 'ddeyes'
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
-import { Provider } from './reactRedux'
-import userStore from './store'
+import {
+  Provider
+  app
+} from '../../store'
+{ store } = app
 
-import { routes as Routes } from 'StoryView'
-{ IndexPage } = Routes
-RouteUsers = Routes.Users
+import { Pages } from 'StoryView'
+{ Home } = Pages
 
-import ViewUsers from '../components/Users'
+import Users from './Users'
 
 import {
   stories
@@ -19,45 +21,28 @@ LinkIndex = stories.HeaderLink.Index
 LinkFof = stories.HeaderLink.Fof
 
 CFX = prefixDom {
-  IndexPage
-  RouteUsers
+  Home
+  Users 
   Provider
-}
-
-Users = ({
-  HeaderLink
-}) =>
-  { c_RouteUsers } = CFX
-  c_RouteUsers {
-    Users: ViewUsers
-    HeaderLink
-  }
-
-CFX = {
-  CFX...
-  (
-    prefixDom {
-      Users
-    }
-  )...
 }
 
 export default ->
 
-  storiesOf 'Route', module
+  storiesOf 'Pages', module
 
   .addDecorator (story) ->
 
     { c_Provider } = CFX
-    c_Provider
-      store: userStore
+    c_Provider {
+      store
+    }
     , story()
 
-  .add 'IndexPage'
+  .add 'Home'
   , =>
 
-    { c_IndexPage } = CFX
-    c_IndexPage
+    { c_Home } = CFX
+    c_Home
       HeaderLink:
         Users: LinkUsers
         Index: LinkIndex

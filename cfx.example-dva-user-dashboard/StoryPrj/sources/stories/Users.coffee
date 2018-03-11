@@ -7,8 +7,8 @@ import {
 { store } = app
 
 import Users from '../components/Users'
-import { components } from 'StoryView'
-ViewUsers = components.Users.Index
+import { Comps } from 'StoryView'
+ViewUsers = Comps.Users
 
 CFX = prefixDom {
   ViewUsers

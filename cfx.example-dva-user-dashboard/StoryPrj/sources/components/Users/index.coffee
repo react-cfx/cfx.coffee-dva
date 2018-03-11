@@ -8,8 +8,8 @@ import {
 } from '../../store'
 { actions } = app._
 
-import { components } from 'StoryView'
-Users = components.Users.Index
+import { Comps } from 'StoryView'
+{ Users } = Comps
 
 CFX = prefixDom {
   Users

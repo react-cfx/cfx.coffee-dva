@@ -20,7 +20,6 @@ export default (
 
   (
     Object.keys DefaultConf
-      
   ).reduce (r, c, i, a) =>
     {
       r...
