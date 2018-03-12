@@ -8,11 +8,11 @@ import {
 } from '../../store'
 { actions } = app._
 
-import { Comps } from 'StoryView'
-{ Users } = Comps
+import { Pages } from 'StoryView'
+{ UsersPage } = Pages
 
 CFX = prefixDom {
-  Users
+  UsersPage
 }
 
 import {
@@ -54,8 +54,8 @@ class StoryUsers extends Component
       current
     } = @state
 
-    { c_Users } = CFX
-    c_Users {
+    { c_UsersPage } = CFX
+    c_UsersPage {
       list
       total
       current

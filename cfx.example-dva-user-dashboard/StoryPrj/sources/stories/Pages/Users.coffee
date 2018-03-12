@@ -1,9 +1,11 @@
 import { prefixDom } from 'cfx.dom'
 
 import { Pages } from 'StoryView'
-{ Users } = Pages
+{
+  Users
+} = Pages
 
-import UsersComp from '../../components/Users'
+import UsersComp from '../../pages/Users'
 
 CFX = prefixDom {
   Users
@@ -13,7 +15,9 @@ CFX = prefixDom {
 export default ({
   HeaderLink
 }) =>
+
   { c_Users } = CFX
+
   c_Users {
     Users: UsersComp
     HeaderLink
