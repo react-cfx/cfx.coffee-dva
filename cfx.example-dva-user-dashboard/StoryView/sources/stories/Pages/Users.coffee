@@ -1,28 +1,33 @@
 import { prefixDom } from 'cfx.dom'
 import {
-  Users as UsersPage
+  Users
+  UsersPage
 } from '../../pages'
 
-import UsersComp from '../../components/Users'
-
 CFX = prefixDom {
+  Users
   UsersPage
-  UsersComp
 }
 
 export default ({
+  location
   HeaderLink
 }) =>
 
-  { c_UsersPage } = CFX
+  {
+    c_Users
+    c_UsersPage
+  } = CFX
 
-  c_UsersPage {
+  c_Users {
+    location
+    HeaderLink
 
     Users: =>
 
-      { c_UsersComp } = CFX
+      { c_Users } = CFX
 
-      c_UsersComp
+      c_UsersPage
         list: [
           id: 1
           name: 'mooxe'
@@ -32,7 +37,5 @@ export default ({
         total: 10
         current: 1
         pageSize: 3
-
-    HeaderLink
 
   }

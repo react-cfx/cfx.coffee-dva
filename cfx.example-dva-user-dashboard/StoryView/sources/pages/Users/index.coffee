@@ -1,11 +1,11 @@
 import { prefixDom } from 'cfx.dom'
 import MainLayout from '../../components/MainLayout';
-import nb from './style'
+import Page from './page'
 
 export default ({
   location
-  Users
   HeaderLink
+  Users
 }) ->
 
   CFX = prefixDom {
@@ -25,8 +25,8 @@ export default ({
     HeaderLink
   }
   ,
-    c_div {
-      ( nb 'normal' )...
-    }
-    ,
-      c_Users {}
+    c_Users {}
+
+export {
+  Page
+}

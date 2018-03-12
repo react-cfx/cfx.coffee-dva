@@ -46,7 +46,7 @@ export default ({
   c_Menu {
     selectedKeys:
       unless location?
-      then '/'
+      then [ '/' ]
       else [ location.pathname ]
     mode: 'horizontal'
     theme: 'dark'
