@@ -11,6 +11,7 @@ export default ({
   location
   HeaderLink
 }) ->
+
   {
     c_MainLayout
     c_Page

@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "cfx.simple-build-tool": "^0.0.12",
+    "ddeyes": "^0.0.6",
+    "umi": "^1.0.5"
+  },
+  "dependencies": {
+    "ReduxServ": "file:../ReduxServ",
+    "StoryView": "file:../StoryView",
+    "antd": "^3.3.0",
+    "cfx.dom": "^0.0.3",
+    "cfx.react-redux": "^0.0.4"
+  }
+}
